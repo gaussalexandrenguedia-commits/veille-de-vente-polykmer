@@ -34,6 +34,8 @@ uvicorn app.main:app --host 0.0.0.0 --port 8000
 | `/releves` | Saisie manuelle/terrain + derniers relevés |
 | `/referentiels` | Produits, marchés, sources |
 | `/ia` | Agent IA : parser NLP, vision/OCR, scoreur, messages, rapport (Gemini + repli offline) |
+| `/deals` | 🎯 Opportunités : statuts, score marché, actions vendeur (appel/WhatsApp) |
+| `/deals` § 🔎 Collecte | Lancement collecte réelle Jumia/CoinAfrique + suivi job (clé API requise) |
 
 ## Endpoints web (en plus de l'API v0.1)
 
@@ -43,6 +45,8 @@ uvicorn app.main:app --host 0.0.0.0 --port 8000
 - `POST /api/v1/kpi/alertes/{id}/resoudre`
 - `GET /api/v1/social/resume?jours=` · `POST /api/v1/social/commentaires` (sentiment auto)
 - `GET /api/v1/sniper/status` · `GET /api/v1/sniper/selectors/{watch}` (lecture sniper.db)
+- Deals : `GET /api/v1/deals` · `POST /deals` · `POST /deals/depuis-texte` · `PATCH /deals/{id}` · `GET /api/v1/villes`
+- Collecte : `POST /api/v1/collecte/lancer` · `GET /collecte/jobs/{id}`
 - Agent IA : `GET /api/v1/ai/statut` · `POST /ai/test|parser-annonce|analyser-image|scorer|message-vendeur` · `GET /ai/rapport-jour`
 
 ## Structure
@@ -52,7 +56,7 @@ backend/
 ├── app/
 │   ├── main.py          # app + lifespan (seed) + statiques
 │   ├── seed.py          # données démo (CSV + commentaires + alertes)
-│   ├── templates/       # 8 pages Jinja2 (coquille, données via API)
+│   ├── templates/       # 9 pages Jinja2 (coquille, données via API)
 │   ├── static/css/      # thème sombre responsive
 │   ├── static/js/       # charts.js (SVG maison) + app.js (pages)
 │   ├── routers/         # api + pages

@@ -111,6 +111,14 @@ Marchés pilotes : **Douala (Central, Mboppi), Yaoundé (Mokolo, Mfoundi), Bafou
 
 Détail : [`docs/05-ROADMAP.md`](docs/05-ROADMAP.md)
 
+## 🎯 Deals détectés + collecte réelle
+
+- **Page 🎯 Deals** : historique des opportunités (`nouveau → contacté → conclu`), score vs médiane marché, boutons J'appelle / WhatsApp, économie totale potentielle.
+- **Collecte réelle** : page 🎯 Deals § 🔎 (Jumia CM / CoinAfrique en direct), `POST /api/v1/collecte/lancer`, `scrapers/run_all.py` + cron → ingestion → relevés + **deals auto** si écart ≤ −10 %.
+- **32 villes** CM + CEMAC (`GET /api/v1/villes`), parser enrichi (kolos, quartiers, feyman…).
+- Détail : [`docs/12-collecte-reelle-et-deals.md`](docs/12-collecte-reelle-et-deals.md).
+
+
 ## 📚 Lire la conception complète
 
 1. [Vision & objectifs](docs/00-VISION.md)

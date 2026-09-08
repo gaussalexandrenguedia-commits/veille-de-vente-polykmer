@@ -34,3 +34,11 @@ def list_sources(db: Session = Depends(get_db)):
     return [{"id": s.id, "nom": s.nom, "type": s.type,
              "frequence": s.frequence, "actif": s.actif}
             for s in db.query(Source).all()]
+
+
+@router.get("/villes")
+def list_villes():
+    """Toutes les villes couvertes (CM 10 régions + CEMAC)."""
+    from ..services.ai_parse import VILLES
+    return [{"ville": v, "pays": d["pays"], "alias": d["alias"]}
+            for v, d in VILLES.items()]

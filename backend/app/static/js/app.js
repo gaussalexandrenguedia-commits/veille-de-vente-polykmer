@@ -41,6 +41,14 @@ function scoreBadge(s) {
     : s < -20 ? badge("😞 " + s, "b-red") : badge("😐 " + s, "b-gray");
 }
 
+async function fillVilles(datalistId) {
+  try {
+    const villes = await getJSON("/api/v1/villes");
+    const dl = $(datalistId);
+    if (dl) dl.innerHTML = villes.map((v) => `<option value="${v.ville}">${v.pays}</option>`).join("");
+  } catch (e) { /* silencieux */ }
+}
+
 /* ── Dashboard ─────────────────────────────────────────── */
 async function pageDashboard() {
   const prods = await getJSON("/api/v1/produits");
@@ -215,6 +223,7 @@ async function pageReleves() {
     `<option value="${p.sku}">${esc(p.nom)}</option>`).join("");
   $("rSource").innerHTML = sources.map((s) => `<option>${esc(s.nom)}</option>`).join("");
   $("rSource").value = "Relevés terrain Kobo";
+  fillVilles("dlVilles");
   async function loadTable() {
     const rows = await getJSON("/api/v1/releves/recent?limit=60");
     $("tableReleves").innerHTML = rows.map((r) =>
@@ -280,6 +289,7 @@ async function pageIA() {
       ? `Modèles : ${st.modeles.join(" → ")} · clés ${st.cles.join(", ")}`
       : "Aucune clé GEMINI_API_KEYS : parser/scoreur/messages en heuristique, vision et rapport enrichi indisponibles.";
   }
+  fillVilles("dlVilles");
   await statut();
   $("btnTestIA").onclick = async () => {
     try {
@@ -348,6 +358,118 @@ async function pageIA() {
   };
 }
 
+/* ── Deals ─────────────────────────────────────────────── */
+function verdictBadge(v) {
+  return v === "prioritaire" ? badge("🔥 prioritaire", "b-green")
+    : v === "interessant" ? badge("👍 intéressant", "b-yellow")
+    : v === "sans_ref" ? badge("sans réf", "b-gray")
+    : v === "suspect" ? badge("🚨 suspect", "b-red") : badge(v, "b-gray");
+}
+function statutBadge(s) {
+  return s === "nouveau" ? badge("🆕 nouveau", "b-blue")
+    : s === "contacte" ? badge("💬 contacté", "b-yellow")
+    : s === "conclu" ? badge("✅ conclu", "b-green") : badge("🗑 abandonné", "b-gray");
+}
+async function pageDeals() {
+  fillVilles("dlVilles");
+  const prods = await getJSON("/api/v1/produits");
+  $("dmProduit").innerHTML = `<option value="">— sans produit —</option>` +
+    prods.map((p) => `<option value="${p.sku}">${esc(p.nom)}</option>`).join("");
+  try { $("cKey").value = localStorage.getItem("api_key") || ""; } catch (e) {}
+  async function load() {
+    const st = $("fStatut").value, vd = $("fVerdict").value;
+    const d = await getJSON("/api/v1/deals" + (st || vd ? "?" + new URLSearchParams({ ...(st ? { statut: st } : {}), ...(vd ? { verdict: vd } : {}) }) : ""));
+    $("dNouveaux").textContent = d.par_statut.nouveau || 0;
+    $("dContactes").textContent = d.par_statut.contacte || 0;
+    $("dConclus").textContent = d.par_statut.conclu || 0;
+    $("dEco").textContent = xaf(d.economie_potentielle);
+    $("tableDeals").innerHTML = d.items.length ? d.items.map((r) => {
+      const ec = r.ecart_pct == null ? badge("—", "b-gray")
+        : badge(pct(r.ecart_pct, true), r.ecart_pct <= -20 ? "b-green" : r.ecart_pct <= -10 ? "b-yellow" : "b-gray");
+      const prix = r.prix == null ? "—" : `<b class="num">${xaf(r.prix)}</b>` +
+        (r.mediane_ref ? ` <span class="muted">/ ${xaf(r.mediane_ref)}</span>` : "");
+      let act = "";
+      if (r.statut === "nouveau" || r.statut === "contacte") {
+        act += `<button class="btn small primary" data-a="contacte" data-id="${r.id}" data-u="${esc(r.preuve_url || "")}" data-p="${esc(r.phone || "")}">💬 Contacter</button> `;
+        act += `<button class="btn small" data-a="conclu" data-id="${r.id}">✅</button> `;
+        act += `<button class="btn small" data-a="abandonne" data-id="${r.id}">🗑</button>`;
+      } else act = `<button class="btn small" data-a="nouveau" data-id="${r.id}">↩ Rouvrir</button>`;
+      return `<tr><td><b class="num">${r.score}</b> ${verdictBadge(r.verdict)}</td>
+        <td>${esc(r.titre)}<br><span class="muted">${esc(r.produit || "")} · ${esc(r.ville || "")}${r.phone ? " · ☎ " + esc(r.phone) : ""}</span></td>
+        <td>${prix} ${ec}</td><td class="muted">${esc(r.source || "")}</td>
+        <td>${statutBadge(r.statut)}</td><td style="white-space:normal">${act}</td></tr>`;
+    }).join("") : `<tr><td colspan="6"><div class="empty">Aucun deal — lancez une collecte ou collez une annonce ⬇</div></td></tr>`;
+    document.querySelectorAll("#tableDeals button").forEach((b) =>
+      b.onclick = async () => {
+        try {
+          await fetch(`/api/v1/deals/${b.dataset.id}`, { method: "PATCH",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ statut: b.dataset.a }) }).then((r) => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); });
+          if (b.dataset.a === "contacte") {
+            const url = b.dataset.p ? "https://wa.me/237" + b.dataset.p.replace(/\D/g, "").slice(-9) : b.dataset.u;
+            if (url) window.open(url, "_blank");
+          }
+          toast("Deal → " + b.dataset.a, "ok");
+          load();
+        } catch (e) { toast(e.message, "err"); }
+      });
+  }
+  $("fStatut").onchange = $("fVerdict").onchange = load;
+  $("formDealTexte").onsubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const r = await postJSON("/api/v1/deals/depuis-texte",
+        { texte: $("dtTexte").value, url: $("dtUrl").value || null });
+      $("dtOut").textContent = `→ deal #${r.deal.id} · score ${r.deal.score} · ${r.deal.verdict} · ${r.parse.ville || "?"} · ${r.parse.prix || "?"} XAF`;
+      $("dtTexte").value = ""; $("dtUrl").value = "";
+      toast("Deal créé depuis le texte", "ok");
+      load();
+    } catch (err) { toast(err.message, "err"); }
+  };
+  $("formDealManuel").onsubmit = async (e) => {
+    e.preventDefault();
+    const v = $("dmUrl").value.trim();
+    const isPhone = /^[\d\s+.]{9,14}$/.test(v);
+    try {
+      await postJSON("/api/v1/deals", { produit: $("dmProduit").value || null,
+        prix: parseFloat($("dmPrix").value), ville: $("dmVille").value,
+        preuve_url: v && !isPhone ? v : null, phone: v && isPhone ? v : null });
+      toast("Deal créé", "ok");
+      load();
+    } catch (err) { toast(err.message, "err"); }
+  };
+  $("btnCollecter").onclick = async () => {
+    const key = $("cKey").value;
+    try { localStorage.setItem("api_key", key); } catch (e) {}
+    $("jobStatus").textContent = "lancement…";
+    try {
+      const r = await fetch("/api/v1/collecte/lancer", { method: "POST",
+        headers: { "Content-Type": "application/json", "X-API-Key": key },
+        body: JSON.stringify({ site: $("cSite").value, query: $("cQuery").value,
+          ville: $("cVille").value, max_pages: 1 }) });
+      const data = await r.json();
+      if (!r.ok) throw new Error(data.detail || ("HTTP " + r.status));
+      $("jobStatus").textContent = `job ${data.job} en cours… (actualisation auto)`;
+      const timer = setInterval(async () => {
+        try {
+          const j = await getJSON("/api/v1/collecte/jobs/" + data.job);
+          if (j.status === "termine") {
+            clearInterval(timer);
+            const res = j.resultat || {};
+            $("jobStatus").textContent = `✅ ${res.offres_inserees || 0} offres, ${res.releves_prix_crees || 0} relevés, ${(res.deals_crees || []).length} deals`;
+            toast("Collecte terminée", "ok");
+            load();
+          } else if (j.status === "erreur") {
+            clearInterval(timer);
+            $("jobStatus").textContent = "❌ " + (j.erreur || "erreur");
+          } else $("jobStatus").textContent = `job ${data.job} : ${j.status}…`;
+        } catch (e) { clearInterval(timer); }
+      }, 5000);
+    } catch (e) { toast(e.message, "err"); $("jobStatus").textContent = ""; }
+  };
+  await load();
+}
+
 /* ── Commun : badge alertes + horloge ──────────────────── */
 async function navBadge() {
   try {
@@ -366,7 +488,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   clock(); setInterval(clock, 30000); navBadge();
   const page = document.body.dataset.page;
   const fn = { dashboard: pageDashboard, prix: pagePrix, alertes: pageAlertes,
-    sniper: pageSniper, social: pageSocial, releves: pageReleves, ia: pageIA,
+    sniper: pageSniper, social: pageSocial, releves: pageReleves, ia: pageIA, deals: pageDeals,
     referentiels: pageReferentiels }[page];
   if (fn) try { await fn(); } catch (e) { toast("Erreur : " + e.message, "err"); }
 });

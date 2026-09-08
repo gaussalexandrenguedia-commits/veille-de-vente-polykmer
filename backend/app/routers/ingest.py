@@ -7,8 +7,9 @@ from sqlalchemy.orm import Session
 
 from ..config import settings
 from ..database import get_db
-from ..models import Marche, OffreDigitale, RelevePrix, Source
+from ..models import Marche, RelevePrix, Source
 from ..schemas import OffreScraperIn
+from ..services.collecte import stocker_offres
 from ..services.normalize import hash_vendeur, resolve_produit
 
 router = APIRouter(prefix="/api/v1/ingest", tags=["ingestion"])
@@ -23,36 +24,8 @@ def check_key(x_api_key: str = Header(...)):
 @router.post("/scraper")
 def ingest_scraper(offres: list[OffreScraperIn], db: Session = Depends(get_db),
                    _ok: bool = Depends(check_key)):
-    """Reçoit un lot d'offres scrapées -> table offres_digitales (+ relevé prix si produit matché)."""
-    inserted, releves = 0, 0
-    for o in offres:
-        src = db.query(Source).filter(func.lower(Source.nom) == o.source.lower()).first()
-        if not src:
-            src = Source(nom=o.source, type="ecommerce")
-            db.add(src)
-            db.commit()
-            db.refresh(src)
-        if db.query(OffreDigitale).filter(OffreDigitale.url == o.url).first():
-            continue
-        remise = None
-        if o.prix and o.ancien_prix and o.ancien_prix > o.prix:
-            remise = round((o.ancien_prix - o.prix) / o.ancien_prix * 100, 1)
-        db.add(OffreDigitale(source_id=src.id, url=o.url, titre=o.titre, prix=o.prix,
-                             ancien_prix=o.ancien_prix, remise_pct=remise,
-                             vendeur_hash=hash_vendeur(o.vendeur, o.source), ville=o.ville))
-        inserted += 1
-        if o.produit and o.prix:
-            p = resolve_produit(db, o.produit)
-            if p:
-                db.add(RelevePrix(produit_id=p.id, source_id=src.id, prix=o.prix,
-                                 ville=o.ville or "Douala", methode="scrape",
-                                 vendeur_hash=hash_vendeur(o.vendeur, o.source),
-                                 preuve_url=o.url, promo=bool(remise),
-                                 observe_le=dt.datetime.now(dt.timezone.utc),
-                                 collecteur=f"scraper:{src.nom}"))
-                releves += 1
-    db.commit()
-    return {"offres_inserees": inserted, "releves_prix_crees": releves}
+    """Lot d'offres -> offres + relevés + deals auto (≥ 10 % sous le marché)."""
+    return stocker_offres(db, [o.model_dump() for o in offres])
 
 
 # Mapping champs Kobo -> API (adapter aux noms réels du formulaire)

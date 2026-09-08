@@ -20,11 +20,28 @@ log = logging.getLogger("seed")
 CSV = ROOT_DIR / "data" / "samples" / "prix_exemple.csv"
 UTC = dt.timezone.utc
 
-MARCHES = [
-    ("Marché Central", "Douala", "CM"), ("Mboppi", "Douala", "CM"),
-    ("Marché Mokolo", "Yaoundé", "CM"), ("Marché Mfoundi", "Yaoundé", "CM"),
-    ("Marché A", "Bafoussam", "CM"), ("Poto-Poto", "Brazzaville", "CG"),
-    ("Marché Central", "NDjamena", "TD"),
+MARCHES = [  # (nom, ville, pays, lat, lon)
+    ("Marché Central", "Douala", "CM", 4.048, 9.704),
+    ("Mboppi", "Douala", "CM", 4.058, 9.732),
+    ("Marché Mokolo", "Yaoundé", "CM", 3.873, 11.502),
+    ("Marché Mfoundi", "Yaoundé", "CM", 3.866, 11.522),
+    ("Marché A", "Bafoussam", "CM", 5.478, 10.417),
+    ("Food Market", "Bamenda", "CM", 5.963, 10.159),
+    ("Marché central", "Garoua", "CM", 9.301, 13.397),
+    ("Marché central", "Maroua", "CM", 10.591, 14.321),
+    ("Marché central", "Ngaoundéré", "CM", 7.321, 13.575),
+    ("Marché central", "Bertoua", "CM", 4.579, 13.684),
+    ("Marché central", "Ebolowa", "CM", 2.917, 11.151),
+    ("Marché central", "Kribi", "CM", 2.939, 9.909),
+    ("Mile 4 Market", "Limbé", "CM", 4.024, 9.214),
+    ("Marché central", "Buéa", "CM", 4.155, 9.242),
+    ("Marché central", "Kumba", "CM", 4.633, 9.446),
+    ("Poto-Poto", "Brazzaville", "CG", -4.255, 15.256),
+    ("Marché Total", "Brazzaville", "CG", -4.263, 15.242),
+    ("Mont-Bouët", "Libreville", "GA", 0.394, 9.451),
+    ("Marché Central", "NDjamena", "TD", 12.134, 15.055),
+    ("Marché Dembé", "NDjamena", "TD", 12.105, 15.085),
+    ("PK5", "Bangui", "CF", 4.365, 18.554),
 ]
 SOURCES = [
     ("Jumia Cameroun", "ecommerce"), ("CoinAfrique", "ecommerce"),
@@ -80,9 +97,9 @@ def seed_all(session) -> dict:
     if session.query(RelevePrix).count() > 0:
         return {"status": "exists"}
 
-    for nom, ville, pays in MARCHES:
+    for nom, ville, pays, lat, lon in MARCHES:
         if not session.query(Marche).filter_by(nom=nom, ville=ville).first():
-            session.add(Marche(nom=nom, ville=ville, pays=pays))
+            session.add(Marche(nom=nom, ville=ville, pays=pays, lat=lat, lon=lon))
     for nom, typ in SOURCES:
         if not session.query(Source).filter_by(nom=nom).first():
             session.add(Source(nom=nom, type=typ))
@@ -135,9 +152,31 @@ def seed_all(session) -> dict:
     session.commit()
 
     alertes = generer_alertes(session, 10.0)
+
+    from .services.deals import creer_deal
+    _src = {s.nom: s.id for s in session.query(Source).all()}
+    _prd = {p.sku: p.id for p in session.query(Produit).all()}
+    for titre, sku, src, prix, ville, url, phone, statut in [
+        ("Congélateur Hisense 200L — destockage Akwa", "CONGEL-200L", "CoinAfrique",
+         145000, "Douala", "https://www.coinafrique.com/annonce/demo-congel", "699123456", "nouveau"),
+        ("Riz parfumé 50kg — lot Mokolo", "RIZ-PARF-50KG", "Relevés terrain Kobo",
+         26500, "Yaoundé", None, None, "nouveau"),
+        ("Tecno Spark 10 — boutique Deïdo", "SMART-ENTRY", "Jumia Cameroun",
+         48000, "Douala", "https://www.jumia.cm/demo-tecno", None, "nouveau"),
+        ("Huile Mayor 1L × carton — Mboppi", "HUILE-VEG-1L", "Relevés terrain Kobo",
+         1650, "Douala", None, "690112233", "contacte"),
+        ("Sucre Sosucam — sac 50kg Mfoundi", "SUCRE-1KG", "Relevés terrain Kobo",
+         820, "Yaoundé", None, None, "contacte"),
+        ("Ciment Dangote — chantier Odza", "CIMENT-50KG", "Relevés terrain Kobo",
+         5200, "Yaoundé", None, None, "conclu"),
+    ]:
+        creer_deal(session, titre=titre, prix=prix, ville=ville,
+                   produit_id=_prd[sku], source_id=_src.get(src),
+                   preuve_url=url, phone=phone, statut=statut,
+                   meta={"origine": "seed-demo"})
     return {"status": "seeded", "releves": n_rel,
             "commentaires": len(COMMENTAIRES),
-            "alertes": [a.titre for a in alertes]}
+            "alertes": [a.titre for a in alertes], "deals": 6}
 
 
 def seed_if_empty() -> None:

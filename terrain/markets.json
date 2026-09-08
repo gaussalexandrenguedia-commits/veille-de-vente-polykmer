@@ -4,9 +4,20 @@
   {"nom": "Marché Mokolo", "ville": "Yaoundé", "pays": "CM", "lat": 3.873, "lon": 11.502, "jours_affluence": ["sam", "mer"], "phase": 1, "specialites": ["alimentaire", "friperie"]},
   {"nom": "Marché Mfoundi", "ville": "Yaoundé", "pays": "CM", "lat": 3.866, "lon": 11.522, "jours_affluence": ["dim", "sam"], "phase": 1, "specialites": ["vivrier"]},
   {"nom": "Marché A", "ville": "Bafoussam", "pays": "CM", "lat": 5.478, "lon": 10.417, "jours_affluence": ["sam"], "phase": 1, "specialites": ["vivrier", "quincaillerie"]},
-  {"nom": "Marché central", "ville": "Garoua", "pays": "CM", "lat": 9.301, "lon": 13.397, "jours_affluence": ["sam"], "phase": 1, "specialites": ["cereales", "betail"]},
+  {"nom": "Food Market", "ville": "Bamenda", "pays": "CM", "lat": 5.963, "lon": 10.159, "jours_affluence": ["sam", "mer"], "phase": 2, "specialites": ["vivrier"]},
+  {"nom": "Marché central", "ville": "Garoua", "pays": "CM", "lat": 9.301, "lon": 13.397, "jours_affluence": ["sam"], "phase": 2, "specialites": ["cereales", "betail"]},
+  {"nom": "Marché central", "ville": "Maroua", "pays": "CM", "lat": 10.591, "lon": 14.321, "jours_affluence": ["sam"], "phase": 2, "specialites": ["cereales", "oignons"]},
+  {"nom": "Marché central", "ville": "Ngaoundéré", "pays": "CM", "lat": 7.321, "lon": 13.575, "jours_affluence": ["sam"], "phase": 2, "specialites": ["vivrier", "betail"]},
+  {"nom": "Marché central", "ville": "Bertoua", "pays": "CM", "lat": 4.579, "lon": 13.684, "jours_affluence": ["sam"], "phase": 2, "specialites": ["vivrier"]},
+  {"nom": "Marché central", "ville": "Ebolowa", "pays": "CM", "lat": 2.917, "lon": 11.151, "jours_affluence": ["sam"], "phase": 2, "specialites": ["vivrier", "cacao"]},
+  {"nom": "Marché central", "ville": "Kribi", "pays": "CM", "lat": 2.939, "lon": 9.909, "jours_affluence": ["sam"], "phase": 2, "specialites": ["poisson", "vivrier"]},
+  {"nom": "Mile 4 Market", "ville": "Limbé", "pays": "CM", "lat": 4.024, "lon": 9.214, "jours_affluence": ["sam"], "phase": 2, "specialites": ["vivrier"]},
+  {"nom": "Marché central", "ville": "Buéa", "pays": "CM", "lat": 4.155, "lon": 9.242, "jours_affluence": ["sam"], "phase": 2, "specialites": ["vivrier"]},
+  {"nom": "Marché central", "ville": "Kumba", "pays": "CM", "lat": 4.633, "lon": 9.446, "jours_affluence": ["sam"], "phase": 2, "specialites": ["vivrier", "huile palme"]},
   {"nom": "Poto-Poto", "ville": "Brazzaville", "pays": "CG", "lat": -4.255, "lon": 15.256, "jours_affluence": ["sam"], "phase": 2, "specialites": ["alimentaire", "textile"]},
+  {"nom": "Marché Total", "ville": "Brazzaville", "pays": "CG", "lat": -4.263, "lon": 15.242, "jours_affluence": ["sam"], "phase": 3, "specialites": ["vivrier"]},
+  {"nom": "Mont-Bouët", "ville": "Libreville", "pays": "GA", "lat": 0.394, "lon": 9.451, "jours_affluence": ["sam"], "phase": 3, "specialites": ["alimentaire"]},
   {"nom": "Marché Central", "ville": "NDjamena", "pays": "TD", "lat": 12.134, "lon": 15.055, "jours_affluence": ["sam"], "phase": 2, "specialites": ["cereales", "import"]},
-  {"nom": "Mont-Bouët", "ville": "Libreville", "pays": "GA", "lat": 0.394, "lon": 9.451, "jours_affluence": ["sam"], "phase": 2, "specialites": ["alimentaire"]},
-  {"nom": "PK5", "ville": "Bangui", "pays": "CF", "lat": 4.365, "lon": 18.554, "jours_affluence": ["sam"], "phase": 2, "specialites": ["alimentaire", "import"]}
+  {"nom": "Marché Dembé", "ville": "NDjamena", "pays": "TD", "lat": 12.105, "lon": 15.085, "jours_affluence": ["sam"], "phase": 3, "specialites": ["vivrier"]},
+  {"nom": "PK5", "ville": "Bangui", "pays": "CF", "lat": 4.365, "lon": 18.554, "jours_affluence": ["sam"], "phase": 3, "specialites": ["alimentaire", "import"]}
 ]

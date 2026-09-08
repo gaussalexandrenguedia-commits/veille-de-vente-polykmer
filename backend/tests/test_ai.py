@@ -75,3 +75,29 @@ def test_message_ponctuation():
 def test_produit_garde_reference():
     r = parse_heuristic("Vs iphone 13 propre 350k kmer négo à dla 699123456")
     assert r["produit"] and "iphone 13" in r["produit"].lower()
+
+
+def test_parse_kolo_et_quartier():
+    r = parse_heuristic("Congélateur Hisense 200L sous carton 175 kolos Akwa last price 690112233")
+    assert r["prix"] == 175000
+    assert r["ville"] == "Douala" and r["quartier"] == "akwa"
+    assert r["prix_ferme"] is True and r["nego"] is False
+    assert r["etat"] == "neuf"
+
+
+def test_parse_toutes_villes():
+    assert parse_heuristic("riz Bamenda")[ "ville"] == "Bamenda"
+    assert parse_heuristic("ciment pointe-noire")["ville"] == "Pointe-Noire"
+    assert parse_heuristic("moto Moundou")["ville"] == "Moundou"
+    assert parse_heuristic("tv lbv")["ville"] == "Libreville"
+    assert parse_heuristic("dispo PK12, chap chap")["ville"] == "Douala"
+    assert parse_heuristic("Nkomo, à côté de la station")["ville"] == "Yaoundé"
+
+
+def test_parse_troc_feyman_cash():
+    r = parse_heuristic("Tecno Spark, troc possible, cash uniquement")
+    assert r["echange"] is True
+    assert "paiement cash" in r["caracteristiques"]
+    r = parse_heuristic("Attention feyman au marché Mokolo, momo volé")
+    assert r["alerte_fraude"] is True
+    assert r["ville"] == "Yaoundé"

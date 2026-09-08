@@ -48,16 +48,38 @@ def session_polie(delai: float = 4.0) -> requests.Session:
 
 
 def parse_prix_xaf(txt: str | None) -> float | None:
+    """Extrait un prix XAF : priorité au nombre suivi d'une unité monétaire.
+
+    « TV TCL 32 pouces 95000 FCFA » -> 95000 (pas 32).
+    Sans unité explicite : dernier nombre >= 100 (évite tailles/modèles).
+    Gère k (=×1000) et M (=×1 000 000).
+    """
     if not txt:
         return None
-    m = PRIX_RE.search(txt.replace("\u00a0", " "))
-    if not m:
+    trouves = list(PRIX_RE.finditer(txt.replace(" ", " ")))
+    if not trouves:
         return None
-    brut = re.sub(r"[^\d]", "", m.group(1))
-    try:
-        return float(brut) if brut else None
-    except ValueError:
-        return None
+
+    def valeur(m):
+        brut = re.sub(r"[^\d]", "", m.group(1))
+        if not brut:
+            return None
+        v = float(brut)
+        unite = (m.group(2) or "").lower()
+        if unite == "k":
+            v *= 1000
+        elif unite == "m":
+            v *= 1_000_000
+        return v
+
+    avec_unite = [m for m in trouves if (m.group(2) or "").strip()]
+    if avec_unite:
+        return valeur(avec_unite[-1])
+    for m in reversed(trouves):  # repli : dernier nombre plausible
+        v = valeur(m)
+        if v is not None and v >= 100:
+            return v
+    return None
 
 
 def push_api(api_url: str, cle: str, offres: list[dict]) -> dict:

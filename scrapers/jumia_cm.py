@@ -4,8 +4,9 @@ Usage:
     python jumia_cm.py --query "riz 50kg" --max-pages 2 --out ../data/jumia_riz.json
     python jumia_cm.py --query "congelateur" --push --api-url http://localhost:8000 --api-key XXX
 
-Note : sélecteurs indicatifs — Jumia change son HTML ; ajuster si vide
-et toujours respecter robots.txt + débit ≤ 1 req / 4 s.
+Structure cible (vérifiée par tests sur fixture) : article.prd > a.core[href]
++ h3.name + div.prc (prix) + div.old (ancien prix). Si Jumia change son HTML,
+le repli générique (ancres) prend le relais — et les tests l'indiquent.
 """
 from __future__ import annotations
 
@@ -21,6 +22,50 @@ log = logging.getLogger("jumia_cm")
 BASE = "https://www.jumia.cm"
 
 
+def parse_jumia_html(html: str) -> list[dict]:
+    """Pur (testable) : HTML -> offres. Ne fait aucun réseau."""
+    soup = BeautifulSoup(html, "html.parser")
+    offres: list[dict] = []
+    vues: set[str] = set()
+
+    def push(url: str, titre: str, prix_txt: str, ancien_txt: str = ""):
+        url = url if url.startswith("http") else BASE + url
+        if url in vues:
+            return
+        vues.add(url)
+        titre = " ".join(titre.split())[:200]
+        if len(titre) > 3:
+            offres.append({"source": "Jumia Cameroun", "url": url,
+                          "titre": titre,
+                          "prix": parse_prix_xaf(prix_txt or ""),
+                          "ancien_prix": parse_prix_xaf(ancien_txt or ""),
+                          "ville": "Douala", "produit": None})
+
+    cartes = soup.select("article.prd")
+    for c in cartes:
+        a = c.select_one("a.core") or c.select_one("a[href]")
+        if not a or not a.get("href"):
+            continue
+        nom = c.select_one("h3.name")
+        titre = nom.get_text(" ", strip=True) if nom else (a.get("title") or "")
+        if not titre:
+            img = a.select_one("img")
+            titre = (img.get("alt", "") if img else "") or a.get_text(" ", strip=True)
+        prc = c.select_one("div.prc, .prc")
+        old = c.select_one("div.old, .old")
+        push(a["href"], titre or a.get_text(" ", strip=True),
+             prc.get_text(" ", strip=True) if prc else "",
+             old.get_text(" ", strip=True) if old else "")
+
+    if not offres:  # repli générique si structure inconnue
+        for a in soup.select("a[href]"):
+            href = a.get("href", "")
+            if "/catalog/" in href or href.endswith(".html"):
+                push(href, a.get("title") or a.get_text(" ", strip=True),
+                     a.get_text(" ", strip=True))
+    return offres
+
+
 def scrape_recherche(query: str, max_pages: int = 2) -> list[dict]:
     s = session_polie()
     offres: list[dict] = []
@@ -31,42 +76,18 @@ def scrape_recherche(query: str, max_pages: int = 2) -> list[dict]:
         if r.status_code != 200:
             log.warning("HTTP %s sur %s — arrêt", r.status_code, url)
             break
-        soup = BeautifulSoup(r.text, "lxml")
-        cartes = soup.select("article.prd, div.info, a.core")
-        if not cartes:  # fallback générique
-            cartes = soup.select("a[href*='/catalog/'], a[href*='.html']")
-        vues = set()
-        for c in cartes:
-            a = c if c.name == "a" else c.select_one("a[href]")
-            if not a or not a.get("href"):
-                continue
-            lien = a["href"]
-            lien = lien if lien.startswith("http") else BASE + lien
-            if lien in vues:
-                continue
-            vues.add(lien)
-            bloc = str(c)
-            titre = (a.get("title") or a.get_text(" ", strip=True) or "")[:200]
-            prix_txt = ""
-            for sel in [".prc", ".price", "[data-price]"]:
-                el = c.select_one(sel)
-                if el:
-                    prix_txt = el.get("data-price") or el.get_text(" ", strip=True)
-                    break
-            if not prix_txt:
-                # cherche un prix dans le bloc
-                import re
-                m = re.search(r"[\d\s.]{3,}\s*(FCFA|F CFA|XAF)", bloc)
-                prix_txt = m.group(0) if m else ""
-            prix = parse_prix_xaf(prix_txt)
-            if titre and len(titre) > 3:
-                offres.append({"source": "Jumia Cameroun", "url": lien,
-                              "titre": titre.strip(), "prix": prix,
-                              "ville": "Douala", "produit": None})
-        log.info("page %d : %d offres", page, len(vues))
-        if not vues:
+        trouves = parse_jumia_html(r.text)
+        log.info("page %d : %d offres", page, len(trouves))
+        offres.extend(trouves)
+        if not trouves:
             break
-    return offres
+    # dédup inter-pages
+    vus, out = set(), []
+    for o in offres:
+        if o["url"] not in vus:
+            vus.add(o["url"])
+            out.append(o)
+    return out
 
 
 def main():
