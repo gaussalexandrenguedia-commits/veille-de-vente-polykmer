@@ -6,7 +6,7 @@
     <label>Produit (SKU ou nom) <input id="rProduit" class="input" list="dlProduits" required placeholder="RIZ-PARF-50KG">
       <datalist id="dlProduits"></datalist></label>
     <label>Source <select id="rSource" class="input"></select></label>
-    <label>Ville <input id="rVille" class="input" value="Douala" required></label>
+    <label>Ville <input id="rVille" class="input" list="dlVilles" value="Douala" required></label>
     <label>Marché <input id="rMarche" class="input" placeholder="Marché Central"></label>
     <label>Prix détail (XAF) <input id="rPrix" class="input" type="number" min="1" step="1" required placeholder="28500"></label>
     <label>Prix de gros (XAF) <input id="rPrixGros" class="input" type="number" min="1" step="1"></label>
@@ -26,4 +26,5 @@
     <tbody id="tableReleves"></tbody>
   </table></div>
 </section>
+<datalist id="dlVilles"></datalist>
 {% endblock %}

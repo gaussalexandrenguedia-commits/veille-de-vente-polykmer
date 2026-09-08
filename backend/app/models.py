@@ -134,3 +134,26 @@ class ReleveLogistique(Base):
     cout_tonne_xaf: Mapped[float | None] = mapped_column(Numeric(14, 2), nullable=True)
     indice_tracasserie: Mapped[int | None] = mapped_column(Integer, nullable=True)
     commentaire: Mapped[str | None] = mapped_column(Text, nullable=True)
+
+
+class Opportunite(Base):
+    """Deal / opportunité détectée, avec statut de suivi commercial."""
+    __tablename__ = "opportunites"
+    id: Mapped[int] = mapped_column(primary_key=True)
+    titre: Mapped[str] = mapped_column(Text)
+    produit_id: Mapped[int | None] = mapped_column(ForeignKey("produits.id"), nullable=True)
+    source_id: Mapped[int | None] = mapped_column(ForeignKey("sources.id"), nullable=True)
+    prix: Mapped[float | None] = mapped_column(Numeric(14, 2), nullable=True)
+    mediane_ref: Mapped[float | None] = mapped_column(Numeric(14, 2), nullable=True)
+    ecart_pct: Mapped[float | None] = mapped_column(Numeric(7, 2), nullable=True)
+    score: Mapped[int] = mapped_column(Integer, default=0)
+    verdict: Mapped[str] = mapped_column(String, default="marche")
+    ville: Mapped[str] = mapped_column(String, default="")
+    pays: Mapped[str] = mapped_column(String(2), default="CM")
+    preuve_url: Mapped[str | None] = mapped_column(Text, nullable=True)
+    phone: Mapped[str | None] = mapped_column(Text, nullable=True)
+    statut: Mapped[str] = mapped_column(String, default="nouveau")
+    notes: Mapped[str] = mapped_column(Text, default="")
+    meta_: Mapped[dict] = mapped_column("meta", JSON, default=dict)
+    cree_le: Mapped[dt.datetime] = mapped_column(TIMESTAMP(timezone=True), default=lambda: dt.datetime.now(dt.timezone.utc))
+    maj_le: Mapped[dt.datetime] = mapped_column(TIMESTAMP(timezone=True), default=lambda: dt.datetime.now(dt.timezone.utc))

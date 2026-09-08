@@ -11,7 +11,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 
 from .config import settings
-from .routers import ai, dashboard, ingest, kpi, pages, referentiels, releves, sniper, social
+from .routers import ai, collecte, dashboard, deals, ingest, kpi, pages, referentiels, releves, sniper, social
 
 APP_DIR = Path(__file__).resolve().parent
 
@@ -37,6 +37,8 @@ app.add_middleware(
 app.mount("/static", StaticFiles(directory=APP_DIR / "static"), name="static")
 app.include_router(pages.router)
 app.include_router(ai.router)
+app.include_router(deals.router)
+app.include_router(collecte.router)
 app.include_router(referentiels.router)
 app.include_router(releves.router)
 app.include_router(kpi.router)

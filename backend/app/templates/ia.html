@@ -23,7 +23,7 @@
     <form id="formScore" class="form">
       <label>Produit <select id="iaProduit" class="input"></select></label>
       <label>Prix constaté (XAF) <input id="iaPrix" class="input" type="number" min="1" required placeholder="24000"></label>
-      <label>Ville <input id="iaVille" class="input" placeholder="Douala"></label>
+      <label>Ville <input id="iaVille" class="input" list="dlVilles" placeholder="Douala"></label>
       <label>Texte annonce (fraude) <input id="iaTexteScore" class="input" placeholder="optionnel"></label>
       <div><button class="btn primary" type="submit">Calculer le score</button></div>
     </form>
@@ -59,4 +59,5 @@
   <div class="card-head"><h2>5 · Rapport quotidien</h2><button class="btn small" id="btnRapport">📰 Générer</button></div>
   <div id="iaRapportOut" class="comment"><span class="muted">Cliquez sur Générer.</span></div>
 </section>
+<datalist id="dlVilles"></datalist>
 {% endblock %}

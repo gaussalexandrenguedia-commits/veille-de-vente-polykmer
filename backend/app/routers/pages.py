@@ -52,6 +52,11 @@ def page_ia(request: Request):
     return _page(request, "ia", "Agent IA 🤖", "ia.html")
 
 
+@router.get("/deals", response_class=HTMLResponse)
+def page_deals(request: Request):
+    return _page(request, "deals", "Deals détectés 🎯", "deals.html")
+
+
 @router.get("/referentiels", response_class=HTMLResponse)
 def page_referentiels(request: Request):
     return _page(request, "referentiels", "Référentiels", "referentiels.html")
