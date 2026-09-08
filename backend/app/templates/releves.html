@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block content %}
+<section class="card">
+  <div class="card-head"><h2>Saisir un relevé (terrain / manuel / SMS superviseur)</h2></div>
+  <form id="formReleve" class="form grid">
+    <label>Produit (SKU ou nom) <input id="rProduit" class="input" list="dlProduits" required placeholder="RIZ-PARF-50KG">
+      <datalist id="dlProduits"></datalist></label>
+    <label>Source <select id="rSource" class="input"></select></label>
+    <label>Ville <input id="rVille" class="input" value="Douala" required></label>
+    <label>Marché <input id="rMarche" class="input" placeholder="Marché Central"></label>
+    <label>Prix détail (XAF) <input id="rPrix" class="input" type="number" min="1" step="1" required placeholder="28500"></label>
+    <label>Prix de gros (XAF) <input id="rPrixGros" class="input" type="number" min="1" step="1"></label>
+    <label>Marque <input id="rMarque" class="input" placeholder="Mémé"></label>
+    <label>Origine <input id="rOrigine" class="input" placeholder="Thaïlande"></label>
+    <label class="check"><input type="checkbox" id="rPromo"> Promotion</label>
+    <label class="check"><input type="checkbox" id="rMomo"> Mobile Money mis en avant</label>
+    <label class="check"><input type="checkbox" id="rRupture"> Rupture constatée</label>
+    <label>Détail promo <input id="rPromoDetail" class="input" placeholder="-5 % si MoMo"></label>
+    <div><button class="btn primary" type="submit">💾 Enregistrer</button></div>
+  </form>
+</section>
+<section class="card">
+  <div class="card-head"><h2>Derniers relevés</h2></div>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Date</th><th>Produit</th><th>Ville</th><th>Prix</th><th>Source</th><th>Méthode</th><th></th></tr></thead>
+    <tbody id="tableReleves"></tbody>
+  </table></div>
+</section>
+{% endblock %}

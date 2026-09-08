@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block content %}
+<section class="card">
+  <div class="filters">
+    <label>Produit <select id="prixProduit" class="input"></select></label>
+    <label>Période
+      <select id="prixJours" class="input">
+        <option value="7">7 jours</option>
+        <option value="30" selected>30 jours</option>
+        <option value="90">90 jours</option>
+      </select>
+    </label>
+  </div>
+  <div class="kpis small" id="prixStats"></div>
+  <div id="chartPrix" class="chart tall"></div>
+</section>
+<section class="card">
+  <div class="card-head"><h2>Derniers relevés — <span id="prixNom"></span></h2></div>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Date</th><th>Ville</th><th>Prix</th><th>Source</th><th>Méthode</th><th>Marque</th><th></th></tr></thead>
+    <tbody id="tablePrix"></tbody>
+  </table></div>
+</section>
+{% endblock %}

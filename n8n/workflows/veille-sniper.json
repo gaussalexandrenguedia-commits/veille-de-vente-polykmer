@@ -1,0 +1,162 @@
+{
+  "name": "veille-sniper",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "veille-sniper",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "wh-entree",
+      "name": "Webhook entrée",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [240, 300],
+      "webhookId": "veille-sniper-hook"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Normalise le signal (sniper / ChangeDetection.io / API veille)\nconst b = $input.first().json.body ?? $input.first().json;\nconst prix = Number(b.prix ?? b.price ?? 0);\nconst avant = Number(b.prix_avant ?? b.previous_price ?? 0);\nconst drop = avant > 0 && prix > 0 ? ((avant - prix) / avant) * 100 : Number(b.drop_pct ?? 0);\nreturn [{ json: {\n  watch_id: b.watch_id ?? 'inconnu',\n  title: b.title ?? b.titre ?? 'Signal',\n  rule: b.rule ?? 'changed',\n  severity: b.severity ?? 'jaune',\n  prix, prix_avant: avant,\n  drop_pct: Math.round(drop * 100) / 100,\n  url: b.url ?? '',\n  ville: b.ville ?? 'Douala',\n  produit: b.produit ?? null\n}}];"
+      },
+      "id": "code-normalise",
+      "name": "Normaliser signal",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [460, 300]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {"caseSensitive": true, "leftValue": "", "typeValidation": "loose"},
+          "conditions": [
+            {
+              "id": "cond-drop",
+              "leftValue": "={{ $json.drop_pct }}",
+              "rightValue": 20,
+              "operator": {"type": "number", "operation": "largerEqual"}
+            }
+          ],
+          "combinator": "or"
+        },
+        "options": {}
+      },
+      "id": "if-grosse-baisse",
+      "name": "Baisse ≥ 20 % ?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [680, 300]
+    },
+    {
+      "parameters": {
+        "chatId": "VOTRE_CHAT_ID",
+        "text": "🔴 *SNIPER — grosse baisse -{{ $json.drop_pct }} %*\n{{ $json.title }}\nPrix : {{ $json.prix }} XAF (avant {{ $json.prix_avant }})\n{{ $json.ville }} · {{ $json.watch_id }}\n{{ $json.url }}",
+        "additionalFields": {"parse_mode": "Markdown"}
+      },
+      "id": "tg-urgent",
+      "name": "Telegram URGENT",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [900, 200],
+      "credentials": {"telegramApi": {"id": null, "name": "Telegram bot veille"}}
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://host.docker.internal:8000/api/v1/ingest/scraper",
+        "sendHeaders": true,
+        "headerParameters": {"parameters": [{"name": "X-API-Key", "value": "VOTRE_CLE_API_INGEST"}]},
+        "sendBody": true,
+        "contentType": "json",
+        "jsonBody": "=[{\"source\": \"n8n:{{ $json.watch_id }}\", \"url\": \"{{ $json.url }}\", \"titre\": \"{{ $json.title }}\", \"prix\": {{ $json.prix }}, \"ville\": \"{{ $json.ville }}\", \"produit\": \"{{ $json.produit }}\"}]",
+        "options": {}
+      },
+      "id": "http-api-veille",
+      "name": "Stocker API veille",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [1120, 200]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {"caseSensitive": true, "leftValue": "", "typeValidation": "loose"},
+          "conditions": [
+            {
+              "id": "cond-rupture",
+              "leftValue": "={{ $json.rule }}",
+              "rightValue": "back_in_stock",
+              "operator": {"type": "string", "operation": "equals"}
+            },
+            {
+              "id": "cond-motcle",
+              "leftValue": "={{ $json.rule }}",
+              "rightValue": "keyword",
+              "operator": {"type": "string", "operation": "equals"}
+            },
+            {
+              "id": "cond-nouveau",
+              "leftValue": "={{ $json.rule }}",
+              "rightValue": "new_item",
+              "operator": {"type": "string", "operation": "equals"}
+            }
+          ],
+          "combinator": "or"
+        },
+        "options": {}
+      },
+      "id": "if-info",
+      "name": "Stock / mot-clé / nouveauté ?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [900, 420]
+    },
+    {
+      "parameters": {
+        "chatId": "VOTRE_CHAT_ID",
+        "text": "🟡 *{{ $json.title }}*\n{{ $json.ville }} · {{ $json.watch_id }}\n{{ $json.url }}",
+        "additionalFields": {"parse_mode": "Markdown"}
+      },
+      "id": "tg-info",
+      "name": "Telegram info",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [1120, 420],
+      "credentials": {"telegramApi": {"id": null, "name": "Telegram bot veille"}}
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={\"ok\": true, \"rule\": \"{{ $json.rule }}\", \"drop_pct\": {{ $json.drop_pct }} }",
+        "options": {}
+      },
+      "id": "repond",
+      "name": "Répondre OK",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [1340, 300]
+    }
+  ],
+  "connections": {
+    "Webhook entrée": {"main": [[{"node": "Normaliser signal", "type": "main", "index": 0}]]},
+    "Normaliser signal": {"main": [[{"node": "Baisse ≥ 20 % ?", "type": "main", "index": 0}]]},
+    "Baisse ≥ 20 % ?": {
+      "main": [
+        [{"node": "Telegram URGENT", "type": "main", "index": 0}],
+        [{"node": "Stock / mot-clé / nouveauté ?", "type": "main", "index": 0}]
+      ]
+    },
+    "Telegram URGENT": {"main": [[{"node": "Stocker API veille", "type": "main", "index": 0}]]},
+    "Stocker API veille": {"main": [[{"node": "Répondre OK", "type": "main", "index": 0}]]},
+    "Stock / mot-clé / nouveauté ?": {
+      "main": [
+        [{"node": "Telegram info", "type": "main", "index": 0}],
+        [{"node": "Répondre OK", "type": "main", "index": 0}]
+      ]
+    },
+    "Telegram info": {"main": [[{"node": "Répondre OK", "type": "main", "index": 0}]]}
+  },
+  "active": false,
+  "settings": {"executionOrder": "v1"},
+  "pinData": {}
+}

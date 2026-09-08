@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block content %}
+<section class="kpis" id="sniperStats" hidden>
+  <div class="kpi"><span class="kpi-label">Cibles surveillées</span><span class="kpi-val" id="snWatches">…</span></div>
+  <div class="kpi"><span class="kpi-label">Signaux (24 h)</span><span class="kpi-val info" id="snSignaux">…</span></div>
+  <div class="kpi"><span class="kpi-label">Cooldowns actifs</span><span class="kpi-val" id="snCooldowns">…</span></div>
+  <div class="kpi"><span class="kpi-label">Config connue</span><span class="kpi-val ok" id="snConfig">…</span></div>
+</section>
+
+<section class="card" id="sniperOnboard" hidden>
+  <h2>⚡ Le sniper ne tourne pas encore</h2>
+  <p>Démarrez la surveillance temps réel (polling + webhooks &lt; 1 s + Telegram) :</p>
+  <pre>cd sniper
+cp config/watches.example.yaml config/watches.yaml
+python -m sniper.runner --config config/watches.yaml   # boucle
+# + webhooks push : uvicorn sniper.webhook_server:app --port 8001</pre>
+  <p class="muted">Cette page lira alors <code>sniper/state/sniper.db</code> en direct : prix suivis, fraîcheur, santé des sélecteurs auto-réparables.</p>
+</section>
+
+<section id="watchGrid" class="watch-grid"></section>
+
+<section class="card">
+  <div class="card-head"><h2>Tester le chemin &lt; 1 s (webhook push)</h2></div>
+  <pre>curl -X POST localhost:8001/hook/demo-riz-mokolo -H 'Content-Type: application/json' \
+  -d '{"price": 25000, "stock": true}'</pre>
+  <p class="muted">Le signal est évalué et alerté en quelques centaines de millisecondes (voir <code>latency_ms</code>).</p>
+</section>
+{% endblock %}

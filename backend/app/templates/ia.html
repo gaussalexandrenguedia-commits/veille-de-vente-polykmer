@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+{% block content %}
+<section class="card">
+  <div class="card-head">
+    <h2 id="iaStatus">🤖 Agent IA — …</h2>
+    <button class="btn small" id="btnTestIA">⚡ Tester la connexion</button>
+  </div>
+  <p class="muted" id="iaDetail">Vérification…</p>
+</section>
+
+<section class="grid-2">
+  <div class="card">
+    <div class="card-head"><h2>1 · Parser d'annonce (NLP)</h2></div>
+    <form id="formParse" class="form">
+      <textarea id="iaTexte" class="input" rows="3" required
+        placeholder="Ex : Vs iphone 13 propre 350k kmer négo à dla 699123456"></textarea>
+      <div><button class="btn primary" type="submit">Structurer → JSON</button></div>
+    </form>
+    <pre id="iaParseOut" hidden></pre>
+  </div>
+  <div class="card">
+    <div class="card-head"><h2>2 · Scoreur d'opportunité</h2></div>
+    <form id="formScore" class="form">
+      <label>Produit <select id="iaProduit" class="input"></select></label>
+      <label>Prix constaté (XAF) <input id="iaPrix" class="input" type="number" min="1" required placeholder="24000"></label>
+      <label>Ville <input id="iaVille" class="input" placeholder="Douala"></label>
+      <label>Texte annonce (fraude) <input id="iaTexteScore" class="input" placeholder="optionnel"></label>
+      <div><button class="btn primary" type="submit">Calculer le score</button></div>
+    </form>
+    <div id="iaScoreOut"></div>
+  </div>
+</section>
+
+<section class="grid-2">
+  <div class="card">
+    <div class="card-head"><h2>3 · Vision / OCR (flyer, capture)</h2></div>
+    <form id="formVision" class="form">
+      <label>Image (JPEG/PNG/WebP, ≤ 5 Mo) <input id="iaImage" class="input" type="file" accept="image/jpeg,image/png,image/webp" required></label>
+      <label>Titre attendu (validation, optionnel) <input id="iaTitre" class="input" placeholder="Congélateur Hisense 200L"></label>
+      <div><button class="btn primary" type="submit">Analyser l'image</button></div>
+    </form>
+    <pre id="iaVisionOut" hidden></pre>
+  </div>
+  <div class="card">
+    <div class="card-head"><h2>4 · Message vendeur one-click</h2></div>
+    <form id="formMsg" class="form">
+      <label>Produit <input id="iaMProduit" class="input" value="iPhone 13" required></label>
+      <label>Prix (XAF) <input id="iaMPrix" class="input" type="number" value="350000" required></label>
+      <label>Ville <input id="iaMVille" class="input" value="Douala"></label>
+      <label>Tél vendeur <input id="iaMPhone" class="input" placeholder="699123456"></label>
+      <label>Prix proposé <input id="iaMPropose" class="input" type="number" placeholder="320000"></label>
+      <div><button class="btn primary" type="submit">Rédiger</button></div>
+    </form>
+    <div id="iaMsgOut"></div>
+  </div>
+</section>
+
+<section class="card">
+  <div class="card-head"><h2>5 · Rapport quotidien</h2><button class="btn small" id="btnRapport">📰 Générer</button></div>
+  <div id="iaRapportOut" class="comment"><span class="muted">Cliquez sur Générer.</span></div>
+</section>
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+{% block content %}
+<section class="kpis">
+  <div class="kpi"><span class="kpi-label">Volume (14 j)</span><span class="kpi-val" id="soVolume">…</span></div>
+  <div class="kpi"><span class="kpi-label">Score moyen</span><span class="kpi-val" id="soScore">…</span></div>
+  <div class="kpi"><span class="kpi-label">Négatifs</span><span class="kpi-val danger" id="soNeg">…</span></div>
+  <div class="kpi"><span class="kpi-label">Positifs</span><span class="kpi-val ok" id="soPos">…</span></div>
+</section>
+<section class="grid-2">
+  <div class="card">
+    <div class="card-head"><h2>Sentiment dans le temps</h2></div>
+    <div id="chartSentiment" class="chart"></div>
+  </div>
+  <div class="card">
+    <div class="card-head"><h2>Motifs de plainte</h2></div>
+    <div id="chartMotifs" class="chart"></div>
+  </div>
+</section>
+<section class="grid-2">
+  <div class="card">
+    <div class="card-head"><h2>Ajouter un commentaire (scoré auto)</h2></div>
+    <form id="formComment" class="form">
+      <label>Source
+        <select id="cSource" class="input">
+          <option>Panel Facebook</option>
+          <option>Canaux Telegram</option>
+        </select>
+      </label>
+      <label>Texte <textarea id="cTexte" class="input" rows="3" required
+        placeholder="Ex : Prix du riz encore augmenté à Mokolo…"></textarea></label>
+      <button class="btn primary" type="submit">Analyser &amp; enregistrer</button>
+      <span id="cResult" class="muted"></span>
+    </form>
+  </div>
+  <div class="card">
+    <div class="card-head"><h2>Derniers commentaires</h2></div>
+    <div id="listComments" class="comment-list"></div>
+  </div>
+</section>
+{% endblock %}

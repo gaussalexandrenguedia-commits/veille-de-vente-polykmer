@@ -1,0 +1,41 @@
+version: "3.9"
+
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: veille_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: veille
+      POSTGRES_PASSWORD: veille_pw
+      POSTGRES_DB: veille_vente
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U veille"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  # Optionnel — Metabase (phase 2/3, décommenter pour la prod BI)
+  # metabase:
+  #   image: metabase/metabase:latest
+  #   container_name: veille_metabase
+  #   ports:
+  #     - "3000:3000"
+  #   environment:
+  #     MB_DB_TYPE: postgres
+  #     MB_DB_DBNAME: veille_vente
+  #     MB_DB_PORT: 5432
+  #     MB_DB_USER: veille
+  #     MB_DB_PASS: veille_pw
+  #     MB_DB_HOST: db
+  #   depends_on:
+  #     db:
+  #       condition: service_healthy
+
+volumes:
+  pgdata:

@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block content %}
+<section class="card">
+  <div class="tabs">
+    <button class="tab on" data-tab="produits">Produits</button>
+    <button class="tab" data-tab="marches">Marchés</button>
+    <button class="tab" data-tab="sources">Sources</button>
+  </div>
+  <div class="table-wrap" id="tab-produits"><table>
+    <thead><tr><th>SKU</th><th>Nom</th><th>Catégorie</th><th>Unité</th><th>Marques</th><th>Traceur</th></tr></thead>
+    <tbody id="tableProduits"></tbody>
+  </table></div>
+  <div class="table-wrap" id="tab-marches" hidden><table>
+    <thead><tr><th>Marché</th><th>Ville</th><th>Pays</th><th>GPS</th></tr></thead>
+    <tbody id="tableMarches"></tbody>
+  </table></div>
+  <div class="table-wrap" id="tab-sources" hidden><table>
+    <thead><tr><th>Source</th><th>Type</th><th>Fréquence</th><th>Actif</th></tr></thead>
+    <tbody id="tableSources"></tbody>
+  </table></div>
+</section>
+{% endblock %}

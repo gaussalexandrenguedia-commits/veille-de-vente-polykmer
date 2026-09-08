@@ -1,0 +1,922 @@
+date,sku,produit,categorie,ville,marche,source,methode,prix,devise,marque,origine,rupture,promo,promo_detail,paiement_momo
+2026-07-15,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Douala,Marché Central,Relevés terrain Kobo,terrain,28400,XAF,Mémé,,0,0,,0
+2026-07-15,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Douala,Marché Central,Relevés terrain Kobo,terrain,1800,XAF,Mayor,,0,0,,0
+2026-07-15,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Yaoundé,Marché Mokolo,CoinAfrique,scrape,1800,XAF,Mayor,,0,0,,1
+2026-07-15,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,1800,XAF,Mayor,,0,0,,0
+2026-07-15,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Bafoussam,Marché A,Jumia Cameroun,scrape,1820,XAF,Mayor,,0,0,,0
+2026-07-15,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Douala,Marché Central,Jumia Cameroun,scrape,870,XAF,,,0,0,,0
+2026-07-15,CIMENT-50KG,Ciment 50 kg,Matériaux,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,5650,XAF,Dangote,,0,0,,0
+2026-07-15,CIMENT-50KG,Ciment 50 kg,Matériaux,Bafoussam,Marché A,Relevés terrain Kobo,terrain,5580,XAF,Dangote,,0,0,,0
+2026-07-15,CONGEL-200L,Congélateur 200 L,Électroménager,Douala,Marché Central,Jumia Cameroun,scrape,182000,XAF,Hisense,Chine,0,0,,1
+2026-07-15,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Douala,Marché Central,CoinAfrique,scrape,53900,XAF,Tecno,,0,0,,0
+2026-07-15,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Douala,Mboppi,Relevés terrain Kobo,terrain,54200,XAF,Tecno,,0,0,,0
+2026-07-15,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,55200,XAF,Tecno,,0,0,,0
+2026-07-16,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Douala,Mboppi,Relevés terrain Kobo,terrain,28200,XAF,Mémé,,0,0,,0
+2026-07-16,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Yaoundé,Marché Mokolo,CoinAfrique,scrape,27500,XAF,Mémé,,0,1,,0
+2026-07-16,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Bafoussam,Marché A,Relevés terrain Kobo,terrain,28500,XAF,Mémé,,0,0,,1
+2026-07-16,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Douala,Marché Central,Relevés terrain Kobo,terrain,1830,XAF,Mayor,,0,0,,1
+2026-07-16,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Douala,Mboppi,Jumia Cameroun,scrape,1790,XAF,Mayor,,0,0,,0
+2026-07-16,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Douala,Marché Central,CoinAfrique,scrape,890,XAF,,,0,0,,1
+2026-07-16,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Douala,Mboppi,Relevés terrain Kobo,terrain,910,XAF,,,0,1,,1
+2026-07-16,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Yaoundé,Marché Mokolo,Jumia Cameroun,scrape,900,XAF,,,0,0,,0
+2026-07-16,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Bafoussam,Marché A,Relevés terrain Kobo,terrain,900,XAF,,,0,0,,0
+2026-07-16,CIMENT-50KG,Ciment 50 kg,Matériaux,Douala,Marché Central,Relevés terrain Kobo,terrain,5430,XAF,Dangote,,0,0,,0
+2026-07-16,CIMENT-50KG,Ciment 50 kg,Matériaux,Bafoussam,Marché A,CoinAfrique,scrape,5540,XAF,Dangote,,0,1,,1
+2026-07-16,CONGEL-200L,Congélateur 200 L,Électroménager,Douala,Mboppi,Jumia Cameroun,scrape,193100,XAF,Hisense,Chine,0,0,,0
+2026-07-16,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Douala,Mboppi,CoinAfrique,scrape,54800,XAF,Tecno,,0,0,,1
+2026-07-16,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,53400,XAF,Tecno,,0,0,,0
+2026-07-17,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Douala,Marché Central,Jumia Cameroun,scrape,27000,XAF,Mémé,,0,1,,0
+2026-07-17,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Douala,Mboppi,CoinAfrique,scrape,28400,XAF,Mémé,,0,0,,1
+2026-07-17,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Douala,Marché Central,Relevés terrain Kobo,terrain,1800,XAF,Mayor,,0,0,,0
+2026-07-17,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Douala,Mboppi,Jumia Cameroun,scrape,1870,XAF,Mayor,,0,0,,0
+2026-07-17,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,1750,XAF,Mayor,,0,0,,0
+2026-07-17,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Bafoussam,Marché A,Relevés terrain Kobo,terrain,1790,XAF,Mayor,,0,0,,0
+2026-07-17,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Yaoundé,Marché Mokolo,Jumia Cameroun,scrape,900,XAF,,,0,0,,0
+2026-07-17,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,930,XAF,,,0,0,,0
+2026-07-17,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Bafoussam,Marché A,Jumia Cameroun,scrape,900,XAF,,,0,1,,0
+2026-07-17,CIMENT-50KG,Ciment 50 kg,Matériaux,Yaoundé,Marché Mfoundi,CoinAfrique,scrape,5820,XAF,Dangote,,0,0,,1
+2026-07-17,CIMENT-50KG,Ciment 50 kg,Matériaux,Bafoussam,Marché A,CoinAfrique,scrape,5470,XAF,Dangote,,1,0,,0
+2026-07-17,CONGEL-200L,Congélateur 200 L,Électroménager,Douala,Mboppi,CoinAfrique,scrape,180400,XAF,Hisense,Chine,0,0,,1
+2026-07-17,CONGEL-200L,Congélateur 200 L,Électroménager,Yaoundé,Marché Mokolo,Jumia Cameroun,scrape,184600,XAF,Hisense,Chine,0,0,,1
+2026-07-17,CONGEL-200L,Congélateur 200 L,Électroménager,Yaoundé,Marché Mfoundi,CoinAfrique,scrape,190300,XAF,Hisense,Chine,0,0,,0
+2026-07-17,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Douala,Mboppi,Jumia Cameroun,scrape,54500,XAF,Tecno,,0,0,,1
+2026-07-17,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Yaoundé,Marché Mfoundi,CoinAfrique,scrape,54400,XAF,Tecno,,0,0,,0
+2026-07-18,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Yaoundé,Marché Mokolo,CoinAfrique,scrape,28400,XAF,Mémé,,0,0,,1
+2026-07-18,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Yaoundé,Marché Mfoundi,CoinAfrique,scrape,27000,XAF,Mémé,,0,0,,1
+2026-07-18,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Bafoussam,Marché A,CoinAfrique,scrape,29100,XAF,Mémé,,1,0,,0
+2026-07-18,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Douala,Mboppi,CoinAfrique,scrape,1730,XAF,Mayor,,0,0,,1
+2026-07-18,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Yaoundé,Marché Mokolo,CoinAfrique,scrape,1860,XAF,Mayor,,0,0,,0
+2026-07-18,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Bafoussam,Marché A,Relevés terrain Kobo,terrain,1850,XAF,Mayor,,0,1,remise MoMo -5%,0
+2026-07-18,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Douala,Marché Central,Relevés terrain Kobo,terrain,900,XAF,,,0,0,,0
+2026-07-18,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,930,XAF,,,0,0,,1
+2026-07-18,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Bafoussam,Marché A,Jumia Cameroun,scrape,890,XAF,,,0,0,,1
+2026-07-18,CIMENT-50KG,Ciment 50 kg,Matériaux,Douala,Marché Central,Relevés terrain Kobo,terrain,5650,XAF,Dangote,,0,0,,0
+2026-07-18,CIMENT-50KG,Ciment 50 kg,Matériaux,Douala,Mboppi,Relevés terrain Kobo,terrain,5460,XAF,Dangote,,0,0,,1
+2026-07-18,CIMENT-50KG,Ciment 50 kg,Matériaux,Yaoundé,Marché Mokolo,Jumia Cameroun,scrape,5640,XAF,Dangote,,0,0,,0
+2026-07-18,CONGEL-200L,Congélateur 200 L,Électroménager,Yaoundé,Marché Mokolo,Jumia Cameroun,scrape,181900,XAF,Hisense,Chine,0,0,,1
+2026-07-18,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Douala,Marché Central,Jumia Cameroun,scrape,53000,XAF,Tecno,,0,0,,1
+2026-07-18,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Douala,Mboppi,Relevés terrain Kobo,terrain,56700,XAF,Tecno,,0,0,,0
+2026-07-18,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Yaoundé,Marché Mfoundi,Jumia Cameroun,scrape,54000,XAF,Tecno,,0,0,,1
+2026-07-19,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Douala,Mboppi,Relevés terrain Kobo,terrain,28200,XAF,Mémé,,0,0,,0
+2026-07-19,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,27900,XAF,Mémé,,1,0,,0
+2026-07-19,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,28600,XAF,Mémé,,0,0,,1
+2026-07-19,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Douala,Marché Central,Relevés terrain Kobo,terrain,1830,XAF,Mayor,,0,0,,0
+2026-07-19,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Douala,Mboppi,Jumia Cameroun,scrape,1880,XAF,Mayor,,0,0,,0
+2026-07-19,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Yaoundé,Marché Mokolo,CoinAfrique,scrape,1780,XAF,Mayor,,0,0,,1
+2026-07-19,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Bafoussam,Marché A,Jumia Cameroun,scrape,1810,XAF,Mayor,,0,0,,1
+2026-07-19,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,880,XAF,,,0,0,,0
+2026-07-19,CIMENT-50KG,Ciment 50 kg,Matériaux,Douala,Marché Central,Relevés terrain Kobo,terrain,5450,XAF,Dangote,,0,0,,0
+2026-07-19,CIMENT-50KG,Ciment 50 kg,Matériaux,Douala,Mboppi,Jumia Cameroun,scrape,5560,XAF,Dangote,,1,0,,0
+2026-07-19,CIMENT-50KG,Ciment 50 kg,Matériaux,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,5910,XAF,Dangote,,0,0,,0
+2026-07-19,CONGEL-200L,Congélateur 200 L,Électroménager,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,178300,XAF,Hisense,Chine,0,0,,1
+2026-07-19,CONGEL-200L,Congélateur 200 L,Électroménager,Bafoussam,Marché A,Jumia Cameroun,scrape,189200,XAF,Hisense,Chine,0,1,remise MoMo -5%,0
+2026-07-19,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Bafoussam,Marché A,Relevés terrain Kobo,terrain,55400,XAF,Tecno,,0,0,,1
+2026-07-20,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Yaoundé,Marché Mokolo,Jumia Cameroun,scrape,28600,XAF,Mémé,,0,0,,0
+2026-07-20,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,28100,XAF,Mémé,,0,1,remise MoMo -5%,0
+2026-07-20,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Bafoussam,Marché A,Jumia Cameroun,scrape,28300,XAF,Mémé,,0,0,,0
+2026-07-20,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Douala,Mboppi,CoinAfrique,scrape,1860,XAF,Mayor,,1,0,,1
+2026-07-20,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Yaoundé,Marché Mokolo,Jumia Cameroun,scrape,1840,XAF,Mayor,,0,1,,1
+2026-07-20,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Yaoundé,Marché Mfoundi,CoinAfrique,scrape,1800,XAF,Mayor,,0,0,,0
+2026-07-20,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Bafoussam,Marché A,Relevés terrain Kobo,terrain,1790,XAF,Mayor,,0,0,,0
+2026-07-20,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Douala,Marché Central,Relevés terrain Kobo,terrain,920,XAF,,,0,0,,0
+2026-07-20,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Douala,Mboppi,CoinAfrique,scrape,880,XAF,,,0,0,,0
+2026-07-20,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,920,XAF,,,0,0,,0
+2026-07-20,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,940,XAF,,,0,0,,0
+2026-07-20,CIMENT-50KG,Ciment 50 kg,Matériaux,Douala,Marché Central,Relevés terrain Kobo,terrain,5640,XAF,Dangote,,0,0,,1
+2026-07-20,CIMENT-50KG,Ciment 50 kg,Matériaux,Douala,Mboppi,Relevés terrain Kobo,terrain,5500,XAF,Dangote,,0,0,,0
+2026-07-20,CIMENT-50KG,Ciment 50 kg,Matériaux,Yaoundé,Marché Mokolo,Jumia Cameroun,scrape,5660,XAF,Dangote,,0,0,,0
+2026-07-20,CIMENT-50KG,Ciment 50 kg,Matériaux,Yaoundé,Marché Mfoundi,Jumia Cameroun,scrape,5810,XAF,Dangote,,0,0,,0
+2026-07-20,CIMENT-50KG,Ciment 50 kg,Matériaux,Bafoussam,Marché A,Relevés terrain Kobo,terrain,5560,XAF,Dangote,,0,0,,0
+2026-07-20,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Douala,Marché Central,Relevés terrain Kobo,terrain,55300,XAF,Tecno,,0,0,,0
+2026-07-20,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Douala,Mboppi,Relevés terrain Kobo,terrain,54500,XAF,Tecno,,0,0,,1
+2026-07-20,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Bafoussam,Marché A,Jumia Cameroun,scrape,54800,XAF,Tecno,,0,0,,0
+2026-07-21,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Douala,Marché Central,CoinAfrique,scrape,29600,XAF,Mémé,,0,0,,0
+2026-07-21,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,27100,XAF,Mémé,,0,1,remise MoMo -5%,1
+2026-07-21,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Bafoussam,Marché A,Relevés terrain Kobo,terrain,28300,XAF,Mémé,,0,0,,0
+2026-07-21,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Douala,Marché Central,Jumia Cameroun,scrape,1820,XAF,Mayor,,0,0,,0
+2026-07-21,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Douala,Mboppi,Relevés terrain Kobo,terrain,1780,XAF,Mayor,,0,0,,0
+2026-07-21,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Yaoundé,Marché Mokolo,Jumia Cameroun,scrape,1820,XAF,Mayor,,0,0,,1
+2026-07-21,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Bafoussam,Marché A,Jumia Cameroun,scrape,1830,XAF,Mayor,,0,0,,0
+2026-07-21,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Douala,Marché Central,CoinAfrique,scrape,880,XAF,,,0,0,,0
+2026-07-21,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Douala,Mboppi,Relevés terrain Kobo,terrain,910,XAF,,,0,0,,0
+2026-07-21,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,910,XAF,,,0,0,,1
+2026-07-21,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Bafoussam,Marché A,Jumia Cameroun,scrape,910,XAF,,,0,0,,0
+2026-07-21,CONGEL-200L,Congélateur 200 L,Électroménager,Douala,Mboppi,CoinAfrique,scrape,188400,XAF,Hisense,Chine,0,0,,1
+2026-07-21,CONGEL-200L,Congélateur 200 L,Électroménager,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,181700,XAF,Hisense,Chine,0,0,,1
+2026-07-21,CONGEL-200L,Congélateur 200 L,Électroménager,Bafoussam,Marché A,Relevés terrain Kobo,terrain,183000,XAF,Hisense,Chine,0,0,,0
+2026-07-21,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Douala,Marché Central,Relevés terrain Kobo,terrain,54300,XAF,Tecno,,0,0,,0
+2026-07-21,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Douala,Mboppi,Relevés terrain Kobo,terrain,54100,XAF,Tecno,,0,0,,0
+2026-07-21,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Yaoundé,Marché Mokolo,CoinAfrique,scrape,54900,XAF,Tecno,,0,0,,0
+2026-07-22,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Douala,Marché Central,Relevés terrain Kobo,terrain,27500,XAF,Mémé,,0,0,,0
+2026-07-22,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Douala,Mboppi,Relevés terrain Kobo,terrain,27500,XAF,Mémé,,0,0,,1
+2026-07-22,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Yaoundé,Marché Mfoundi,CoinAfrique,scrape,27900,XAF,Mémé,,0,0,,1
+2026-07-22,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Bafoussam,Marché A,Relevés terrain Kobo,terrain,28100,XAF,Mémé,,0,0,,1
+2026-07-22,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Douala,Marché Central,Jumia Cameroun,scrape,1840,XAF,Mayor,,0,0,,0
+2026-07-22,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Douala,Mboppi,CoinAfrique,scrape,1810,XAF,Mayor,,0,0,,0
+2026-07-22,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,1740,XAF,Mayor,,0,0,,0
+2026-07-22,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,1810,XAF,Mayor,,0,0,,0
+2026-07-22,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Bafoussam,Marché A,Relevés terrain Kobo,terrain,1780,XAF,Mayor,,0,0,,1
+2026-07-22,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Douala,Marché Central,Relevés terrain Kobo,terrain,910,XAF,,,0,0,,0
+2026-07-22,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,930,XAF,,,0,1,,0
+2026-07-22,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,860,XAF,,,0,0,,0
+2026-07-22,CIMENT-50KG,Ciment 50 kg,Matériaux,Douala,Marché Central,CoinAfrique,scrape,5600,XAF,Dangote,,0,0,,0
+2026-07-22,CIMENT-50KG,Ciment 50 kg,Matériaux,Douala,Mboppi,CoinAfrique,scrape,5630,XAF,Dangote,,0,0,,1
+2026-07-22,CIMENT-50KG,Ciment 50 kg,Matériaux,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,5770,XAF,Dangote,,0,1,,0
+2026-07-22,CIMENT-50KG,Ciment 50 kg,Matériaux,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,5520,XAF,Dangote,,0,0,,0
+2026-07-22,CONGEL-200L,Congélateur 200 L,Électroménager,Douala,Marché Central,Jumia Cameroun,scrape,187000,XAF,Hisense,Chine,0,0,,1
+2026-07-22,CONGEL-200L,Congélateur 200 L,Électroménager,Douala,Mboppi,Jumia Cameroun,scrape,185400,XAF,Hisense,Chine,0,0,,1
+2026-07-22,CONGEL-200L,Congélateur 200 L,Électroménager,Yaoundé,Marché Mokolo,CoinAfrique,scrape,184000,XAF,Hisense,Chine,0,0,,1
+2026-07-22,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Douala,Marché Central,CoinAfrique,scrape,54800,XAF,Tecno,,0,0,,0
+2026-07-22,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,54600,XAF,Tecno,,0,0,,0
+2026-07-22,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,54400,XAF,Tecno,,0,0,,0
+2026-07-23,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Douala,Marché Central,Jumia Cameroun,scrape,27900,XAF,Mémé,,0,0,,1
+2026-07-23,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Douala,Mboppi,Relevés terrain Kobo,terrain,27800,XAF,Mémé,,0,0,,0
+2026-07-23,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Yaoundé,Marché Mokolo,Jumia Cameroun,scrape,27700,XAF,Mémé,,0,0,,0
+2026-07-23,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Yaoundé,Marché Mfoundi,Jumia Cameroun,scrape,28800,XAF,Mémé,,0,0,,1
+2026-07-23,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Douala,Marché Central,Relevés terrain Kobo,terrain,1810,XAF,Mayor,,0,0,,1
+2026-07-23,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Douala,Mboppi,CoinAfrique,scrape,1800,XAF,Mayor,,0,0,,0
+2026-07-23,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Yaoundé,Marché Mfoundi,Jumia Cameroun,scrape,1750,XAF,Mayor,,0,0,,0
+2026-07-23,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Douala,Marché Central,CoinAfrique,scrape,910,XAF,,,0,0,,0
+2026-07-23,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Douala,Mboppi,Relevés terrain Kobo,terrain,880,XAF,,,0,0,,0
+2026-07-23,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Yaoundé,Marché Mokolo,Jumia Cameroun,scrape,930,XAF,,,0,0,,1
+2026-07-23,CIMENT-50KG,Ciment 50 kg,Matériaux,Douala,Marché Central,Relevés terrain Kobo,terrain,5310,XAF,Dangote,,0,1,,1
+2026-07-23,CIMENT-50KG,Ciment 50 kg,Matériaux,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,5660,XAF,Dangote,,0,0,,0
+2026-07-23,CONGEL-200L,Congélateur 200 L,Électroménager,Douala,Marché Central,CoinAfrique,scrape,183300,XAF,Hisense,Chine,0,0,,1
+2026-07-23,CONGEL-200L,Congélateur 200 L,Électroménager,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,180800,XAF,Hisense,Chine,0,0,,0
+2026-07-23,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Douala,Marché Central,Jumia Cameroun,scrape,55700,XAF,Tecno,,0,0,,0
+2026-07-23,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Bafoussam,Marché A,Relevés terrain Kobo,terrain,55000,XAF,Tecno,,0,0,,0
+2026-07-24,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Douala,Mboppi,Jumia Cameroun,scrape,28200,XAF,Mémé,,0,1,remise MoMo -5%,1
+2026-07-24,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,28500,XAF,Mémé,,0,0,,1
+2026-07-24,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,28400,XAF,Mémé,,0,0,,1
+2026-07-24,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Douala,Marché Central,Relevés terrain Kobo,terrain,1830,XAF,Mayor,,0,0,,1
+2026-07-24,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Douala,Mboppi,Relevés terrain Kobo,terrain,1750,XAF,Mayor,,0,0,,1
+2026-07-24,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Yaoundé,Marché Mokolo,CoinAfrique,scrape,1800,XAF,Mayor,,0,1,,0
+2026-07-24,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,1830,XAF,Mayor,,0,0,,0
+2026-07-24,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Bafoussam,Marché A,Relevés terrain Kobo,terrain,1810,XAF,Mayor,,0,0,,1
+2026-07-24,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Douala,Mboppi,CoinAfrique,scrape,890,XAF,,,0,0,,0
+2026-07-24,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Yaoundé,Marché Mfoundi,CoinAfrique,scrape,900,XAF,,,0,0,,0
+2026-07-24,CIMENT-50KG,Ciment 50 kg,Matériaux,Douala,Marché Central,Relevés terrain Kobo,terrain,5550,XAF,Dangote,,0,0,,0
+2026-07-24,CIMENT-50KG,Ciment 50 kg,Matériaux,Douala,Mboppi,Relevés terrain Kobo,terrain,5640,XAF,Dangote,,0,0,,1
+2026-07-24,CIMENT-50KG,Ciment 50 kg,Matériaux,Yaoundé,Marché Mokolo,Jumia Cameroun,scrape,5800,XAF,Dangote,,0,0,,0
+2026-07-24,CIMENT-50KG,Ciment 50 kg,Matériaux,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,5790,XAF,Dangote,,0,0,,0
+2026-07-24,CIMENT-50KG,Ciment 50 kg,Matériaux,Bafoussam,Marché A,CoinAfrique,scrape,5660,XAF,Dangote,,0,0,,0
+2026-07-24,CONGEL-200L,Congélateur 200 L,Électroménager,Douala,Mboppi,Relevés terrain Kobo,terrain,182000,XAF,Hisense,Chine,0,0,,0
+2026-07-24,CONGEL-200L,Congélateur 200 L,Électroménager,Yaoundé,Marché Mokolo,CoinAfrique,scrape,180300,XAF,Hisense,Chine,0,0,,0
+2026-07-24,CONGEL-200L,Congélateur 200 L,Électroménager,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,183300,XAF,Hisense,Chine,0,0,,1
+2026-07-24,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Douala,Marché Central,Relevés terrain Kobo,terrain,55000,XAF,Tecno,,0,0,,0
+2026-07-24,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,56300,XAF,Tecno,,0,0,,0
+2026-07-25,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Douala,Marché Central,Relevés terrain Kobo,terrain,28300,XAF,Mémé,,0,1,,0
+2026-07-25,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,27500,XAF,Mémé,,0,0,,0
+2026-07-25,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Douala,Mboppi,Relevés terrain Kobo,terrain,1760,XAF,Mayor,,0,0,,1
+2026-07-25,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,910,XAF,,,0,0,,0
+2026-07-25,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Bafoussam,Marché A,CoinAfrique,scrape,910,XAF,,,1,1,,0
+2026-07-25,CIMENT-50KG,Ciment 50 kg,Matériaux,Douala,Marché Central,Jumia Cameroun,scrape,5500,XAF,Dangote,,0,0,,1
+2026-07-25,CIMENT-50KG,Ciment 50 kg,Matériaux,Yaoundé,Marché Mfoundi,CoinAfrique,scrape,5610,XAF,Dangote,,0,0,,1
+2026-07-25,CIMENT-50KG,Ciment 50 kg,Matériaux,Bafoussam,Marché A,Jumia Cameroun,scrape,5400,XAF,Dangote,,0,0,,1
+2026-07-25,CONGEL-200L,Congélateur 200 L,Électroménager,Yaoundé,Marché Mokolo,CoinAfrique,scrape,189800,XAF,Hisense,Chine,0,0,,0
+2026-07-25,CONGEL-200L,Congélateur 200 L,Électroménager,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,189400,XAF,Hisense,Chine,0,0,,0
+2026-07-25,CONGEL-200L,Congélateur 200 L,Électroménager,Bafoussam,Marché A,Jumia Cameroun,scrape,185200,XAF,Hisense,Chine,0,0,,0
+2026-07-25,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Douala,Mboppi,Jumia Cameroun,scrape,54900,XAF,Tecno,,0,0,,0
+2026-07-25,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,55700,XAF,Tecno,,0,0,,1
+2026-07-25,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,55800,XAF,Tecno,,0,0,,0
+2026-07-26,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Douala,Marché Central,Jumia Cameroun,scrape,28700,XAF,Mémé,,0,0,,0
+2026-07-26,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Douala,Mboppi,Relevés terrain Kobo,terrain,27600,XAF,Mémé,,0,0,,1
+2026-07-26,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,28400,XAF,Mémé,,0,0,,0
+2026-07-26,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,28400,XAF,Mémé,,0,0,,0
+2026-07-26,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Bafoussam,Marché A,Relevés terrain Kobo,terrain,28500,XAF,Mémé,,0,0,,0
+2026-07-26,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Douala,Marché Central,Jumia Cameroun,scrape,1850,XAF,Mayor,,0,1,,1
+2026-07-26,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Douala,Mboppi,CoinAfrique,scrape,1770,XAF,Mayor,,0,0,,1
+2026-07-26,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Yaoundé,Marché Mfoundi,Jumia Cameroun,scrape,1750,XAF,Mayor,,0,0,,0
+2026-07-26,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Douala,Mboppi,CoinAfrique,scrape,920,XAF,,,0,0,,0
+2026-07-26,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,880,XAF,,,0,0,,1
+2026-07-26,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Bafoussam,Marché A,Relevés terrain Kobo,terrain,900,XAF,,,0,1,remise MoMo -5%,0
+2026-07-26,CIMENT-50KG,Ciment 50 kg,Matériaux,Douala,Marché Central,CoinAfrique,scrape,5560,XAF,Dangote,,0,1,,1
+2026-07-26,CIMENT-50KG,Ciment 50 kg,Matériaux,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,5800,XAF,Dangote,,0,0,,0
+2026-07-26,CONGEL-200L,Congélateur 200 L,Électroménager,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,180000,XAF,Hisense,Chine,0,0,,0
+2026-07-26,CONGEL-200L,Congélateur 200 L,Électroménager,Yaoundé,Marché Mfoundi,CoinAfrique,scrape,188400,XAF,Hisense,Chine,0,0,,1
+2026-07-26,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Douala,Marché Central,CoinAfrique,scrape,54600,XAF,Tecno,,0,0,,1
+2026-07-26,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,56500,XAF,Tecno,,0,0,,1
+2026-07-26,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,54500,XAF,Tecno,,0,0,,0
+2026-07-26,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Bafoussam,Marché A,Relevés terrain Kobo,terrain,55700,XAF,Tecno,,0,1,,1
+2026-07-27,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Douala,Marché Central,Relevés terrain Kobo,terrain,28900,XAF,Mémé,,0,1,,0
+2026-07-27,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Douala,Mboppi,CoinAfrique,scrape,28600,XAF,Mémé,,0,0,,0
+2026-07-27,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Douala,Mboppi,Jumia Cameroun,scrape,1840,XAF,Mayor,,0,0,,1
+2026-07-27,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Douala,Mboppi,CoinAfrique,scrape,900,XAF,,,1,0,,0
+2026-07-27,CIMENT-50KG,Ciment 50 kg,Matériaux,Douala,Marché Central,Relevés terrain Kobo,terrain,5570,XAF,Dangote,,0,0,,1
+2026-07-27,CIMENT-50KG,Ciment 50 kg,Matériaux,Douala,Mboppi,Jumia Cameroun,scrape,5680,XAF,Dangote,,0,0,,0
+2026-07-27,CIMENT-50KG,Ciment 50 kg,Matériaux,Yaoundé,Marché Mokolo,Jumia Cameroun,scrape,5830,XAF,Dangote,,0,0,,1
+2026-07-27,CIMENT-50KG,Ciment 50 kg,Matériaux,Yaoundé,Marché Mfoundi,Jumia Cameroun,scrape,5670,XAF,Dangote,,0,0,,1
+2026-07-27,CONGEL-200L,Congélateur 200 L,Électroménager,Douala,Marché Central,CoinAfrique,scrape,191800,XAF,Hisense,Chine,0,0,,0
+2026-07-27,CONGEL-200L,Congélateur 200 L,Électroménager,Douala,Mboppi,Relevés terrain Kobo,terrain,182200,XAF,Hisense,Chine,0,0,,1
+2026-07-27,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Douala,Marché Central,Jumia Cameroun,scrape,54000,XAF,Tecno,,0,0,,1
+2026-07-27,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Douala,Mboppi,Jumia Cameroun,scrape,55900,XAF,Tecno,,0,0,,1
+2026-07-27,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Yaoundé,Marché Mfoundi,Jumia Cameroun,scrape,56500,XAF,Tecno,,0,0,,0
+2026-07-27,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Bafoussam,Marché A,Jumia Cameroun,scrape,53000,XAF,Tecno,,0,0,,1
+2026-07-28,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Douala,Marché Central,CoinAfrique,scrape,28300,XAF,Mémé,,0,0,,1
+2026-07-28,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Douala,Mboppi,Relevés terrain Kobo,terrain,28000,XAF,Mémé,,0,0,,1
+2026-07-28,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,29000,XAF,Mémé,,0,0,,0
+2026-07-28,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,29000,XAF,Mémé,,0,0,,0
+2026-07-28,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Douala,Marché Central,Jumia Cameroun,scrape,1840,XAF,Mayor,,0,1,,0
+2026-07-28,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Yaoundé,Marché Mokolo,CoinAfrique,scrape,1780,XAF,Mayor,,0,0,,0
+2026-07-28,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,1790,XAF,Mayor,,0,0,,1
+2026-07-28,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Bafoussam,Marché A,Jumia Cameroun,scrape,1780,XAF,Mayor,,0,0,,0
+2026-07-28,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Douala,Marché Central,Relevés terrain Kobo,terrain,910,XAF,,,0,0,,1
+2026-07-28,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Douala,Mboppi,Relevés terrain Kobo,terrain,870,XAF,,,0,0,,0
+2026-07-28,CIMENT-50KG,Ciment 50 kg,Matériaux,Douala,Marché Central,CoinAfrique,scrape,5630,XAF,Dangote,,0,0,,0
+2026-07-28,CIMENT-50KG,Ciment 50 kg,Matériaux,Douala,Mboppi,Relevés terrain Kobo,terrain,5590,XAF,Dangote,,0,0,,0
+2026-07-28,CIMENT-50KG,Ciment 50 kg,Matériaux,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,5650,XAF,Dangote,,0,0,,0
+2026-07-28,CONGEL-200L,Congélateur 200 L,Électroménager,Douala,Mboppi,Jumia Cameroun,scrape,186000,XAF,Hisense,Chine,0,0,,0
+2026-07-28,CONGEL-200L,Congélateur 200 L,Électroménager,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,182500,XAF,Hisense,Chine,0,0,,0
+2026-07-28,CONGEL-200L,Congélateur 200 L,Électroménager,Yaoundé,Marché Mfoundi,CoinAfrique,scrape,185400,XAF,Hisense,Chine,0,0,,1
+2026-07-28,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,55000,XAF,Tecno,,0,0,,0
+2026-07-29,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Douala,Marché Central,Relevés terrain Kobo,terrain,28000,XAF,Mémé,,0,0,,1
+2026-07-29,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Douala,Mboppi,Relevés terrain Kobo,terrain,28200,XAF,Mémé,,0,0,,0
+2026-07-29,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,27400,XAF,Mémé,,0,1,,0
+2026-07-29,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,27900,XAF,Mémé,,0,0,,0
+2026-07-29,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Douala,Marché Central,Jumia Cameroun,scrape,1760,XAF,Mayor,,0,0,,1
+2026-07-29,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,1830,XAF,Mayor,,0,0,,0
+2026-07-29,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,1880,XAF,Mayor,,0,0,,1
+2026-07-29,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Bafoussam,Marché A,Relevés terrain Kobo,terrain,1740,XAF,Mayor,,0,0,,1
+2026-07-29,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Douala,Mboppi,Relevés terrain Kobo,terrain,910,XAF,,,0,0,,1
+2026-07-29,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,950,XAF,,,0,0,,1
+2026-07-29,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Bafoussam,Marché A,Relevés terrain Kobo,terrain,860,XAF,,,0,0,,0
+2026-07-29,CIMENT-50KG,Ciment 50 kg,Matériaux,Douala,Marché Central,Jumia Cameroun,scrape,5550,XAF,Dangote,,0,0,,0
+2026-07-29,CIMENT-50KG,Ciment 50 kg,Matériaux,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,5760,XAF,Dangote,,0,0,,1
+2026-07-29,CIMENT-50KG,Ciment 50 kg,Matériaux,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,5590,XAF,Dangote,,0,0,,1
+2026-07-29,CIMENT-50KG,Ciment 50 kg,Matériaux,Bafoussam,Marché A,CoinAfrique,scrape,5540,XAF,Dangote,,0,0,,1
+2026-07-29,CONGEL-200L,Congélateur 200 L,Électroménager,Douala,Marché Central,Jumia Cameroun,scrape,185400,XAF,Hisense,Chine,0,0,,0
+2026-07-29,CONGEL-200L,Congélateur 200 L,Électroménager,Bafoussam,Marché A,Jumia Cameroun,scrape,182200,XAF,Hisense,Chine,0,0,,1
+2026-07-29,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Douala,Marché Central,Jumia Cameroun,scrape,56000,XAF,Tecno,,0,0,,0
+2026-07-29,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Douala,Mboppi,CoinAfrique,scrape,55400,XAF,Tecno,,0,0,,0
+2026-07-29,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Yaoundé,Marché Mokolo,Jumia Cameroun,scrape,54700,XAF,Tecno,,0,0,,1
+2026-07-29,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Yaoundé,Marché Mfoundi,Jumia Cameroun,scrape,57500,XAF,Tecno,,0,0,,0
+2026-07-30,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Douala,Marché Central,Jumia Cameroun,scrape,28100,XAF,Mémé,,0,0,,0
+2026-07-30,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,28400,XAF,Mémé,,0,0,,0
+2026-07-30,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Yaoundé,Marché Mfoundi,CoinAfrique,scrape,28400,XAF,Mémé,,0,0,,1
+2026-07-30,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,1790,XAF,Mayor,,0,0,,0
+2026-07-30,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Yaoundé,Marché Mfoundi,Jumia Cameroun,scrape,1820,XAF,Mayor,,0,0,,0
+2026-07-30,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Douala,Mboppi,Relevés terrain Kobo,terrain,920,XAF,,,0,0,,0
+2026-07-30,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Bafoussam,Marché A,Jumia Cameroun,scrape,960,XAF,,,0,0,,0
+2026-07-30,CIMENT-50KG,Ciment 50 kg,Matériaux,Douala,Mboppi,CoinAfrique,scrape,5680,XAF,Dangote,,0,0,,0
+2026-07-30,CONGEL-200L,Congélateur 200 L,Électroménager,Douala,Marché Central,Relevés terrain Kobo,terrain,178900,XAF,Hisense,Chine,0,0,,0
+2026-07-30,CONGEL-200L,Congélateur 200 L,Électroménager,Yaoundé,Marché Mokolo,Jumia Cameroun,scrape,184900,XAF,Hisense,Chine,0,0,,1
+2026-07-30,CONGEL-200L,Congélateur 200 L,Électroménager,Bafoussam,Marché A,Relevés terrain Kobo,terrain,185800,XAF,Hisense,Chine,1,0,,0
+2026-07-30,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Douala,Marché Central,CoinAfrique,scrape,53500,XAF,Tecno,,0,0,,0
+2026-07-30,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Yaoundé,Marché Mokolo,CoinAfrique,scrape,57100,XAF,Tecno,,0,0,,0
+2026-07-30,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,57900,XAF,Tecno,,0,0,,0
+2026-07-30,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Bafoussam,Marché A,Relevés terrain Kobo,terrain,54700,XAF,Tecno,,0,0,,0
+2026-07-31,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Douala,Marché Central,Jumia Cameroun,scrape,28400,XAF,Mémé,,0,0,,1
+2026-07-31,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Douala,Mboppi,Jumia Cameroun,scrape,28300,XAF,Mémé,,0,0,,0
+2026-07-31,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,28500,XAF,Mémé,,0,0,,1
+2026-07-31,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Yaoundé,Marché Mfoundi,Jumia Cameroun,scrape,28600,XAF,Mémé,,0,0,,1
+2026-07-31,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Bafoussam,Marché A,Jumia Cameroun,scrape,29200,XAF,Mémé,,0,0,,1
+2026-07-31,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Douala,Marché Central,CoinAfrique,scrape,890,XAF,,,0,0,,1
+2026-07-31,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Douala,Mboppi,Relevés terrain Kobo,terrain,910,XAF,,,0,0,,0
+2026-07-31,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Yaoundé,Marché Mokolo,Jumia Cameroun,scrape,910,XAF,,,0,0,,0
+2026-07-31,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Bafoussam,Marché A,Relevés terrain Kobo,terrain,910,XAF,,,0,0,,0
+2026-07-31,CIMENT-50KG,Ciment 50 kg,Matériaux,Douala,Marché Central,Relevés terrain Kobo,terrain,5630,XAF,Dangote,,0,0,,1
+2026-07-31,CIMENT-50KG,Ciment 50 kg,Matériaux,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,5830,XAF,Dangote,,0,0,,0
+2026-07-31,CIMENT-50KG,Ciment 50 kg,Matériaux,Bafoussam,Marché A,Jumia Cameroun,scrape,5540,XAF,Dangote,,0,0,,1
+2026-07-31,CONGEL-200L,Congélateur 200 L,Électroménager,Douala,Marché Central,Jumia Cameroun,scrape,189200,XAF,Hisense,Chine,0,0,,0
+2026-07-31,CONGEL-200L,Congélateur 200 L,Électroménager,Douala,Mboppi,Jumia Cameroun,scrape,189000,XAF,Hisense,Chine,0,0,,0
+2026-07-31,CONGEL-200L,Congélateur 200 L,Électroménager,Yaoundé,Marché Mokolo,CoinAfrique,scrape,186700,XAF,Hisense,Chine,0,0,,1
+2026-07-31,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Douala,Marché Central,CoinAfrique,scrape,54600,XAF,Tecno,,0,1,remise MoMo -5%,0
+2026-07-31,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Douala,Mboppi,Jumia Cameroun,scrape,56000,XAF,Tecno,,0,0,,0
+2026-07-31,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Yaoundé,Marché Mokolo,CoinAfrique,scrape,52700,XAF,Tecno,,0,0,,0
+2026-07-31,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,55100,XAF,Tecno,,0,0,,0
+2026-08-01,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Yaoundé,Marché Mfoundi,Jumia Cameroun,scrape,28000,XAF,Mémé,,0,0,,1
+2026-08-01,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Douala,Mboppi,CoinAfrique,scrape,1820,XAF,Mayor,,0,0,,0
+2026-08-01,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Douala,Mboppi,Jumia Cameroun,scrape,900,XAF,,,0,1,remise MoMo -5%,1
+2026-08-01,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,930,XAF,,,0,0,,1
+2026-08-01,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Bafoussam,Marché A,Jumia Cameroun,scrape,920,XAF,,,0,0,,1
+2026-08-01,CIMENT-50KG,Ciment 50 kg,Matériaux,Douala,Marché Central,Relevés terrain Kobo,terrain,5590,XAF,Dangote,,0,0,,0
+2026-08-01,CIMENT-50KG,Ciment 50 kg,Matériaux,Douala,Mboppi,Relevés terrain Kobo,terrain,5670,XAF,Dangote,,0,0,,0
+2026-08-01,CIMENT-50KG,Ciment 50 kg,Matériaux,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,5820,XAF,Dangote,,0,0,,0
+2026-08-01,CIMENT-50KG,Ciment 50 kg,Matériaux,Yaoundé,Marché Mfoundi,CoinAfrique,scrape,5700,XAF,Dangote,,0,0,,0
+2026-08-01,CIMENT-50KG,Ciment 50 kg,Matériaux,Bafoussam,Marché A,Jumia Cameroun,scrape,5310,XAF,Dangote,,0,0,,1
+2026-08-01,CONGEL-200L,Congélateur 200 L,Électroménager,Douala,Marché Central,CoinAfrique,scrape,183800,XAF,Hisense,Chine,0,0,,0
+2026-08-01,CONGEL-200L,Congélateur 200 L,Électroménager,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,181500,XAF,Hisense,Chine,0,0,,0
+2026-08-01,CONGEL-200L,Congélateur 200 L,Électroménager,Bafoussam,Marché A,CoinAfrique,scrape,183000,XAF,Hisense,Chine,0,0,,1
+2026-08-01,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Douala,Marché Central,CoinAfrique,scrape,56300,XAF,Tecno,,0,0,,0
+2026-08-01,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Yaoundé,Marché Mokolo,Jumia Cameroun,scrape,55600,XAF,Tecno,,0,0,,0
+2026-08-02,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Douala,Marché Central,CoinAfrique,scrape,28100,XAF,Mémé,,0,0,,0
+2026-08-02,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,28400,XAF,Mémé,,0,0,,0
+2026-08-02,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Bafoussam,Marché A,Relevés terrain Kobo,terrain,28100,XAF,Mémé,,0,0,,0
+2026-08-02,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Douala,Marché Central,Jumia Cameroun,scrape,1840,XAF,Mayor,,0,0,,0
+2026-08-02,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Douala,Mboppi,Jumia Cameroun,scrape,1800,XAF,Mayor,,0,0,,0
+2026-08-02,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Yaoundé,Marché Mokolo,Jumia Cameroun,scrape,1830,XAF,Mayor,,1,0,,1
+2026-08-02,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Yaoundé,Marché Mfoundi,Jumia Cameroun,scrape,1880,XAF,Mayor,,0,0,,1
+2026-08-02,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Bafoussam,Marché A,Relevés terrain Kobo,terrain,1810,XAF,Mayor,,0,0,,0
+2026-08-02,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Douala,Marché Central,Relevés terrain Kobo,terrain,900,XAF,,,0,1,remise MoMo -5%,0
+2026-08-02,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,900,XAF,,,0,0,,0
+2026-08-02,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,920,XAF,,,0,0,,0
+2026-08-02,CIMENT-50KG,Ciment 50 kg,Matériaux,Yaoundé,Marché Mfoundi,CoinAfrique,scrape,5830,XAF,Dangote,,0,0,,0
+2026-08-02,CIMENT-50KG,Ciment 50 kg,Matériaux,Bafoussam,Marché A,Relevés terrain Kobo,terrain,5700,XAF,Dangote,,0,0,,1
+2026-08-02,CONGEL-200L,Congélateur 200 L,Électroménager,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,182800,XAF,Hisense,Chine,0,0,,0
+2026-08-02,CONGEL-200L,Congélateur 200 L,Électroménager,Bafoussam,Marché A,CoinAfrique,scrape,190100,XAF,Hisense,Chine,0,0,,1
+2026-08-02,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Douala,Mboppi,CoinAfrique,scrape,56000,XAF,Tecno,,0,0,,0
+2026-08-02,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Yaoundé,Marché Mfoundi,Jumia Cameroun,scrape,54200,XAF,Tecno,,0,0,,1
+2026-08-03,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Douala,Marché Central,Relevés terrain Kobo,terrain,27900,XAF,Mémé,,0,0,,0
+2026-08-03,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Yaoundé,Marché Mokolo,CoinAfrique,scrape,28300,XAF,Mémé,,0,1,,1
+2026-08-03,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Yaoundé,Marché Mfoundi,CoinAfrique,scrape,27800,XAF,Mémé,,0,0,,1
+2026-08-03,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Douala,Marché Central,CoinAfrique,scrape,1790,XAF,Mayor,,0,0,,0
+2026-08-03,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Yaoundé,Marché Mokolo,Jumia Cameroun,scrape,1830,XAF,Mayor,,0,0,,1
+2026-08-03,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,1790,XAF,Mayor,,1,0,,1
+2026-08-03,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Bafoussam,Marché A,Relevés terrain Kobo,terrain,890,XAF,,,0,1,remise MoMo -5%,0
+2026-08-03,CONGEL-200L,Congélateur 200 L,Électroménager,Douala,Marché Central,Jumia Cameroun,scrape,196300,XAF,Hisense,Chine,0,0,,1
+2026-08-03,CONGEL-200L,Congélateur 200 L,Électroménager,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,182100,XAF,Hisense,Chine,0,0,,0
+2026-08-03,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Douala,Mboppi,Relevés terrain Kobo,terrain,55200,XAF,Tecno,,0,0,,1
+2026-08-03,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Yaoundé,Marché Mokolo,CoinAfrique,scrape,55400,XAF,Tecno,,0,0,,0
+2026-08-03,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,56400,XAF,Tecno,,0,0,,1
+2026-08-03,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Bafoussam,Marché A,CoinAfrique,scrape,55700,XAF,Tecno,,0,0,,0
+2026-08-04,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Douala,Marché Central,CoinAfrique,scrape,28500,XAF,Mémé,,0,0,,0
+2026-08-04,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Douala,Mboppi,Jumia Cameroun,scrape,29000,XAF,Mémé,,0,0,,0
+2026-08-04,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,28300,XAF,Mémé,,0,0,,0
+2026-08-04,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Bafoussam,Marché A,Jumia Cameroun,scrape,27900,XAF,Mémé,,0,0,,0
+2026-08-04,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Douala,Marché Central,Relevés terrain Kobo,terrain,1930,XAF,Mayor,,0,0,,0
+2026-08-04,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Douala,Mboppi,Jumia Cameroun,scrape,1880,XAF,Mayor,,0,0,,0
+2026-08-04,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Yaoundé,Marché Mokolo,Jumia Cameroun,scrape,1820,XAF,Mayor,,0,0,,0
+2026-08-04,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Bafoussam,Marché A,Jumia Cameroun,scrape,1820,XAF,Mayor,,0,0,,0
+2026-08-04,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Yaoundé,Marché Mfoundi,Jumia Cameroun,scrape,890,XAF,,,0,0,,0
+2026-08-04,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Bafoussam,Marché A,Jumia Cameroun,scrape,910,XAF,,,1,0,,1
+2026-08-04,CIMENT-50KG,Ciment 50 kg,Matériaux,Douala,Mboppi,Relevés terrain Kobo,terrain,5780,XAF,Dangote,,0,0,,1
+2026-08-04,CIMENT-50KG,Ciment 50 kg,Matériaux,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,5990,XAF,Dangote,,0,0,,1
+2026-08-04,CIMENT-50KG,Ciment 50 kg,Matériaux,Bafoussam,Marché A,Jumia Cameroun,scrape,5750,XAF,Dangote,,0,0,,0
+2026-08-04,CONGEL-200L,Congélateur 200 L,Électroménager,Yaoundé,Marché Mfoundi,CoinAfrique,scrape,192700,XAF,Hisense,Chine,0,0,,1
+2026-08-04,CONGEL-200L,Congélateur 200 L,Électroménager,Bafoussam,Marché A,Jumia Cameroun,scrape,187100,XAF,Hisense,Chine,0,0,,0
+2026-08-04,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Douala,Marché Central,Relevés terrain Kobo,terrain,56000,XAF,Tecno,,0,0,,1
+2026-08-04,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,56300,XAF,Tecno,,0,0,,0
+2026-08-04,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Yaoundé,Marché Mfoundi,Jumia Cameroun,scrape,56800,XAF,Tecno,,0,0,,1
+2026-08-04,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Bafoussam,Marché A,Jumia Cameroun,scrape,54400,XAF,Tecno,,0,0,,1
+2026-08-05,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Bafoussam,Marché A,Jumia Cameroun,scrape,27800,XAF,Mémé,,0,0,,0
+2026-08-05,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Douala,Mboppi,CoinAfrique,scrape,1810,XAF,Mayor,,0,0,,1
+2026-08-05,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,1780,XAF,Mayor,,1,0,,1
+2026-08-05,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Bafoussam,Marché A,Relevés terrain Kobo,terrain,1870,XAF,Mayor,,0,0,,0
+2026-08-05,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Douala,Marché Central,Relevés terrain Kobo,terrain,910,XAF,,,0,1,remise MoMo -5%,1
+2026-08-05,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Douala,Mboppi,Jumia Cameroun,scrape,920,XAF,,,0,0,,1
+2026-08-05,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Yaoundé,Marché Mfoundi,CoinAfrique,scrape,930,XAF,,,0,0,,1
+2026-08-05,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Bafoussam,Marché A,Relevés terrain Kobo,terrain,860,XAF,,,0,0,,1
+2026-08-05,CIMENT-50KG,Ciment 50 kg,Matériaux,Douala,Marché Central,Relevés terrain Kobo,terrain,5500,XAF,Dangote,,0,0,,0
+2026-08-05,CIMENT-50KG,Ciment 50 kg,Matériaux,Douala,Mboppi,CoinAfrique,scrape,5610,XAF,Dangote,,0,0,,0
+2026-08-05,CIMENT-50KG,Ciment 50 kg,Matériaux,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,5730,XAF,Dangote,,0,0,,1
+2026-08-05,CONGEL-200L,Congélateur 200 L,Électroménager,Douala,Mboppi,Relevés terrain Kobo,terrain,185500,XAF,Hisense,Chine,0,0,,0
+2026-08-05,CONGEL-200L,Congélateur 200 L,Électroménager,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,193300,XAF,Hisense,Chine,0,0,,0
+2026-08-05,CONGEL-200L,Congélateur 200 L,Électroménager,Yaoundé,Marché Mfoundi,CoinAfrique,scrape,189400,XAF,Hisense,Chine,0,0,,0
+2026-08-05,CONGEL-200L,Congélateur 200 L,Électroménager,Bafoussam,Marché A,Jumia Cameroun,scrape,186700,XAF,Hisense,Chine,0,0,,1
+2026-08-05,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Douala,Mboppi,Relevés terrain Kobo,terrain,54400,XAF,Tecno,,0,0,,0
+2026-08-05,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,54200,XAF,Tecno,,0,1,,0
+2026-08-05,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Bafoussam,Marché A,Relevés terrain Kobo,terrain,55400,XAF,Tecno,,0,0,,0
+2026-08-06,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,28000,XAF,Mémé,,0,0,,0
+2026-08-06,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Bafoussam,Marché A,Jumia Cameroun,scrape,28700,XAF,Mémé,,0,0,,0
+2026-08-06,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,1840,XAF,Mayor,,0,0,,0
+2026-08-06,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Bafoussam,Marché A,Relevés terrain Kobo,terrain,1820,XAF,Mayor,,0,0,,1
+2026-08-06,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,940,XAF,,,0,0,,1
+2026-08-06,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Yaoundé,Marché Mfoundi,Jumia Cameroun,scrape,920,XAF,,,0,1,,0
+2026-08-06,CIMENT-50KG,Ciment 50 kg,Matériaux,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,5880,XAF,Dangote,,0,0,,1
+2026-08-06,CIMENT-50KG,Ciment 50 kg,Matériaux,Bafoussam,Marché A,CoinAfrique,scrape,5600,XAF,Dangote,,0,0,,1
+2026-08-06,CONGEL-200L,Congélateur 200 L,Électroménager,Douala,Marché Central,Relevés terrain Kobo,terrain,186300,XAF,Hisense,Chine,0,0,,1
+2026-08-06,CONGEL-200L,Congélateur 200 L,Électroménager,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,189300,XAF,Hisense,Chine,0,0,,0
+2026-08-06,CONGEL-200L,Congélateur 200 L,Électroménager,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,187000,XAF,Hisense,Chine,0,0,,1
+2026-08-06,CONGEL-200L,Congélateur 200 L,Électroménager,Bafoussam,Marché A,Jumia Cameroun,scrape,184200,XAF,Hisense,Chine,0,0,,0
+2026-08-06,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Douala,Mboppi,Jumia Cameroun,scrape,55100,XAF,Tecno,,0,0,,1
+2026-08-06,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,57200,XAF,Tecno,,0,0,,0
+2026-08-06,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Yaoundé,Marché Mfoundi,CoinAfrique,scrape,55600,XAF,Tecno,,0,0,,0
+2026-08-06,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Bafoussam,Marché A,Jumia Cameroun,scrape,54900,XAF,Tecno,,0,0,,1
+2026-08-07,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Bafoussam,Marché A,Jumia Cameroun,scrape,29200,XAF,Mémé,,0,0,,0
+2026-08-07,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Douala,Marché Central,Jumia Cameroun,scrape,1870,XAF,Mayor,,0,0,,0
+2026-08-07,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Yaoundé,Marché Mokolo,Jumia Cameroun,scrape,1860,XAF,Mayor,,0,0,,0
+2026-08-07,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Yaoundé,Marché Mfoundi,Jumia Cameroun,scrape,1880,XAF,Mayor,,1,0,,1
+2026-08-07,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Douala,Marché Central,Jumia Cameroun,scrape,930,XAF,,,0,0,,0
+2026-08-07,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Yaoundé,Marché Mokolo,CoinAfrique,scrape,910,XAF,,,0,0,,0
+2026-08-07,CIMENT-50KG,Ciment 50 kg,Matériaux,Douala,Marché Central,Relevés terrain Kobo,terrain,5540,XAF,Dangote,,0,0,,1
+2026-08-07,CIMENT-50KG,Ciment 50 kg,Matériaux,Douala,Mboppi,Jumia Cameroun,scrape,5600,XAF,Dangote,,0,0,,0
+2026-08-07,CIMENT-50KG,Ciment 50 kg,Matériaux,Yaoundé,Marché Mfoundi,Jumia Cameroun,scrape,5870,XAF,Dangote,,0,0,,1
+2026-08-07,CIMENT-50KG,Ciment 50 kg,Matériaux,Bafoussam,Marché A,Jumia Cameroun,scrape,5590,XAF,Dangote,,0,1,remise MoMo -5%,0
+2026-08-07,CONGEL-200L,Congélateur 200 L,Électroménager,Yaoundé,Marché Mokolo,CoinAfrique,scrape,185800,XAF,Hisense,Chine,0,0,,0
+2026-08-07,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Douala,Mboppi,Relevés terrain Kobo,terrain,56000,XAF,Tecno,,0,0,,1
+2026-08-07,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Yaoundé,Marché Mokolo,CoinAfrique,scrape,56500,XAF,Tecno,,0,0,,0
+2026-08-07,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Bafoussam,Marché A,Relevés terrain Kobo,terrain,55400,XAF,Tecno,,0,0,,1
+2026-08-08,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Douala,Marché Central,Relevés terrain Kobo,terrain,29200,XAF,Mémé,,0,0,,0
+2026-08-08,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,28600,XAF,Mémé,,0,0,,1
+2026-08-08,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Yaoundé,Marché Mfoundi,CoinAfrique,scrape,28100,XAF,Mémé,,1,0,,0
+2026-08-08,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Bafoussam,Marché A,Jumia Cameroun,scrape,28500,XAF,Mémé,,0,0,,1
+2026-08-08,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Douala,Marché Central,Jumia Cameroun,scrape,1820,XAF,Mayor,,0,0,,0
+2026-08-08,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Douala,Mboppi,CoinAfrique,scrape,1820,XAF,Mayor,,0,0,,1
+2026-08-08,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,1800,XAF,Mayor,,0,0,,0
+2026-08-08,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Douala,Mboppi,Relevés terrain Kobo,terrain,910,XAF,,,0,0,,1
+2026-08-08,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Yaoundé,Marché Mokolo,Jumia Cameroun,scrape,890,XAF,,,0,0,,0
+2026-08-08,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Bafoussam,Marché A,Relevés terrain Kobo,terrain,930,XAF,,,0,0,,1
+2026-08-08,CIMENT-50KG,Ciment 50 kg,Matériaux,Douala,Marché Central,CoinAfrique,scrape,5590,XAF,Dangote,,0,0,,0
+2026-08-08,CONGEL-200L,Congélateur 200 L,Électroménager,Douala,Marché Central,CoinAfrique,scrape,187300,XAF,Hisense,Chine,0,1,remise MoMo -5%,0
+2026-08-08,CONGEL-200L,Congélateur 200 L,Électroménager,Yaoundé,Marché Mokolo,CoinAfrique,scrape,186000,XAF,Hisense,Chine,1,0,,0
+2026-08-08,CONGEL-200L,Congélateur 200 L,Électroménager,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,193200,XAF,Hisense,Chine,0,0,,0
+2026-08-08,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Douala,Marché Central,Relevés terrain Kobo,terrain,57600,XAF,Tecno,,0,1,remise MoMo -5%,1
+2026-08-08,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Douala,Mboppi,Relevés terrain Kobo,terrain,56500,XAF,Tecno,,0,0,,0
+2026-08-08,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,55200,XAF,Tecno,,0,1,remise MoMo -5%,1
+2026-08-09,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Douala,Marché Central,Relevés terrain Kobo,terrain,29300,XAF,Mémé,,0,0,,0
+2026-08-09,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Douala,Marché Central,Jumia Cameroun,scrape,1850,XAF,Mayor,,0,0,,0
+2026-08-09,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Douala,Mboppi,Jumia Cameroun,scrape,1840,XAF,Mayor,,0,0,,0
+2026-08-09,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Douala,Mboppi,Jumia Cameroun,scrape,900,XAF,,,0,1,,0
+2026-08-09,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Yaoundé,Marché Mokolo,Jumia Cameroun,scrape,930,XAF,,,0,0,,0
+2026-08-09,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Bafoussam,Marché A,Relevés terrain Kobo,terrain,920,XAF,,,0,0,,0
+2026-08-09,CIMENT-50KG,Ciment 50 kg,Matériaux,Douala,Marché Central,Jumia Cameroun,scrape,5650,XAF,Dangote,,0,0,,0
+2026-08-09,CIMENT-50KG,Ciment 50 kg,Matériaux,Yaoundé,Marché Mokolo,CoinAfrique,scrape,5780,XAF,Dangote,,0,0,,1
+2026-08-09,CIMENT-50KG,Ciment 50 kg,Matériaux,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,5930,XAF,Dangote,,0,0,,1
+2026-08-09,CONGEL-200L,Congélateur 200 L,Électroménager,Douala,Marché Central,Relevés terrain Kobo,terrain,185800,XAF,Hisense,Chine,0,0,,1
+2026-08-09,CONGEL-200L,Congélateur 200 L,Électroménager,Douala,Mboppi,Relevés terrain Kobo,terrain,194900,XAF,Hisense,Chine,0,1,,0
+2026-08-09,CONGEL-200L,Congélateur 200 L,Électroménager,Yaoundé,Marché Mokolo,CoinAfrique,scrape,185200,XAF,Hisense,Chine,0,0,,0
+2026-08-09,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Yaoundé,Marché Mfoundi,Jumia Cameroun,scrape,56800,XAF,Tecno,,0,0,,0
+2026-08-09,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Bafoussam,Marché A,Jumia Cameroun,scrape,53400,XAF,Tecno,,0,0,,1
+2026-08-10,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Douala,Mboppi,CoinAfrique,scrape,29200,XAF,Mémé,,0,0,,0
+2026-08-10,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,29200,XAF,Mémé,,0,0,,0
+2026-08-10,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Bafoussam,Marché A,Jumia Cameroun,scrape,28900,XAF,Mémé,,0,0,,1
+2026-08-10,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Douala,Marché Central,Relevés terrain Kobo,terrain,1830,XAF,Mayor,,0,0,,0
+2026-08-10,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Bafoussam,Marché A,Relevés terrain Kobo,terrain,960,XAF,,,0,0,,1
+2026-08-10,CIMENT-50KG,Ciment 50 kg,Matériaux,Douala,Marché Central,CoinAfrique,scrape,5570,XAF,Dangote,,0,0,,1
+2026-08-10,CIMENT-50KG,Ciment 50 kg,Matériaux,Yaoundé,Marché Mokolo,CoinAfrique,scrape,5810,XAF,Dangote,,0,1,remise MoMo -5%,0
+2026-08-10,CIMENT-50KG,Ciment 50 kg,Matériaux,Yaoundé,Marché Mfoundi,CoinAfrique,scrape,5940,XAF,Dangote,,0,0,,0
+2026-08-10,CIMENT-50KG,Ciment 50 kg,Matériaux,Bafoussam,Marché A,Relevés terrain Kobo,terrain,5870,XAF,Dangote,,0,0,,1
+2026-08-10,CONGEL-200L,Congélateur 200 L,Électroménager,Yaoundé,Marché Mokolo,Jumia Cameroun,scrape,190600,XAF,Hisense,Chine,0,0,,1
+2026-08-10,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Douala,Marché Central,Relevés terrain Kobo,terrain,56500,XAF,Tecno,,0,0,,0
+2026-08-10,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Douala,Mboppi,Relevés terrain Kobo,terrain,55600,XAF,Tecno,,0,1,remise MoMo -5%,1
+2026-08-10,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,55700,XAF,Tecno,,0,0,,0
+2026-08-10,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Bafoussam,Marché A,Relevés terrain Kobo,terrain,57200,XAF,Tecno,,0,0,,0
+2026-08-11,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,28500,XAF,Mémé,,0,0,,0
+2026-08-11,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Bafoussam,Marché A,CoinAfrique,scrape,28400,XAF,Mémé,,0,0,,0
+2026-08-11,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Douala,Marché Central,Relevés terrain Kobo,terrain,1770,XAF,Mayor,,0,1,,0
+2026-08-11,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Douala,Mboppi,CoinAfrique,scrape,1850,XAF,Mayor,,0,0,,1
+2026-08-11,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Yaoundé,Marché Mokolo,CoinAfrique,scrape,1890,XAF,Mayor,,0,0,,0
+2026-08-11,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,1930,XAF,Mayor,,0,0,,0
+2026-08-11,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Douala,Marché Central,Relevés terrain Kobo,terrain,930,XAF,,,0,0,,1
+2026-08-11,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Douala,Mboppi,CoinAfrique,scrape,920,XAF,,,0,0,,0
+2026-08-11,CIMENT-50KG,Ciment 50 kg,Matériaux,Douala,Marché Central,CoinAfrique,scrape,5630,XAF,Dangote,,0,0,,1
+2026-08-11,CIMENT-50KG,Ciment 50 kg,Matériaux,Douala,Mboppi,Relevés terrain Kobo,terrain,5360,XAF,Dangote,,0,0,,0
+2026-08-11,CIMENT-50KG,Ciment 50 kg,Matériaux,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,5930,XAF,Dangote,,0,0,,1
+2026-08-11,CIMENT-50KG,Ciment 50 kg,Matériaux,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,5860,XAF,Dangote,,0,0,,0
+2026-08-11,CIMENT-50KG,Ciment 50 kg,Matériaux,Bafoussam,Marché A,Relevés terrain Kobo,terrain,5820,XAF,Dangote,,0,0,,0
+2026-08-11,CONGEL-200L,Congélateur 200 L,Électroménager,Douala,Mboppi,Relevés terrain Kobo,terrain,189900,XAF,Hisense,Chine,0,0,,0
+2026-08-11,CONGEL-200L,Congélateur 200 L,Électroménager,Bafoussam,Marché A,CoinAfrique,scrape,190000,XAF,Hisense,Chine,0,0,,0
+2026-08-11,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Douala,Marché Central,Jumia Cameroun,scrape,56900,XAF,Tecno,,0,0,,0
+2026-08-11,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,56400,XAF,Tecno,,0,0,,1
+2026-08-11,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Yaoundé,Marché Mfoundi,CoinAfrique,scrape,56000,XAF,Tecno,,0,0,,0
+2026-08-11,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Bafoussam,Marché A,Relevés terrain Kobo,terrain,55800,XAF,Tecno,,0,0,,1
+2026-08-12,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Douala,Marché Central,Jumia Cameroun,scrape,28400,XAF,Mémé,,0,0,,0
+2026-08-12,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Douala,Mboppi,Relevés terrain Kobo,terrain,28500,XAF,Mémé,,0,0,,0
+2026-08-12,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Yaoundé,Marché Mokolo,Jumia Cameroun,scrape,28200,XAF,Mémé,,0,0,,0
+2026-08-12,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Bafoussam,Marché A,CoinAfrique,scrape,28600,XAF,Mémé,,0,0,,1
+2026-08-12,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Douala,Mboppi,Relevés terrain Kobo,terrain,1840,XAF,Mayor,,0,0,,0
+2026-08-12,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Douala,Marché Central,Relevés terrain Kobo,terrain,910,XAF,,,0,0,,0
+2026-08-12,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Douala,Mboppi,Relevés terrain Kobo,terrain,890,XAF,,,0,0,,1
+2026-08-12,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Bafoussam,Marché A,Relevés terrain Kobo,terrain,900,XAF,,,0,0,,1
+2026-08-12,CIMENT-50KG,Ciment 50 kg,Matériaux,Douala,Mboppi,CoinAfrique,scrape,5450,XAF,Dangote,,0,0,,0
+2026-08-12,CIMENT-50KG,Ciment 50 kg,Matériaux,Yaoundé,Marché Mokolo,Jumia Cameroun,scrape,5770,XAF,Dangote,,0,0,,0
+2026-08-12,CONGEL-200L,Congélateur 200 L,Électroménager,Douala,Marché Central,Jumia Cameroun,scrape,183800,XAF,Hisense,Chine,0,0,,1
+2026-08-12,CONGEL-200L,Congélateur 200 L,Électroménager,Douala,Mboppi,Jumia Cameroun,scrape,190900,XAF,Hisense,Chine,0,0,,0
+2026-08-12,CONGEL-200L,Congélateur 200 L,Électroménager,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,181300,XAF,Hisense,Chine,0,0,,1
+2026-08-12,CONGEL-200L,Congélateur 200 L,Électroménager,Yaoundé,Marché Mfoundi,Jumia Cameroun,scrape,189300,XAF,Hisense,Chine,0,0,,0
+2026-08-12,CONGEL-200L,Congélateur 200 L,Électroménager,Bafoussam,Marché A,Relevés terrain Kobo,terrain,186800,XAF,Hisense,Chine,0,0,,1
+2026-08-12,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Douala,Mboppi,Jumia Cameroun,scrape,54100,XAF,Tecno,,0,0,,0
+2026-08-12,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Yaoundé,Marché Mokolo,CoinAfrique,scrape,56600,XAF,Tecno,,0,0,,1
+2026-08-12,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,56700,XAF,Tecno,,0,0,,0
+2026-08-13,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Douala,Marché Central,Jumia Cameroun,scrape,28900,XAF,Mémé,,0,0,,1
+2026-08-13,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Douala,Mboppi,Jumia Cameroun,scrape,29100,XAF,Mémé,,0,0,,0
+2026-08-13,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,28700,XAF,Mémé,,0,0,,0
+2026-08-13,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,28500,XAF,Mémé,,1,0,,1
+2026-08-13,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Bafoussam,Marché A,Relevés terrain Kobo,terrain,28800,XAF,Mémé,,0,0,,1
+2026-08-13,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Douala,Marché Central,Relevés terrain Kobo,terrain,1830,XAF,Mayor,,0,0,,0
+2026-08-13,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Yaoundé,Marché Mfoundi,Jumia Cameroun,scrape,1860,XAF,Mayor,,0,0,,0
+2026-08-13,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Douala,Marché Central,CoinAfrique,scrape,910,XAF,,,0,0,,1
+2026-08-13,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Douala,Mboppi,Relevés terrain Kobo,terrain,930,XAF,,,0,0,,1
+2026-08-13,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,960,XAF,,,0,0,,0
+2026-08-13,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Bafoussam,Marché A,Jumia Cameroun,scrape,930,XAF,,,0,1,remise MoMo -5%,0
+2026-08-13,CIMENT-50KG,Ciment 50 kg,Matériaux,Douala,Marché Central,Jumia Cameroun,scrape,5560,XAF,Dangote,,0,0,,0
+2026-08-13,CIMENT-50KG,Ciment 50 kg,Matériaux,Douala,Mboppi,Relevés terrain Kobo,terrain,5640,XAF,Dangote,,0,0,,0
+2026-08-13,CIMENT-50KG,Ciment 50 kg,Matériaux,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,5890,XAF,Dangote,,0,0,,1
+2026-08-13,CIMENT-50KG,Ciment 50 kg,Matériaux,Bafoussam,Marché A,Relevés terrain Kobo,terrain,5660,XAF,Dangote,,0,0,,1
+2026-08-13,CONGEL-200L,Congélateur 200 L,Électroménager,Douala,Marché Central,Relevés terrain Kobo,terrain,191600,XAF,Hisense,Chine,0,1,,0
+2026-08-13,CONGEL-200L,Congélateur 200 L,Électroménager,Douala,Mboppi,Relevés terrain Kobo,terrain,197600,XAF,Hisense,Chine,0,0,,0
+2026-08-13,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Douala,Marché Central,Relevés terrain Kobo,terrain,55900,XAF,Tecno,,0,0,,1
+2026-08-13,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Douala,Mboppi,Relevés terrain Kobo,terrain,57500,XAF,Tecno,,0,0,,0
+2026-08-13,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,55900,XAF,Tecno,,0,0,,0
+2026-08-14,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Douala,Marché Central,Relevés terrain Kobo,terrain,28400,XAF,Mémé,,0,0,,1
+2026-08-14,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Yaoundé,Marché Mokolo,Jumia Cameroun,scrape,28900,XAF,Mémé,,0,0,,1
+2026-08-14,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,27900,XAF,Mémé,,0,0,,0
+2026-08-14,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Bafoussam,Marché A,Relevés terrain Kobo,terrain,28900,XAF,Mémé,,0,1,,0
+2026-08-14,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Douala,Mboppi,Relevés terrain Kobo,terrain,1880,XAF,Mayor,,1,0,,1
+2026-08-14,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Yaoundé,Marché Mfoundi,Jumia Cameroun,scrape,1820,XAF,Mayor,,0,0,,0
+2026-08-14,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Douala,Marché Central,Jumia Cameroun,scrape,890,XAF,,,0,0,,1
+2026-08-14,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Yaoundé,Marché Mokolo,Jumia Cameroun,scrape,900,XAF,,,0,0,,0
+2026-08-14,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Bafoussam,Marché A,CoinAfrique,scrape,940,XAF,,,0,0,,0
+2026-08-14,CIMENT-50KG,Ciment 50 kg,Matériaux,Douala,Mboppi,Jumia Cameroun,scrape,5710,XAF,Dangote,,0,0,,0
+2026-08-14,CIMENT-50KG,Ciment 50 kg,Matériaux,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,5880,XAF,Dangote,,0,0,,1
+2026-08-14,CIMENT-50KG,Ciment 50 kg,Matériaux,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,5830,XAF,Dangote,,1,0,,1
+2026-08-14,CIMENT-50KG,Ciment 50 kg,Matériaux,Bafoussam,Marché A,Jumia Cameroun,scrape,5590,XAF,Dangote,,0,0,,1
+2026-08-14,CONGEL-200L,Congélateur 200 L,Électroménager,Douala,Marché Central,Relevés terrain Kobo,terrain,192800,XAF,Hisense,Chine,0,0,,0
+2026-08-14,CONGEL-200L,Congélateur 200 L,Électroménager,Douala,Mboppi,Relevés terrain Kobo,terrain,188400,XAF,Hisense,Chine,0,0,,1
+2026-08-14,CONGEL-200L,Congélateur 200 L,Électroménager,Yaoundé,Marché Mokolo,CoinAfrique,scrape,190000,XAF,Hisense,Chine,0,0,,0
+2026-08-14,CONGEL-200L,Congélateur 200 L,Électroménager,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,192800,XAF,Hisense,Chine,0,0,,0
+2026-08-14,CONGEL-200L,Congélateur 200 L,Électroménager,Bafoussam,Marché A,Relevés terrain Kobo,terrain,193400,XAF,Hisense,Chine,0,0,,0
+2026-08-14,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Douala,Marché Central,Jumia Cameroun,scrape,57300,XAF,Tecno,,0,0,,0
+2026-08-14,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Douala,Mboppi,Relevés terrain Kobo,terrain,54700,XAF,Tecno,,0,0,,1
+2026-08-14,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Yaoundé,Marché Mokolo,Jumia Cameroun,scrape,55300,XAF,Tecno,,0,1,,0
+2026-08-14,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Yaoundé,Marché Mfoundi,Jumia Cameroun,scrape,56900,XAF,Tecno,,0,0,,0
+2026-08-14,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Bafoussam,Marché A,CoinAfrique,scrape,56000,XAF,Tecno,,0,0,,0
+2026-08-15,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Douala,Marché Central,CoinAfrique,scrape,28700,XAF,Mémé,,0,0,,1
+2026-08-15,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Yaoundé,Marché Mokolo,Jumia Cameroun,scrape,28200,XAF,Mémé,,0,0,,0
+2026-08-15,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,29400,XAF,Mémé,,0,0,,1
+2026-08-15,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Bafoussam,Marché A,CoinAfrique,scrape,28400,XAF,Mémé,,0,0,,0
+2026-08-15,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Douala,Marché Central,Relevés terrain Kobo,terrain,1840,XAF,Mayor,,0,0,,0
+2026-08-15,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Yaoundé,Marché Mokolo,CoinAfrique,scrape,1860,XAF,Mayor,,0,0,,0
+2026-08-15,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Yaoundé,Marché Mfoundi,Jumia Cameroun,scrape,1860,XAF,Mayor,,0,0,,1
+2026-08-15,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Douala,Mboppi,Jumia Cameroun,scrape,920,XAF,,,0,0,,1
+2026-08-15,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Yaoundé,Marché Mokolo,Jumia Cameroun,scrape,950,XAF,,,0,0,,0
+2026-08-15,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Bafoussam,Marché A,Jumia Cameroun,scrape,940,XAF,,,0,0,,0
+2026-08-15,CIMENT-50KG,Ciment 50 kg,Matériaux,Douala,Mboppi,Jumia Cameroun,scrape,5730,XAF,Dangote,,0,1,,0
+2026-08-15,CIMENT-50KG,Ciment 50 kg,Matériaux,Yaoundé,Marché Mokolo,CoinAfrique,scrape,5850,XAF,Dangote,,0,0,,0
+2026-08-15,CIMENT-50KG,Ciment 50 kg,Matériaux,Yaoundé,Marché Mfoundi,Jumia Cameroun,scrape,5710,XAF,Dangote,,0,0,,1
+2026-08-15,CIMENT-50KG,Ciment 50 kg,Matériaux,Bafoussam,Marché A,Relevés terrain Kobo,terrain,5590,XAF,Dangote,,0,0,,0
+2026-08-15,CONGEL-200L,Congélateur 200 L,Électroménager,Douala,Mboppi,Relevés terrain Kobo,terrain,192900,XAF,Hisense,Chine,0,0,,1
+2026-08-15,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Douala,Marché Central,Jumia Cameroun,scrape,57400,XAF,Tecno,,0,0,,0
+2026-08-15,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,56000,XAF,Tecno,,0,1,remise MoMo -5%,0
+2026-08-16,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Bafoussam,Marché A,Jumia Cameroun,scrape,29100,XAF,Mémé,,0,0,,0
+2026-08-16,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Douala,Mboppi,Jumia Cameroun,scrape,1770,XAF,Mayor,,0,0,,0
+2026-08-16,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Yaoundé,Marché Mfoundi,CoinAfrique,scrape,1870,XAF,Mayor,,0,0,,1
+2026-08-16,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Bafoussam,Marché A,CoinAfrique,scrape,1860,XAF,Mayor,,1,0,,0
+2026-08-16,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Douala,Mboppi,CoinAfrique,scrape,910,XAF,,,0,0,,0
+2026-08-16,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Bafoussam,Marché A,Relevés terrain Kobo,terrain,930,XAF,,,0,0,,0
+2026-08-16,CIMENT-50KG,Ciment 50 kg,Matériaux,Douala,Marché Central,Jumia Cameroun,scrape,5420,XAF,Dangote,,0,0,,0
+2026-08-16,CIMENT-50KG,Ciment 50 kg,Matériaux,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,5840,XAF,Dangote,,0,0,,0
+2026-08-16,CONGEL-200L,Congélateur 200 L,Électroménager,Douala,Mboppi,Relevés terrain Kobo,terrain,191100,XAF,Hisense,Chine,0,1,,0
+2026-08-16,CONGEL-200L,Congélateur 200 L,Électroménager,Yaoundé,Marché Mokolo,Jumia Cameroun,scrape,189900,XAF,Hisense,Chine,0,1,remise MoMo -5%,0
+2026-08-16,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Douala,Marché Central,Relevés terrain Kobo,terrain,54900,XAF,Tecno,,0,0,,0
+2026-08-16,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Douala,Mboppi,Jumia Cameroun,scrape,57100,XAF,Tecno,,0,0,,1
+2026-08-16,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Yaoundé,Marché Mokolo,CoinAfrique,scrape,57200,XAF,Tecno,,0,0,,0
+2026-08-16,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,55100,XAF,Tecno,,0,1,,0
+2026-08-17,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Douala,Marché Central,CoinAfrique,scrape,28500,XAF,Mémé,,0,0,,0
+2026-08-17,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Douala,Mboppi,CoinAfrique,scrape,28900,XAF,Mémé,,0,0,,0
+2026-08-17,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Yaoundé,Marché Mokolo,CoinAfrique,scrape,29100,XAF,Mémé,,0,0,,0
+2026-08-17,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,28700,XAF,Mémé,,0,0,,1
+2026-08-17,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Douala,Marché Central,Relevés terrain Kobo,terrain,1860,XAF,Mayor,,0,0,,1
+2026-08-17,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Douala,Mboppi,Jumia Cameroun,scrape,1820,XAF,Mayor,,0,0,,1
+2026-08-17,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Douala,Mboppi,Relevés terrain Kobo,terrain,910,XAF,,,0,0,,0
+2026-08-17,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,910,XAF,,,0,0,,0
+2026-08-17,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Yaoundé,Marché Mfoundi,CoinAfrique,scrape,930,XAF,,,0,0,,1
+2026-08-17,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Bafoussam,Marché A,Relevés terrain Kobo,terrain,930,XAF,,,0,0,,0
+2026-08-17,CIMENT-50KG,Ciment 50 kg,Matériaux,Douala,Mboppi,CoinAfrique,scrape,5670,XAF,Dangote,,0,0,,0
+2026-08-17,CIMENT-50KG,Ciment 50 kg,Matériaux,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,5890,XAF,Dangote,,0,0,,1
+2026-08-17,CIMENT-50KG,Ciment 50 kg,Matériaux,Yaoundé,Marché Mfoundi,Jumia Cameroun,scrape,5760,XAF,Dangote,,0,0,,0
+2026-08-17,CIMENT-50KG,Ciment 50 kg,Matériaux,Bafoussam,Marché A,Relevés terrain Kobo,terrain,5700,XAF,Dangote,,0,0,,1
+2026-08-17,CONGEL-200L,Congélateur 200 L,Électroménager,Douala,Marché Central,Jumia Cameroun,scrape,185100,XAF,Hisense,Chine,0,0,,0
+2026-08-17,CONGEL-200L,Congélateur 200 L,Électroménager,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,193200,XAF,Hisense,Chine,0,0,,0
+2026-08-17,CONGEL-200L,Congélateur 200 L,Électroménager,Bafoussam,Marché A,Relevés terrain Kobo,terrain,191300,XAF,Hisense,Chine,0,1,remise MoMo -5%,0
+2026-08-17,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Douala,Marché Central,Relevés terrain Kobo,terrain,57500,XAF,Tecno,,0,0,,0
+2026-08-17,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Yaoundé,Marché Mokolo,CoinAfrique,scrape,54600,XAF,Tecno,,0,0,,0
+2026-08-17,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,55100,XAF,Tecno,,0,0,,0
+2026-08-18,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,29700,XAF,Mémé,,0,0,,0
+2026-08-18,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Douala,Marché Central,Relevés terrain Kobo,terrain,1840,XAF,Mayor,,0,0,,0
+2026-08-18,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,1810,XAF,Mayor,,1,0,,0
+2026-08-18,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,910,XAF,,,0,0,,1
+2026-08-18,CIMENT-50KG,Ciment 50 kg,Matériaux,Douala,Marché Central,CoinAfrique,scrape,5570,XAF,Dangote,,0,0,,0
+2026-08-18,CIMENT-50KG,Ciment 50 kg,Matériaux,Douala,Mboppi,Jumia Cameroun,scrape,5680,XAF,Dangote,,0,0,,1
+2026-08-18,CIMENT-50KG,Ciment 50 kg,Matériaux,Yaoundé,Marché Mokolo,Jumia Cameroun,scrape,5810,XAF,Dangote,,0,0,,1
+2026-08-18,CIMENT-50KG,Ciment 50 kg,Matériaux,Bafoussam,Marché A,Relevés terrain Kobo,terrain,5530,XAF,Dangote,,0,0,,0
+2026-08-18,CONGEL-200L,Congélateur 200 L,Électroménager,Douala,Mboppi,Jumia Cameroun,scrape,189900,XAF,Hisense,Chine,0,0,,1
+2026-08-18,CONGEL-200L,Congélateur 200 L,Électroménager,Yaoundé,Marché Mokolo,Jumia Cameroun,scrape,193700,XAF,Hisense,Chine,0,0,,0
+2026-08-18,CONGEL-200L,Congélateur 200 L,Électroménager,Bafoussam,Marché A,Relevés terrain Kobo,terrain,183100,XAF,Hisense,Chine,0,0,,0
+2026-08-18,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Douala,Marché Central,Jumia Cameroun,scrape,56400,XAF,Tecno,,0,0,,0
+2026-08-18,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,54600,XAF,Tecno,,0,0,,1
+2026-08-18,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,56900,XAF,Tecno,,0,1,,1
+2026-08-19,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Douala,Mboppi,Relevés terrain Kobo,terrain,28100,XAF,Mémé,,0,0,,0
+2026-08-19,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Yaoundé,Marché Mfoundi,Jumia Cameroun,scrape,28800,XAF,Mémé,,0,0,,0
+2026-08-19,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Yaoundé,Marché Mokolo,Jumia Cameroun,scrape,1810,XAF,Mayor,,0,0,,0
+2026-08-19,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Bafoussam,Marché A,Relevés terrain Kobo,terrain,1860,XAF,Mayor,,0,0,,0
+2026-08-19,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Douala,Marché Central,Relevés terrain Kobo,terrain,940,XAF,,,1,0,,1
+2026-08-19,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,920,XAF,,,0,0,,0
+2026-08-19,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Yaoundé,Marché Mfoundi,Jumia Cameroun,scrape,930,XAF,,,0,0,,0
+2026-08-19,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Bafoussam,Marché A,Relevés terrain Kobo,terrain,940,XAF,,,0,0,,0
+2026-08-19,CIMENT-50KG,Ciment 50 kg,Matériaux,Yaoundé,Marché Mokolo,Jumia Cameroun,scrape,5730,XAF,Dangote,,0,0,,1
+2026-08-19,CONGEL-200L,Congélateur 200 L,Électroménager,Douala,Mboppi,Relevés terrain Kobo,terrain,190800,XAF,Hisense,Chine,0,0,,0
+2026-08-19,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Douala,Marché Central,CoinAfrique,scrape,55500,XAF,Tecno,,0,0,,1
+2026-08-19,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Douala,Mboppi,Jumia Cameroun,scrape,57400,XAF,Tecno,,0,0,,1
+2026-08-19,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Bafoussam,Marché A,CoinAfrique,scrape,58900,XAF,Tecno,,0,0,,0
+2026-08-20,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Douala,Marché Central,Jumia Cameroun,scrape,28300,XAF,Mémé,,0,0,,0
+2026-08-20,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Douala,Mboppi,Relevés terrain Kobo,terrain,27400,XAF,Mémé,,1,0,,1
+2026-08-20,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,29600,XAF,Mémé,,0,0,,0
+2026-08-20,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Douala,Marché Central,Relevés terrain Kobo,terrain,1850,XAF,Mayor,,0,0,,0
+2026-08-20,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Yaoundé,Marché Mokolo,CoinAfrique,scrape,1820,XAF,Mayor,,0,0,,0
+2026-08-20,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,1860,XAF,Mayor,,0,0,,0
+2026-08-20,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Yaoundé,Marché Mokolo,CoinAfrique,scrape,930,XAF,,,0,0,,0
+2026-08-20,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Yaoundé,Marché Mfoundi,Jumia Cameroun,scrape,930,XAF,,,0,1,,0
+2026-08-20,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Bafoussam,Marché A,Relevés terrain Kobo,terrain,950,XAF,,,0,0,,1
+2026-08-20,CIMENT-50KG,Ciment 50 kg,Matériaux,Douala,Mboppi,Relevés terrain Kobo,terrain,5520,XAF,Dangote,,0,0,,0
+2026-08-20,CIMENT-50KG,Ciment 50 kg,Matériaux,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,5750,XAF,Dangote,,0,0,,0
+2026-08-20,CIMENT-50KG,Ciment 50 kg,Matériaux,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,5990,XAF,Dangote,,0,0,,1
+2026-08-20,CIMENT-50KG,Ciment 50 kg,Matériaux,Bafoussam,Marché A,Relevés terrain Kobo,terrain,5650,XAF,Dangote,,0,0,,0
+2026-08-20,CONGEL-200L,Congélateur 200 L,Électroménager,Douala,Marché Central,Relevés terrain Kobo,terrain,195000,XAF,Hisense,Chine,0,0,,0
+2026-08-20,CONGEL-200L,Congélateur 200 L,Électroménager,Bafoussam,Marché A,Relevés terrain Kobo,terrain,190600,XAF,Hisense,Chine,0,0,,0
+2026-08-20,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Douala,Mboppi,Relevés terrain Kobo,terrain,57100,XAF,Tecno,,0,0,,0
+2026-08-20,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Yaoundé,Marché Mokolo,Jumia Cameroun,scrape,57400,XAF,Tecno,,0,0,,0
+2026-08-20,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,55500,XAF,Tecno,,0,0,,0
+2026-08-20,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Bafoussam,Marché A,Relevés terrain Kobo,terrain,55800,XAF,Tecno,,0,0,,0
+2026-08-21,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Yaoundé,Marché Mfoundi,CoinAfrique,scrape,28400,XAF,Mémé,,0,0,,0
+2026-08-21,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Douala,Marché Central,Relevés terrain Kobo,terrain,1820,XAF,Mayor,,0,0,,0
+2026-08-21,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,1900,XAF,Mayor,,0,0,,1
+2026-08-21,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,1790,XAF,Mayor,,0,0,,1
+2026-08-21,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Douala,Mboppi,Relevés terrain Kobo,terrain,910,XAF,,,0,0,,0
+2026-08-21,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,940,XAF,,,0,1,,0
+2026-08-21,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,920,XAF,,,0,0,,1
+2026-08-21,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Bafoussam,Marché A,Relevés terrain Kobo,terrain,920,XAF,,,0,0,,1
+2026-08-21,CIMENT-50KG,Ciment 50 kg,Matériaux,Douala,Mboppi,CoinAfrique,scrape,5660,XAF,Dangote,,0,0,,1
+2026-08-21,CIMENT-50KG,Ciment 50 kg,Matériaux,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,6040,XAF,Dangote,,0,0,,1
+2026-08-21,CIMENT-50KG,Ciment 50 kg,Matériaux,Yaoundé,Marché Mfoundi,CoinAfrique,scrape,6050,XAF,Dangote,,0,0,,0
+2026-08-21,CIMENT-50KG,Ciment 50 kg,Matériaux,Bafoussam,Marché A,Jumia Cameroun,scrape,5640,XAF,Dangote,,0,0,,0
+2026-08-21,CONGEL-200L,Congélateur 200 L,Électroménager,Douala,Marché Central,Jumia Cameroun,scrape,188300,XAF,Hisense,Chine,0,0,,0
+2026-08-21,CONGEL-200L,Congélateur 200 L,Électroménager,Douala,Mboppi,Relevés terrain Kobo,terrain,187200,XAF,Hisense,Chine,1,0,,0
+2026-08-21,CONGEL-200L,Congélateur 200 L,Électroménager,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,191700,XAF,Hisense,Chine,1,0,,0
+2026-08-21,CONGEL-200L,Congélateur 200 L,Électroménager,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,190000,XAF,Hisense,Chine,0,0,,1
+2026-08-21,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Douala,Mboppi,Relevés terrain Kobo,terrain,56600,XAF,Tecno,,0,0,,0
+2026-08-22,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Douala,Mboppi,Jumia Cameroun,scrape,29700,XAF,Mémé,,0,0,,0
+2026-08-22,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,28300,XAF,Mémé,,0,0,,0
+2026-08-22,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Douala,Marché Central,Relevés terrain Kobo,terrain,1860,XAF,Mayor,,0,0,,1
+2026-08-22,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Yaoundé,Marché Mokolo,Jumia Cameroun,scrape,1860,XAF,Mayor,,0,0,,0
+2026-08-22,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Douala,Marché Central,Jumia Cameroun,scrape,950,XAF,,,0,0,,0
+2026-08-22,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,930,XAF,,,0,0,,0
+2026-08-22,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Yaoundé,Marché Mfoundi,Jumia Cameroun,scrape,930,XAF,,,0,0,,0
+2026-08-22,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Bafoussam,Marché A,Relevés terrain Kobo,terrain,920,XAF,,,0,0,,0
+2026-08-22,CIMENT-50KG,Ciment 50 kg,Matériaux,Douala,Marché Central,Relevés terrain Kobo,terrain,5500,XAF,Dangote,,0,0,,1
+2026-08-22,CIMENT-50KG,Ciment 50 kg,Matériaux,Douala,Mboppi,Jumia Cameroun,scrape,5700,XAF,Dangote,,0,0,,1
+2026-08-22,CIMENT-50KG,Ciment 50 kg,Matériaux,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,5950,XAF,Dangote,,0,0,,1
+2026-08-22,CONGEL-200L,Congélateur 200 L,Électroménager,Douala,Marché Central,Relevés terrain Kobo,terrain,188700,XAF,Hisense,Chine,0,1,remise MoMo -5%,0
+2026-08-22,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Douala,Marché Central,Jumia Cameroun,scrape,60100,XAF,Tecno,,0,1,,0
+2026-08-22,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Yaoundé,Marché Mfoundi,Jumia Cameroun,scrape,55100,XAF,Tecno,,0,0,,0
+2026-08-23,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Douala,Marché Central,CoinAfrique,scrape,28700,XAF,Mémé,,0,0,,1
+2026-08-23,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Douala,Mboppi,Relevés terrain Kobo,terrain,29100,XAF,Mémé,,0,0,,0
+2026-08-23,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,29500,XAF,Mémé,,0,0,,1
+2026-08-23,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Douala,Mboppi,Relevés terrain Kobo,terrain,1830,XAF,Mayor,,1,0,,0
+2026-08-23,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Yaoundé,Marché Mokolo,Jumia Cameroun,scrape,1860,XAF,Mayor,,0,0,,0
+2026-08-23,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Yaoundé,Marché Mfoundi,Jumia Cameroun,scrape,1910,XAF,Mayor,,0,0,,0
+2026-08-23,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Douala,Marché Central,Relevés terrain Kobo,terrain,960,XAF,,,0,0,,0
+2026-08-23,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Yaoundé,Marché Mokolo,CoinAfrique,scrape,940,XAF,,,0,0,,0
+2026-08-23,CIMENT-50KG,Ciment 50 kg,Matériaux,Douala,Marché Central,Relevés terrain Kobo,terrain,5900,XAF,Dangote,,0,0,,1
+2026-08-23,CIMENT-50KG,Ciment 50 kg,Matériaux,Douala,Mboppi,Relevés terrain Kobo,terrain,5780,XAF,Dangote,,0,0,,0
+2026-08-23,CIMENT-50KG,Ciment 50 kg,Matériaux,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,5940,XAF,Dangote,,0,1,,0
+2026-08-23,CONGEL-200L,Congélateur 200 L,Électroménager,Douala,Marché Central,Jumia Cameroun,scrape,188200,XAF,Hisense,Chine,0,0,,1
+2026-08-23,CONGEL-200L,Congélateur 200 L,Électroménager,Douala,Mboppi,Relevés terrain Kobo,terrain,193400,XAF,Hisense,Chine,0,0,,0
+2026-08-23,CONGEL-200L,Congélateur 200 L,Électroménager,Yaoundé,Marché Mokolo,Jumia Cameroun,scrape,196300,XAF,Hisense,Chine,0,0,,1
+2026-08-23,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Douala,Mboppi,Relevés terrain Kobo,terrain,55800,XAF,Tecno,,0,0,,0
+2026-08-23,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,57100,XAF,Tecno,,0,0,,0
+2026-08-23,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Bafoussam,Marché A,CoinAfrique,scrape,57500,XAF,Tecno,,0,0,,0
+2026-08-24,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Douala,Marché Central,Jumia Cameroun,scrape,28700,XAF,Mémé,,0,0,,1
+2026-08-24,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Yaoundé,Marché Mfoundi,Jumia Cameroun,scrape,29900,XAF,Mémé,,0,0,,0
+2026-08-24,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Bafoussam,Marché A,Relevés terrain Kobo,terrain,29000,XAF,Mémé,,0,1,remise MoMo -5%,0
+2026-08-24,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Douala,Marché Central,Relevés terrain Kobo,terrain,1860,XAF,Mayor,,0,0,,0
+2026-08-24,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Douala,Mboppi,Jumia Cameroun,scrape,1920,XAF,Mayor,,0,0,,0
+2026-08-24,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,1900,XAF,Mayor,,0,0,,1
+2026-08-24,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Bafoussam,Marché A,Relevés terrain Kobo,terrain,1830,XAF,Mayor,,0,0,,0
+2026-08-24,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Douala,Marché Central,Jumia Cameroun,scrape,930,XAF,,,0,1,remise MoMo -5%,1
+2026-08-24,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,950,XAF,,,0,0,,1
+2026-08-24,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Yaoundé,Marché Mfoundi,Jumia Cameroun,scrape,910,XAF,,,0,0,,1
+2026-08-24,CIMENT-50KG,Ciment 50 kg,Matériaux,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,5980,XAF,Dangote,,0,0,,0
+2026-08-24,CIMENT-50KG,Ciment 50 kg,Matériaux,Yaoundé,Marché Mfoundi,Jumia Cameroun,scrape,5950,XAF,Dangote,,0,0,,1
+2026-08-24,CIMENT-50KG,Ciment 50 kg,Matériaux,Bafoussam,Marché A,Jumia Cameroun,scrape,5720,XAF,Dangote,,0,0,,0
+2026-08-24,CONGEL-200L,Congélateur 200 L,Électroménager,Douala,Mboppi,Relevés terrain Kobo,terrain,195600,XAF,Hisense,Chine,0,0,,0
+2026-08-24,CONGEL-200L,Congélateur 200 L,Électroménager,Bafoussam,Marché A,Jumia Cameroun,scrape,193900,XAF,Hisense,Chine,0,0,,1
+2026-08-24,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Douala,Mboppi,Jumia Cameroun,scrape,57100,XAF,Tecno,,0,0,,1
+2026-08-24,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Yaoundé,Marché Mokolo,CoinAfrique,scrape,57800,XAF,Tecno,,0,0,,1
+2026-08-24,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,57700,XAF,Tecno,,0,0,,1
+2026-08-24,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Bafoussam,Marché A,Relevés terrain Kobo,terrain,57500,XAF,Tecno,,0,0,,1
+2026-08-25,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Douala,Marché Central,Jumia Cameroun,scrape,29700,XAF,Mémé,,0,1,remise MoMo -5%,0
+2026-08-25,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Douala,Mboppi,Relevés terrain Kobo,terrain,29000,XAF,Mémé,,1,0,,0
+2026-08-25,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,28300,XAF,Mémé,,0,0,,1
+2026-08-25,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Douala,Marché Central,Relevés terrain Kobo,terrain,1800,XAF,Mayor,,0,0,,0
+2026-08-25,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,1780,XAF,Mayor,,0,0,,1
+2026-08-25,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,940,XAF,,,0,0,,0
+2026-08-25,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Yaoundé,Marché Mfoundi,CoinAfrique,scrape,960,XAF,,,0,1,remise MoMo -5%,1
+2026-08-25,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Bafoussam,Marché A,Jumia Cameroun,scrape,900,XAF,,,0,0,,0
+2026-08-25,CIMENT-50KG,Ciment 50 kg,Matériaux,Douala,Marché Central,Relevés terrain Kobo,terrain,5620,XAF,Dangote,,0,0,,0
+2026-08-25,CIMENT-50KG,Ciment 50 kg,Matériaux,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,5850,XAF,Dangote,,0,0,,0
+2026-08-25,CIMENT-50KG,Ciment 50 kg,Matériaux,Yaoundé,Marché Mfoundi,Jumia Cameroun,scrape,5840,XAF,Dangote,,0,0,,0
+2026-08-25,CONGEL-200L,Congélateur 200 L,Électroménager,Douala,Marché Central,CoinAfrique,scrape,196500,XAF,Hisense,Chine,0,0,,0
+2026-08-25,CONGEL-200L,Congélateur 200 L,Électroménager,Yaoundé,Marché Mfoundi,CoinAfrique,scrape,190200,XAF,Hisense,Chine,0,0,,0
+2026-08-25,CONGEL-200L,Congélateur 200 L,Électroménager,Bafoussam,Marché A,CoinAfrique,scrape,184800,XAF,Hisense,Chine,0,0,,0
+2026-08-25,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Yaoundé,Marché Mokolo,Jumia Cameroun,scrape,56100,XAF,Tecno,,0,0,,0
+2026-08-25,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Bafoussam,Marché A,Relevés terrain Kobo,terrain,56200,XAF,Tecno,,0,0,,0
+2026-08-26,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Douala,Mboppi,Relevés terrain Kobo,terrain,28600,XAF,Mémé,,0,1,remise MoMo -5%,1
+2026-08-26,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Yaoundé,Marché Mfoundi,CoinAfrique,scrape,29000,XAF,Mémé,,0,0,,0
+2026-08-26,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Bafoussam,Marché A,Relevés terrain Kobo,terrain,29400,XAF,Mémé,,0,0,,0
+2026-08-26,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Douala,Mboppi,Relevés terrain Kobo,terrain,1830,XAF,Mayor,,0,0,,0
+2026-08-26,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Yaoundé,Marché Mokolo,Jumia Cameroun,scrape,1790,XAF,Mayor,,0,0,,0
+2026-08-26,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Bafoussam,Marché A,Jumia Cameroun,scrape,1850,XAF,Mayor,,0,0,,0
+2026-08-26,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Douala,Marché Central,Relevés terrain Kobo,terrain,930,XAF,,,0,0,,0
+2026-08-26,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Douala,Mboppi,Relevés terrain Kobo,terrain,930,XAF,,,0,0,,0
+2026-08-26,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,900,XAF,,,0,0,,0
+2026-08-26,CIMENT-50KG,Ciment 50 kg,Matériaux,Douala,Mboppi,Relevés terrain Kobo,terrain,5740,XAF,Dangote,,0,0,,1
+2026-08-26,CIMENT-50KG,Ciment 50 kg,Matériaux,Yaoundé,Marché Mokolo,CoinAfrique,scrape,5910,XAF,Dangote,,0,0,,1
+2026-08-26,CONGEL-200L,Congélateur 200 L,Électroménager,Douala,Mboppi,Relevés terrain Kobo,terrain,196900,XAF,Hisense,Chine,0,0,,0
+2026-08-26,CONGEL-200L,Congélateur 200 L,Électroménager,Bafoussam,Marché A,Jumia Cameroun,scrape,195300,XAF,Hisense,Chine,0,0,,1
+2026-08-26,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Douala,Marché Central,Relevés terrain Kobo,terrain,56100,XAF,Tecno,,0,0,,0
+2026-08-26,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Douala,Mboppi,Relevés terrain Kobo,terrain,57300,XAF,Tecno,,0,0,,0
+2026-08-26,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Yaoundé,Marché Mokolo,Jumia Cameroun,scrape,57200,XAF,Tecno,,0,1,remise MoMo -5%,0
+2026-08-26,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Yaoundé,Marché Mfoundi,Jumia Cameroun,scrape,56500,XAF,Tecno,,0,0,,0
+2026-08-26,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Bafoussam,Marché A,CoinAfrique,scrape,57100,XAF,Tecno,,0,1,,1
+2026-08-27,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Douala,Marché Central,Relevés terrain Kobo,terrain,28400,XAF,Mémé,,0,0,,0
+2026-08-27,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Yaoundé,Marché Mokolo,Jumia Cameroun,scrape,28000,XAF,Mémé,,0,0,,0
+2026-08-27,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Bafoussam,Marché A,Relevés terrain Kobo,terrain,27800,XAF,Mémé,,0,0,,0
+2026-08-27,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,1820,XAF,Mayor,,0,0,,1
+2026-08-27,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Yaoundé,Marché Mfoundi,Jumia Cameroun,scrape,1810,XAF,Mayor,,0,0,,0
+2026-08-27,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Bafoussam,Marché A,Relevés terrain Kobo,terrain,1850,XAF,Mayor,,0,0,,0
+2026-08-27,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Douala,Mboppi,CoinAfrique,scrape,920,XAF,,,0,0,,0
+2026-08-27,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Yaoundé,Marché Mokolo,Jumia Cameroun,scrape,950,XAF,,,0,0,,0
+2026-08-27,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,930,XAF,,,0,0,,0
+2026-08-27,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Bafoussam,Marché A,CoinAfrique,scrape,930,XAF,,,0,0,,0
+2026-08-27,CIMENT-50KG,Ciment 50 kg,Matériaux,Douala,Marché Central,Relevés terrain Kobo,terrain,5760,XAF,Dangote,,0,0,,0
+2026-08-27,CIMENT-50KG,Ciment 50 kg,Matériaux,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,5920,XAF,Dangote,,0,0,,1
+2026-08-27,CONGEL-200L,Congélateur 200 L,Électroménager,Yaoundé,Marché Mokolo,Jumia Cameroun,scrape,197100,XAF,Hisense,Chine,0,0,,0
+2026-08-27,CONGEL-200L,Congélateur 200 L,Électroménager,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,188000,XAF,Hisense,Chine,0,0,,0
+2026-08-27,CONGEL-200L,Congélateur 200 L,Électroménager,Bafoussam,Marché A,Relevés terrain Kobo,terrain,189600,XAF,Hisense,Chine,0,0,,0
+2026-08-27,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Douala,Marché Central,CoinAfrique,scrape,58600,XAF,Tecno,,0,0,,1
+2026-08-27,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Yaoundé,Marché Mokolo,Jumia Cameroun,scrape,55400,XAF,Tecno,,0,0,,0
+2026-08-27,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Yaoundé,Marché Mfoundi,Jumia Cameroun,scrape,55400,XAF,Tecno,,0,0,,0
+2026-08-27,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Bafoussam,Marché A,CoinAfrique,scrape,57000,XAF,Tecno,,0,0,,1
+2026-08-28,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Douala,Marché Central,Jumia Cameroun,scrape,29600,XAF,Mémé,,0,0,,1
+2026-08-28,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Douala,Mboppi,CoinAfrique,scrape,28600,XAF,Mémé,,0,0,,0
+2026-08-28,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Yaoundé,Marché Mfoundi,CoinAfrique,scrape,29000,XAF,Mémé,,0,0,,1
+2026-08-28,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Bafoussam,Marché A,Jumia Cameroun,scrape,28100,XAF,Mémé,,0,1,,0
+2026-08-28,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Douala,Mboppi,Relevés terrain Kobo,terrain,1880,XAF,Mayor,,0,0,,1
+2026-08-28,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,1830,XAF,Mayor,,0,0,,1
+2026-08-28,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Yaoundé,Marché Mfoundi,Jumia Cameroun,scrape,970,XAF,,,0,0,,1
+2026-08-28,CIMENT-50KG,Ciment 50 kg,Matériaux,Douala,Marché Central,Relevés terrain Kobo,terrain,5680,XAF,Dangote,,0,0,,0
+2026-08-28,CIMENT-50KG,Ciment 50 kg,Matériaux,Yaoundé,Marché Mokolo,Jumia Cameroun,scrape,6010,XAF,Dangote,,0,0,,0
+2026-08-28,CIMENT-50KG,Ciment 50 kg,Matériaux,Bafoussam,Marché A,Jumia Cameroun,scrape,5520,XAF,Dangote,,0,0,,0
+2026-08-28,CONGEL-200L,Congélateur 200 L,Électroménager,Douala,Marché Central,Jumia Cameroun,scrape,187600,XAF,Hisense,Chine,0,0,,0
+2026-08-28,CONGEL-200L,Congélateur 200 L,Électroménager,Douala,Mboppi,CoinAfrique,scrape,196100,XAF,Hisense,Chine,0,0,,0
+2026-08-28,CONGEL-200L,Congélateur 200 L,Électroménager,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,196500,XAF,Hisense,Chine,0,0,,0
+2026-08-28,CONGEL-200L,Congélateur 200 L,Électroménager,Yaoundé,Marché Mfoundi,Jumia Cameroun,scrape,194700,XAF,Hisense,Chine,0,0,,0
+2026-08-28,CONGEL-200L,Congélateur 200 L,Électroménager,Bafoussam,Marché A,Relevés terrain Kobo,terrain,189600,XAF,Hisense,Chine,0,0,,0
+2026-08-28,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Douala,Mboppi,Relevés terrain Kobo,terrain,56500,XAF,Tecno,,0,0,,1
+2026-08-28,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Yaoundé,Marché Mokolo,Jumia Cameroun,scrape,56600,XAF,Tecno,,0,0,,0
+2026-08-28,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,54100,XAF,Tecno,,0,0,,0
+2026-08-28,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Bafoussam,Marché A,Relevés terrain Kobo,terrain,56100,XAF,Tecno,,0,0,,1
+2026-08-29,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Douala,Marché Central,Jumia Cameroun,scrape,30200,XAF,Mémé,,0,0,,0
+2026-08-29,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Douala,Mboppi,CoinAfrique,scrape,29600,XAF,Mémé,,0,0,,1
+2026-08-29,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,29100,XAF,Mémé,,0,0,,0
+2026-08-29,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Bafoussam,Marché A,CoinAfrique,scrape,28500,XAF,Mémé,,1,0,,1
+2026-08-29,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Douala,Mboppi,Relevés terrain Kobo,terrain,1830,XAF,Mayor,,0,0,,0
+2026-08-29,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,1890,XAF,Mayor,,0,0,,0
+2026-08-29,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Douala,Mboppi,Relevés terrain Kobo,terrain,920,XAF,,,0,0,,1
+2026-08-29,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Yaoundé,Marché Mokolo,CoinAfrique,scrape,940,XAF,,,0,0,,0
+2026-08-29,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Bafoussam,Marché A,Relevés terrain Kobo,terrain,920,XAF,,,0,0,,0
+2026-08-29,CIMENT-50KG,Ciment 50 kg,Matériaux,Douala,Marché Central,Relevés terrain Kobo,terrain,5760,XAF,Dangote,,0,0,,0
+2026-08-29,CIMENT-50KG,Ciment 50 kg,Matériaux,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,5900,XAF,Dangote,,0,1,remise MoMo -5%,0
+2026-08-29,CIMENT-50KG,Ciment 50 kg,Matériaux,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,5870,XAF,Dangote,,0,0,,0
+2026-08-29,CIMENT-50KG,Ciment 50 kg,Matériaux,Bafoussam,Marché A,Relevés terrain Kobo,terrain,5610,XAF,Dangote,,0,0,,0
+2026-08-29,CONGEL-200L,Congélateur 200 L,Électroménager,Yaoundé,Marché Mokolo,Jumia Cameroun,scrape,189300,XAF,Hisense,Chine,0,0,,0
+2026-08-29,CONGEL-200L,Congélateur 200 L,Électroménager,Bafoussam,Marché A,Jumia Cameroun,scrape,184800,XAF,Hisense,Chine,0,0,,0
+2026-08-29,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Douala,Marché Central,Relevés terrain Kobo,terrain,59200,XAF,Tecno,,0,0,,0
+2026-08-29,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Douala,Mboppi,CoinAfrique,scrape,56500,XAF,Tecno,,0,0,,0
+2026-08-29,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,57100,XAF,Tecno,,0,0,,1
+2026-08-30,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Douala,Marché Central,Relevés terrain Kobo,terrain,28400,XAF,Mémé,,0,0,,0
+2026-08-30,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Douala,Mboppi,Relevés terrain Kobo,terrain,29200,XAF,Mémé,,0,1,,0
+2026-08-30,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,29600,XAF,Mémé,,0,1,,0
+2026-08-30,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Douala,Marché Central,CoinAfrique,scrape,1880,XAF,Mayor,,0,0,,1
+2026-08-30,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Douala,Mboppi,Relevés terrain Kobo,terrain,1880,XAF,Mayor,,0,0,,0
+2026-08-30,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,1870,XAF,Mayor,,0,0,,0
+2026-08-30,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,1860,XAF,Mayor,,0,0,,0
+2026-08-30,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Bafoussam,Marché A,Jumia Cameroun,scrape,1880,XAF,Mayor,,0,0,,0
+2026-08-30,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Douala,Mboppi,Jumia Cameroun,scrape,920,XAF,,,0,0,,0
+2026-08-30,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Yaoundé,Marché Mfoundi,Jumia Cameroun,scrape,950,XAF,,,0,0,,0
+2026-08-30,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Bafoussam,Marché A,Relevés terrain Kobo,terrain,960,XAF,,,0,0,,0
+2026-08-30,CIMENT-50KG,Ciment 50 kg,Matériaux,Douala,Marché Central,Jumia Cameroun,scrape,5880,XAF,Dangote,,0,1,,0
+2026-08-30,CIMENT-50KG,Ciment 50 kg,Matériaux,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,6000,XAF,Dangote,,0,0,,0
+2026-08-30,CIMENT-50KG,Ciment 50 kg,Matériaux,Yaoundé,Marché Mfoundi,Jumia Cameroun,scrape,5850,XAF,Dangote,,0,0,,1
+2026-08-30,CONGEL-200L,Congélateur 200 L,Électroménager,Douala,Marché Central,Jumia Cameroun,scrape,193800,XAF,Hisense,Chine,1,0,,1
+2026-08-30,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Yaoundé,Marché Mfoundi,Jumia Cameroun,scrape,58300,XAF,Tecno,,0,0,,0
+2026-08-30,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Bafoussam,Marché A,Relevés terrain Kobo,terrain,58600,XAF,Tecno,,0,0,,0
+2026-08-31,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Douala,Marché Central,CoinAfrique,scrape,29800,XAF,Mémé,,0,0,,0
+2026-08-31,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Douala,Mboppi,Relevés terrain Kobo,terrain,28200,XAF,Mémé,,0,0,,0
+2026-08-31,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Douala,Marché Central,Relevés terrain Kobo,terrain,1810,XAF,Mayor,,0,0,,0
+2026-08-31,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,1910,XAF,Mayor,,0,0,,0
+2026-08-31,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Douala,Marché Central,CoinAfrique,scrape,920,XAF,,,0,0,,1
+2026-08-31,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Douala,Mboppi,CoinAfrique,scrape,930,XAF,,,0,0,,0
+2026-08-31,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,950,XAF,,,0,0,,0
+2026-08-31,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,950,XAF,,,0,0,,0
+2026-08-31,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Bafoussam,Marché A,Relevés terrain Kobo,terrain,930,XAF,,,0,0,,0
+2026-08-31,CIMENT-50KG,Ciment 50 kg,Matériaux,Douala,Marché Central,Jumia Cameroun,scrape,5800,XAF,Dangote,,0,0,,0
+2026-08-31,CIMENT-50KG,Ciment 50 kg,Matériaux,Yaoundé,Marché Mokolo,CoinAfrique,scrape,5890,XAF,Dangote,,0,0,,0
+2026-08-31,CIMENT-50KG,Ciment 50 kg,Matériaux,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,5950,XAF,Dangote,,0,0,,0
+2026-08-31,CIMENT-50KG,Ciment 50 kg,Matériaux,Bafoussam,Marché A,Relevés terrain Kobo,terrain,5730,XAF,Dangote,,0,0,,0
+2026-08-31,CONGEL-200L,Congélateur 200 L,Électroménager,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,188400,XAF,Hisense,Chine,0,0,,0
+2026-08-31,CONGEL-200L,Congélateur 200 L,Électroménager,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,189600,XAF,Hisense,Chine,0,0,,1
+2026-08-31,CONGEL-200L,Congélateur 200 L,Électroménager,Bafoussam,Marché A,CoinAfrique,scrape,193700,XAF,Hisense,Chine,0,0,,0
+2026-08-31,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Douala,Marché Central,Relevés terrain Kobo,terrain,57200,XAF,Tecno,,0,0,,1
+2026-08-31,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,54600,XAF,Tecno,,0,0,,1
+2026-09-01,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Douala,Marché Central,Relevés terrain Kobo,terrain,32800,XAF,Mémé,,0,0,,0
+2026-09-01,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Yaoundé,Marché Mokolo,CoinAfrique,scrape,32700,XAF,Mémé,,0,0,,0
+2026-09-01,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,32100,XAF,Mémé,,0,0,,1
+2026-09-01,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Bafoussam,Marché A,Jumia Cameroun,scrape,32800,XAF,Mémé,,0,0,,1
+2026-09-01,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Douala,Mboppi,Jumia Cameroun,scrape,1680,XAF,Mayor,,0,0,,1
+2026-09-01,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,1690,XAF,Mayor,,1,0,,1
+2026-09-01,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Douala,Marché Central,CoinAfrique,scrape,910,XAF,,,0,0,,0
+2026-09-01,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Douala,Mboppi,Jumia Cameroun,scrape,940,XAF,,,0,0,,0
+2026-09-01,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Bafoussam,Marché A,CoinAfrique,scrape,960,XAF,,,0,0,,1
+2026-09-01,CIMENT-50KG,Ciment 50 kg,Matériaux,Yaoundé,Marché Mfoundi,Jumia Cameroun,scrape,6030,XAF,Dangote,,0,0,,0
+2026-09-01,CIMENT-50KG,Ciment 50 kg,Matériaux,Bafoussam,Marché A,Relevés terrain Kobo,terrain,5770,XAF,Dangote,,0,0,,0
+2026-09-01,CONGEL-200L,Congélateur 200 L,Électroménager,Douala,Marché Central,Jumia Cameroun,scrape,189800,XAF,Hisense,Chine,0,1,remise MoMo -5%,0
+2026-09-01,CONGEL-200L,Congélateur 200 L,Électroménager,Yaoundé,Marché Mokolo,Jumia Cameroun,scrape,192500,XAF,Hisense,Chine,0,1,,1
+2026-09-01,CONGEL-200L,Congélateur 200 L,Électroménager,Yaoundé,Marché Mfoundi,CoinAfrique,scrape,190300,XAF,Hisense,Chine,0,0,,1
+2026-09-01,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Douala,Marché Central,Relevés terrain Kobo,terrain,57200,XAF,Tecno,,0,0,,1
+2026-09-01,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Douala,Mboppi,Relevés terrain Kobo,terrain,57800,XAF,Tecno,,0,0,,0
+2026-09-01,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,56300,XAF,Tecno,,0,0,,0
+2026-09-01,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Bafoussam,Marché A,Relevés terrain Kobo,terrain,57800,XAF,Tecno,,0,0,,1
+2026-09-02,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Douala,Marché Central,Relevés terrain Kobo,terrain,32500,XAF,Mémé,,0,0,,0
+2026-09-02,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Douala,Mboppi,Jumia Cameroun,scrape,32800,XAF,Mémé,,0,0,,0
+2026-09-02,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,31700,XAF,Mémé,,0,0,,0
+2026-09-02,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Douala,Marché Central,Relevés terrain Kobo,terrain,1740,XAF,Mayor,,0,0,,0
+2026-09-02,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,1710,XAF,Mayor,,1,0,,0
+2026-09-02,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,1780,XAF,Mayor,,0,0,,0
+2026-09-02,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Douala,Marché Central,Relevés terrain Kobo,terrain,940,XAF,,,0,0,,1
+2026-09-02,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,950,XAF,,,0,0,,0
+2026-09-02,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Bafoussam,Marché A,Jumia Cameroun,scrape,950,XAF,,,0,0,,0
+2026-09-02,CIMENT-50KG,Ciment 50 kg,Matériaux,Douala,Mboppi,Relevés terrain Kobo,terrain,5570,XAF,Dangote,,0,0,,1
+2026-09-02,CIMENT-50KG,Ciment 50 kg,Matériaux,Bafoussam,Marché A,Jumia Cameroun,scrape,5550,XAF,Dangote,,0,0,,1
+2026-09-02,CONGEL-200L,Congélateur 200 L,Électroménager,Douala,Marché Central,CoinAfrique,scrape,192100,XAF,Hisense,Chine,0,0,,1
+2026-09-02,CONGEL-200L,Congélateur 200 L,Électroménager,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,191000,XAF,Hisense,Chine,0,0,,1
+2026-09-02,CONGEL-200L,Congélateur 200 L,Électroménager,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,195200,XAF,Hisense,Chine,0,0,,0
+2026-09-02,CONGEL-200L,Congélateur 200 L,Électroménager,Bafoussam,Marché A,CoinAfrique,scrape,202300,XAF,Hisense,Chine,0,0,,1
+2026-09-02,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,57100,XAF,Tecno,,0,0,,1
+2026-09-02,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Yaoundé,Marché Mfoundi,Jumia Cameroun,scrape,57500,XAF,Tecno,,0,0,,0
+2026-09-02,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Bafoussam,Marché A,CoinAfrique,scrape,59000,XAF,Tecno,,0,1,remise MoMo -5%,1
+2026-09-03,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Douala,Marché Central,Relevés terrain Kobo,terrain,32200,XAF,Mémé,,0,0,,1
+2026-09-03,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Douala,Mboppi,Jumia Cameroun,scrape,31300,XAF,Mémé,,0,0,,0
+2026-09-03,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,32600,XAF,Mémé,,0,0,,0
+2026-09-03,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Douala,Marché Central,Jumia Cameroun,scrape,1750,XAF,Mayor,,0,0,,0
+2026-09-03,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Yaoundé,Marché Mokolo,Jumia Cameroun,scrape,1820,XAF,Mayor,,0,0,,1
+2026-09-03,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Bafoussam,Marché A,Relevés terrain Kobo,terrain,1750,XAF,Mayor,,0,0,,1
+2026-09-03,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Douala,Mboppi,Relevés terrain Kobo,terrain,950,XAF,,,0,0,,1
+2026-09-03,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Yaoundé,Marché Mokolo,Jumia Cameroun,scrape,950,XAF,,,0,0,,1
+2026-09-03,CIMENT-50KG,Ciment 50 kg,Matériaux,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,5800,XAF,Dangote,,0,0,,0
+2026-09-03,CIMENT-50KG,Ciment 50 kg,Matériaux,Yaoundé,Marché Mfoundi,CoinAfrique,scrape,6000,XAF,Dangote,,0,0,,1
+2026-09-03,CIMENT-50KG,Ciment 50 kg,Matériaux,Bafoussam,Marché A,Relevés terrain Kobo,terrain,5800,XAF,Dangote,,0,1,,1
+2026-09-03,CONGEL-200L,Congélateur 200 L,Électroménager,Douala,Marché Central,CoinAfrique,scrape,189400,XAF,Hisense,Chine,0,0,,1
+2026-09-03,CONGEL-200L,Congélateur 200 L,Électroménager,Douala,Mboppi,CoinAfrique,scrape,192900,XAF,Hisense,Chine,0,0,,0
+2026-09-03,CONGEL-200L,Congélateur 200 L,Électroménager,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,195400,XAF,Hisense,Chine,0,0,,0
+2026-09-03,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Douala,Marché Central,Jumia Cameroun,scrape,58300,XAF,Tecno,,0,0,,1
+2026-09-03,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,55700,XAF,Tecno,,0,0,,1
+2026-09-03,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Yaoundé,Marché Mfoundi,CoinAfrique,scrape,57800,XAF,Tecno,,0,0,,1
+2026-09-03,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Bafoussam,Marché A,Relevés terrain Kobo,terrain,56500,XAF,Tecno,,0,0,,0
+2026-09-04,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Douala,Mboppi,Relevés terrain Kobo,terrain,33100,XAF,Mémé,,0,0,,1
+2026-09-04,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Yaoundé,Marché Mokolo,CoinAfrique,scrape,33300,XAF,Mémé,,0,0,,1
+2026-09-04,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Bafoussam,Marché A,CoinAfrique,scrape,32500,XAF,Mémé,,0,0,,0
+2026-09-04,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Douala,Marché Central,CoinAfrique,scrape,1770,XAF,Mayor,,0,0,,0
+2026-09-04,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Douala,Mboppi,Relevés terrain Kobo,terrain,1760,XAF,Mayor,,0,0,,0
+2026-09-04,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Yaoundé,Marché Mfoundi,Jumia Cameroun,scrape,1760,XAF,Mayor,,1,0,,1
+2026-09-04,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Douala,Marché Central,CoinAfrique,scrape,920,XAF,,,0,0,,0
+2026-09-04,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,930,XAF,,,0,0,,1
+2026-09-04,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Yaoundé,Marché Mfoundi,Jumia Cameroun,scrape,920,XAF,,,0,0,,0
+2026-09-04,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Bafoussam,Marché A,Jumia Cameroun,scrape,930,XAF,,,0,0,,1
+2026-09-04,CIMENT-50KG,Ciment 50 kg,Matériaux,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,5900,XAF,Dangote,,0,0,,0
+2026-09-04,CIMENT-50KG,Ciment 50 kg,Matériaux,Yaoundé,Marché Mfoundi,Jumia Cameroun,scrape,5890,XAF,Dangote,,0,0,,0
+2026-09-04,CONGEL-200L,Congélateur 200 L,Électroménager,Douala,Mboppi,Jumia Cameroun,scrape,195000,XAF,Hisense,Chine,0,0,,0
+2026-09-04,CONGEL-200L,Congélateur 200 L,Électroménager,Yaoundé,Marché Mfoundi,Jumia Cameroun,scrape,191900,XAF,Hisense,Chine,1,0,,0
+2026-09-04,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Douala,Marché Central,Relevés terrain Kobo,terrain,56800,XAF,Tecno,,0,0,,1
+2026-09-04,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Yaoundé,Marché Mfoundi,Jumia Cameroun,scrape,55700,XAF,Tecno,,0,0,,0
+2026-09-05,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Douala,Marché Central,Relevés terrain Kobo,terrain,31900,XAF,Mémé,,0,0,,0
+2026-09-05,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Yaoundé,Marché Mfoundi,Jumia Cameroun,scrape,33300,XAF,Mémé,,0,0,,1
+2026-09-05,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Bafoussam,Marché A,Relevés terrain Kobo,terrain,32100,XAF,Mémé,,0,0,,1
+2026-09-05,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Yaoundé,Marché Mfoundi,Jumia Cameroun,scrape,1750,XAF,Mayor,,1,0,,1
+2026-09-05,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Bafoussam,Marché A,Jumia Cameroun,scrape,1730,XAF,Mayor,,0,1,remise MoMo -5%,1
+2026-09-05,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Douala,Marché Central,CoinAfrique,scrape,940,XAF,,,0,0,,1
+2026-09-05,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Yaoundé,Marché Mfoundi,CoinAfrique,scrape,910,XAF,,,0,0,,1
+2026-09-05,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Bafoussam,Marché A,Jumia Cameroun,scrape,940,XAF,,,0,0,,1
+2026-09-05,CIMENT-50KG,Ciment 50 kg,Matériaux,Yaoundé,Marché Mfoundi,Jumia Cameroun,scrape,5870,XAF,Dangote,,0,0,,1
+2026-09-05,CIMENT-50KG,Ciment 50 kg,Matériaux,Bafoussam,Marché A,Jumia Cameroun,scrape,5700,XAF,Dangote,,0,0,,1
+2026-09-05,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Douala,Marché Central,Relevés terrain Kobo,terrain,56300,XAF,Tecno,,0,0,,0
+2026-09-05,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Douala,Mboppi,Relevés terrain Kobo,terrain,57000,XAF,Tecno,,0,0,,0
+2026-09-05,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,57200,XAF,Tecno,,0,0,,0
+2026-09-06,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Douala,Mboppi,Relevés terrain Kobo,terrain,31800,XAF,Mémé,,0,0,,1
+2026-09-06,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,32800,XAF,Mémé,,0,0,,0
+2026-09-06,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Douala,Marché Central,CoinAfrique,scrape,1760,XAF,Mayor,,0,0,,0
+2026-09-06,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Yaoundé,Marché Mokolo,Jumia Cameroun,scrape,1740,XAF,Mayor,,0,0,,0
+2026-09-06,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Bafoussam,Marché A,Relevés terrain Kobo,terrain,1720,XAF,Mayor,,0,0,,0
+2026-09-06,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Douala,Mboppi,Relevés terrain Kobo,terrain,920,XAF,,,0,0,,0
+2026-09-06,CIMENT-50KG,Ciment 50 kg,Matériaux,Douala,Mboppi,Jumia Cameroun,scrape,5840,XAF,Dangote,,0,0,,1
+2026-09-06,CIMENT-50KG,Ciment 50 kg,Matériaux,Yaoundé,Marché Mfoundi,Jumia Cameroun,scrape,5940,XAF,Dangote,,0,0,,0
+2026-09-06,CIMENT-50KG,Ciment 50 kg,Matériaux,Bafoussam,Marché A,CoinAfrique,scrape,5730,XAF,Dangote,,0,0,,1
+2026-09-06,CONGEL-200L,Congélateur 200 L,Électroménager,Douala,Mboppi,Relevés terrain Kobo,terrain,196200,XAF,Hisense,Chine,0,0,,0
+2026-09-06,CONGEL-200L,Congélateur 200 L,Électroménager,Yaoundé,Marché Mfoundi,Jumia Cameroun,scrape,194900,XAF,Hisense,Chine,0,0,,0
+2026-09-06,CONGEL-200L,Congélateur 200 L,Électroménager,Bafoussam,Marché A,Relevés terrain Kobo,terrain,190400,XAF,Hisense,Chine,0,0,,0
+2026-09-06,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Douala,Marché Central,Jumia Cameroun,scrape,55200,XAF,Tecno,,0,0,,0
+2026-09-06,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Douala,Mboppi,Relevés terrain Kobo,terrain,57700,XAF,Tecno,,0,0,,1
+2026-09-06,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,56300,XAF,Tecno,,0,0,,1
+2026-09-07,RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,33600,XAF,Mémé,,0,0,,0
+2026-09-07,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Yaoundé,Marché Mfoundi,CoinAfrique,scrape,1770,XAF,Mayor,,0,0,,0
+2026-09-07,HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,Bafoussam,Marché A,Relevés terrain Kobo,terrain,1710,XAF,Mayor,,0,0,,0
+2026-09-07,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Douala,Mboppi,Jumia Cameroun,scrape,930,XAF,,,0,0,,0
+2026-09-07,SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,Yaoundé,Marché Mfoundi,CoinAfrique,scrape,960,XAF,,,0,0,,0
+2026-09-07,CIMENT-50KG,Ciment 50 kg,Matériaux,Douala,Mboppi,Jumia Cameroun,scrape,5670,XAF,Dangote,,0,0,,1
+2026-09-07,CIMENT-50KG,Ciment 50 kg,Matériaux,Bafoussam,Marché A,Relevés terrain Kobo,terrain,5780,XAF,Dangote,,0,0,,0
+2026-09-07,CONGEL-200L,Congélateur 200 L,Électroménager,Douala,Mboppi,Relevés terrain Kobo,terrain,188800,XAF,Hisense,Chine,0,0,,0
+2026-09-07,CONGEL-200L,Congélateur 200 L,Électroménager,Yaoundé,Marché Mokolo,Relevés terrain Kobo,terrain,194900,XAF,Hisense,Chine,0,1,,0
+2026-09-07,CONGEL-200L,Congélateur 200 L,Électroménager,Bafoussam,Marché A,CoinAfrique,scrape,192800,XAF,Hisense,Chine,0,0,,0
+2026-09-07,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Douala,Mboppi,Jumia Cameroun,scrape,56100,XAF,Tecno,,0,0,,1
+2026-09-07,SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,Yaoundé,Marché Mfoundi,Relevés terrain Kobo,terrain,57000,XAF,Tecno,,0,0,,1

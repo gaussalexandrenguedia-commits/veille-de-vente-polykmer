@@ -1,0 +1,152 @@
+# ═══════════════════════════════════════════════════════════════════
+# Veille Sniper — définition des cibles surveillées
+# Copier vers watches.yaml et adapter. ${VAR} = variable d'environnement.
+#
+# Tiers de polling (intervalle conseillé) :
+#   hot   15-30 s   endpoints API tolérants / partenaires UNIQUEMENT
+#   warm  5 min     pages HTML e-commerce classiques
+#   cold  1 h       veille large (doublée par ChangeDetection.io)
+# Jamais de polling agressif sur un site tiers sans accord (bans + CGU).
+# Le < 1 s temps réel passe par les WEBHOOKS entrants (push, voir port 8001).
+# ═══════════════════════════════════════════════════════════════════
+
+global:
+  user_agent: "VeilleVenteCM-sniper/0.1 (+contact: veille-vente; polling poli)"
+  default_cooldown: 300        # anti-spam : 1 alerte / règle / 5 min max
+  dedup_ttl: 86400             # ne jamais re-signaler le même signal sous 24 h
+  state_db: "state/sniper.db"
+  max_parallel: 10
+  min_interval_per_domain: 15  # garde-fou : pas plus vite que 15 s / domaine
+
+telegram:
+  bot_token: "${TELEGRAM_BOT_TOKEN}"
+  chat_ids: "${TELEGRAM_CHAT_IDS}"   # séparés par des virgules
+  dashboard_url: "${DASHBOARD_URL}"
+
+apprise_urls: "${APPRISE_URLS}"       # séparés par ; (vide = désactivé)
+
+api_veille:
+  url: "${API_URL}"
+  key: "${API_KEY_INGEST}"
+
+watches:
+  # ── DÉMO sans réseau : marche aléatoire, pour tester le pipeline ──
+  - id: demo-riz-mokolo
+    name: "[DÉMO] Riz parfumé 50 kg — Mokolo"
+    tier: hot
+    interval: 20
+    type: demo
+    demo: {base_price: 28500, volatility: 0.04, drop_every: 12}
+    url: "https://example.com/offre/riz-parfume-50kg"
+    ville: "Yaoundé"
+    produit_sku: "RIZ-PARF-50KG"
+    rules:
+      - {type: drop_pct, value: 5}
+      - {type: below, value: 26000}
+    actions: {telegram: true, apprise: false, post_api: false}
+
+  # ── Endpoint JSON (idéal : API partenaire / ta propre boutique) ──
+  - id: partenaire-stock-api
+    name: "API partenaire — stock & prix"
+    tier: hot
+    interval: 30
+    type: api_json
+    url: "https://partenaire.example.com/api/v1/produits/RIZ-PARF-50KG"
+    headers: {Authorization: "Bearer ${PARTENAIRE_TOKEN}"}
+    ville: "Douala"
+    produit_sku: "RIZ-PARF-50KG"
+    extract:
+      price_jsonpath: "data.prix"
+      stock_jsonpath: "data.en_stock"
+    rules:
+      - {type: drop_pct, value: 10}
+      - {type: back_in_stock}
+      - {type: below, value: 25000, severity: rouge}
+    actions: {telegram: true, apprise: true, post_api: true}
+
+  # ── Page HTML classique (tier warm, polling poli) ──
+  - id: jumia-congelateur
+    name: "Jumia CM — Congélateur Hisense 200 L"
+    tier: warm
+    interval: 300
+    type: html
+    url: "https://www.jumia.cm/congelateur-hisense-200l-exemple/"
+    ville: "Douala"
+    produit_sku: "CONGEL-200L"
+    extract:
+      price_regex: '([\\d\\s.]+)\\s*(FCFA|XAF)'
+      stock_absent: "rupture de stock|out of stock|indisponible"
+      stock_present: "ajouter au panier|add to cart"
+    rules:
+      - {type: drop_pct, value: 5}
+      - {type: back_in_stock}
+    actions: {telegram: true, apprise: false, post_api: true}
+
+  # ── Liste JSON : détection NOUVEAUX posts/produits ──
+  - id: arrivages-telegram-mirror
+    name: "Miroir arrivages — nouveaux posts"
+    tier: warm
+    interval: 300
+    type: api_json
+    url: "https://partenaire.example.com/api/v1/arrivages"
+    ville: "Douala"
+    extract:
+      items_jsonpath: "data.items"
+      items_id_key: "id"
+    rules:
+      - {type: new_items}
+      - {type: keyword, pattern: "iphone|samsung galaxy|starlink", severity: rouge}
+    actions: {telegram: true, apprise: true, post_api: false}
+
+  # ── Cible webhook UNIQUEMENT (push instantané, interval: 0 = pas de polling) ──
+  - id: kobo-rupture-push
+    name: "Push terrain — ruptures signalées"
+    tier: hot
+    interval: 0
+    type: webhook
+    url: "https://veille.example.com/hook/kobo-rupture-push"
+    ville: "Yaoundé"
+    rules:
+      - {type: keyword, pattern: "rupture", severity: rouge}
+    actions: {telegram: true, apprise: true, post_api: false}
+
+  # ── EXEMPLE AVANCÉ : zones + healing + sémantique + one-click + stealth ──
+  - id: electro-gene-dla
+    name: "Annonces — groupe électrogène Douala"
+    tier: warm
+    interval: 300
+    type: html
+    url: "https://annonces.example.com/recherche?q=groupe+electrogene&ville=douala"
+    ville: "Douala"
+    # session: sessions/marketplace.json   # décommenter après login manuel (tools/save_session.py)
+    stealth:
+      profile: rotate          # rotate | desktop | mobile | off
+      # impersonate: chrome124 # nécessite `pip install curl-cffi`
+      # proxies: ["http://user:pass@proxy:port"]
+    extract:
+      zone_css_chain: [".listing-detail", ".annonce", "main"]  # ciblage zone (anti faux positifs)
+      price_css_chain: [".product-price", ".prc", ".price", "[data-price]"]  # auto-réparée
+      price_regex: '([\\d\\s.]+)\\s*(FCFA|XAF)'
+      seller_phone_regex: '((?:\\+237)?[\\s\\d]{9,})'  # -> bouton WhatsApp
+      clean_html: true
+    rules:
+      - {type: below, value: 200000}
+      - {type: keyword, pattern: "electrogene|générateur|generator"}
+    semantic:                  # gate AVANT alerte (ScrapeGraphAI-like)
+      backend: heuristic       # heuristic | ollama | openai_compatible
+      applies_to: ["*"]
+      on_error: allow
+      criteria:
+        must_include: ["electrogene"]
+        must_exclude: ["pièces détachées", "réparation", "location"]
+        numeric: [{pattern: '([\\d.,]+)\\s*kva', op: ">=", value: 5}]
+        max_price: 200000
+      # ollama: {url: "http://localhost:11434", model: "llama3.1:8b"}
+      # backend: gemini + gemini: {model: "gemini-2.5-flash"}  # needs GEMINI_API_KEYS
+    actions_card:              # boutons one-click Telegram
+      wa_text: "Bonjour, '{watch}' à {prix} XAF m'intéresse, toujours dispo ? ({ville})"
+      buttons:
+        - {label: "💬 WhatsApp vendeur", requires: seller_phone,
+           url: "https://wa.me/{seller_phone_digits}?text={wa_text}"}
+        - {label: "🔗 Voir l'annonce", url: "{url}"}
+    actions: {telegram: true, apprise: false, post_api: true}
