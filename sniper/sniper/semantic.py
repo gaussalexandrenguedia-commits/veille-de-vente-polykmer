@@ -5,7 +5,9 @@ Backends :
   - heuristic (défaut, 100 % hors-ligne) : must_include / must_exclude /
     contraintes numériques par regex / prix min-max ;
   - ollama : petit LLM local (ex. llama3.1:8b) via http://localhost:11434 ;
-  - openai_compatible : tout endpoint /chat/completions.
+  - openai_compatible : tout endpoint /chat/completions ;
+  - gemini : Google AI (GEMINI_API_KEYS, rotation + failover), config
+    `gemini: {model: ...}`. Idéal : validation sémantique riche en < 2 s.
 
 Exemple (groupe électrogène > 5 kVA sous 200 000 FCFA) : voir tests +
 watches.example.yaml. `on_error: allow|block` si le backend LLM est injoignable.
@@ -108,6 +110,35 @@ async def _openai_pass(client, cfg: dict, prompt: str) -> tuple[bool, str]:
     return bool(data.get("match")), str(data.get("reason", "llm"))
 
 
+async def _gemini_pass(client, sem: dict, prompt: str) -> tuple[bool, str]:
+    import os
+    keys = [k.strip() for k in os.getenv("GEMINI_API_KEYS", "").split(",") if k.strip()]
+    if not keys:
+        raise RuntimeError("GEMINI_API_KEYS absent (export ou sniper/.env)")
+    g = sem.get("gemini", {})
+    model = g.get("model", os.getenv("GEMINI_MODEL", "gemini-2.5-flash"))
+    payload = {"contents": [{"parts": [{"text": prompt}]}],
+               "generationConfig": {"temperature": 0, "maxOutputTokens": 200,
+                                    "response_mime_type": "application/json"}}
+    last = "injoignable"
+    for key in keys:  # failover inter-clés (429/5xx)
+        try:
+            r = await client.post(
+                f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent",
+                params={"key": key}, json=payload, timeout=30.0)
+        except Exception as e:  # noqa: BLE001
+            last = str(e)[:100]
+            continue
+        if r.status_code == 200:
+            txt = r.json()["candidates"][0]["content"]["parts"][0]["text"]
+            data = json.loads(txt.strip().removeprefix("```json").removeprefix("```").removesuffix("```"))
+            return bool(data.get("match")), str(data.get("reason", "gemini"))
+        last = f"HTTP {r.status_code}"
+        if r.status_code not in (429, 500, 502, 503):
+            break
+    raise RuntimeError(f"gemini: {last}")
+
+
 async def filter_signals(watch: dict, obs: dict, signals: list[Signal],
                          http_client=None) -> list[Signal]:
     """Applique le gate sémantique ; sans bloc `semantic:` -> inchangé."""
@@ -119,7 +150,7 @@ async def filter_signals(watch: dict, obs: dict, signals: list[Signal],
     criteria = sem.get("criteria", {})
     on_error = sem.get("on_error", "allow")
     prompt = _prompt(criteria, obs, signals[0], watch.get("ville", "")) \
-        if backend in ("ollama", "openai_compatible") else ""
+        if backend in ("ollama", "openai_compatible", "gemini") else ""
     out: list[Signal] = []
     for sig in signals:
         if "*" not in applies and sig.rule not in applies:
@@ -128,6 +159,9 @@ async def filter_signals(watch: dict, obs: dict, signals: list[Signal],
         try:
             if backend == "heuristic":
                 ok, raison = heuristic_pass(criteria, obs, sig)
+            elif backend == "gemini":
+                assert http_client is not None
+                ok, raison = await _gemini_pass(http_client, sem, prompt)
             elif backend == "ollama":
                 assert http_client is not None
                 ok, raison = await _ollama_pass(http_client, sem, prompt)

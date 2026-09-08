@@ -142,6 +142,7 @@ watches:
         numeric: [{pattern: '([\\d.,]+)\\s*kva', op: ">=", value: 5}]
         max_price: 200000
       # ollama: {url: "http://localhost:11434", model: "llama3.1:8b"}
+      # backend: gemini + gemini: {model: "gemini-2.5-flash"}  # needs GEMINI_API_KEYS
     actions_card:              # boutons one-click Telegram
       wa_text: "Bonjour, '{watch}' à {prix} XAF m'intéresse, toujours dispo ? ({ville})"
       buttons:

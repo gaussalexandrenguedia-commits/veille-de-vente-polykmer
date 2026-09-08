@@ -266,6 +266,88 @@ async function pageReferentiels() {
     `<td>${esc(s.frequence)}</td><td>${s.actif ? "✅" : "⏸️"}</td></tr>`).join("");
 }
 
+/* ── Agent IA ──────────────────────────────────────────── */
+function mdLite(s) {
+  return esc(s).replace(/\*\*(.+?)\*\*/g, "<b>$1</b>").replace(/^## (.+)$/gm, "<h3>$1</h3>")
+    .replace(/^- (.+)$/gm, "• $1").replace(/\n/g, "<br>");
+}
+async function pageIA() {
+  async function statut() {
+    const st = await getJSON("/api/v1/ai/statut");
+    $("iaStatus").textContent = st.ia_disponible
+      ? `🤖 Agent IA — Gemini connecté (${st.nb_cles} clés)` : "🤖 Agent IA — mode heuristique offline";
+    $("iaDetail").textContent = st.ia_disponible
+      ? `Modèles : ${st.modeles.join(" → ")} · clés ${st.cles.join(", ")}`
+      : "Aucune clé GEMINI_API_KEYS : parser/scoreur/messages en heuristique, vision et rapport enrichi indisponibles.";
+  }
+  await statut();
+  $("btnTestIA").onclick = async () => {
+    try {
+      const r = await postJSON("/api/v1/ai/test");
+      toast(r.ok ? `Gemini OK (${r.latence_ms} ms)` : "Échec : " + r.erreur, r.ok ? "ok" : "err");
+    } catch (e) { toast(e.message, "err"); }
+  };
+  const prods = await getJSON("/api/v1/produits");
+  $("iaProduit").innerHTML = prods.map((p) => `<option value="${p.sku}">${esc(p.nom)}</option>`).join("");
+  $("formParse").onsubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const r = await postJSON("/api/v1/ai/parser-annonce", { texte: $("iaTexte").value });
+      const out = $("iaParseOut");
+      out.hidden = false;
+      out.textContent = JSON.stringify(r, null, 2);
+    } catch (err) { toast(err.message, "err"); }
+  };
+  $("formScore").onsubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const r = await postJSON("/api/v1/ai/scorer", { produit: $("iaProduit").value,
+        prix: parseFloat($("iaPrix").value), ville: $("iaVille").value || null,
+        texte: $("iaTexteScore").value });
+      const vc = r.verdict === "prioritaire" ? "b-green" : r.verdict === "suspect" ? "b-red" : r.verdict === "interessant" ? "b-yellow" : "b-gray";
+      $("iaScoreOut").innerHTML = `<div class="kpis small">
+        <div class="kpi"><span class="kpi-label">Score</span><span class="kpi-val">${r.score}/100</span></div>
+        <div class="kpi"><span class="kpi-label">Verdict</span><span class="kpi-val">${badge(r.verdict, vc)}</span></div>
+        <div class="kpi"><span class="kpi-label">Écart marché</span><span class="kpi-val">${pct(r.ecart_pct, true)}</span></div>
+        <div class="kpi"><span class="kpi-label">Médiane</span><span class="kpi-val">${xaf(r.mediane_marche)}</span></div></div>
+        <div class="muted">${r.fraude_suspectee ? "🚨 " : "✓ "}${r.raisons.map(esc).join(" · ")} <i>(${esc(r.source)})</i></div>`;
+    } catch (err) { toast(err.message, "err"); }
+  };
+  $("formVision").onsubmit = async (e) => {
+    e.preventDefault();
+    const f = $("iaImage").files[0];
+    if (!f) return;
+    const fd = new FormData();
+    fd.append("file", f); fd.append("titre", $("iaTitre").value);
+    try {
+      const r = await fetch("/api/v1/ai/analyser-image", { method: "POST", body: fd });
+      const data = await r.json();
+      if (!r.ok) throw new Error(data.detail || ("HTTP " + r.status));
+      const out = $("iaVisionOut");
+      out.hidden = false;
+      out.textContent = JSON.stringify(data, null, 2);
+    } catch (err) { toast(err.message, "err"); }
+  };
+  $("formMsg").onsubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const r = await postJSON("/api/v1/ai/message-vendeur", { produit: $("iaMProduit").value,
+        prix: parseFloat($("iaMPrix").value), ville: $("iaMVille").value,
+        phone: $("iaMPhone").value || null,
+        prix_propose: $("iaMPropose").value ? parseFloat($("iaMPropose").value) : null });
+      $("iaMsgOut").innerHTML = `<div class="comment">${esc(r.message)}
+        <div class="meta"><i>(${esc(r.source)})</i>
+        ${r.wa_link ? `<a class="btn small primary" target="_blank" rel="noopener" href="${esc(r.wa_link)}">💬 Ouvrir WhatsApp</a>` : ""}</div></div>`;
+    } catch (err) { toast(err.message, "err"); }
+  };
+  $("btnRapport").onclick = async () => {
+    try {
+      const r = await getJSON("/api/v1/ai/rapport-jour");
+      $("iaRapportOut").innerHTML = mdLite(r.rapport) + `<div class="meta"><i>source : ${esc(r.source)}</i></div>`;
+    } catch (e) { toast(e.message, "err"); }
+  };
+}
+
 /* ── Commun : badge alertes + horloge ──────────────────── */
 async function navBadge() {
   try {
@@ -284,7 +366,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   clock(); setInterval(clock, 30000); navBadge();
   const page = document.body.dataset.page;
   const fn = { dashboard: pageDashboard, prix: pagePrix, alertes: pageAlertes,
-    sniper: pageSniper, social: pageSocial, releves: pageReleves,
+    sniper: pageSniper, social: pageSocial, releves: pageReleves, ia: pageIA,
     referentiels: pageReferentiels }[page];
   if (fn) try { await fn(); } catch (e) { toast("Erreur : " + e.message, "err"); }
 });

@@ -33,6 +33,7 @@ uvicorn app.main:app --host 0.0.0.0 --port 8000
 | `/social` | Écoute sociale : sentiment, motifs, timeline, saisie scorée auto |
 | `/releves` | Saisie manuelle/terrain + derniers relevés |
 | `/referentiels` | Produits, marchés, sources |
+| `/ia` | Agent IA : parser NLP, vision/OCR, scoreur, messages, rapport (Gemini + repli offline) |
 
 ## Endpoints web (en plus de l'API v0.1)
 
@@ -42,6 +43,7 @@ uvicorn app.main:app --host 0.0.0.0 --port 8000
 - `POST /api/v1/kpi/alertes/{id}/resoudre`
 - `GET /api/v1/social/resume?jours=` · `POST /api/v1/social/commentaires` (sentiment auto)
 - `GET /api/v1/sniper/status` · `GET /api/v1/sniper/selectors/{watch}` (lecture sniper.db)
+- Agent IA : `GET /api/v1/ai/statut` · `POST /ai/test|parser-annonce|analyser-image|scorer|message-vendeur` · `GET /ai/rapport-jour`
 
 ## Structure
 

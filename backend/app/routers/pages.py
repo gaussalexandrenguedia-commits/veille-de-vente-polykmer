@@ -47,6 +47,11 @@ def page_releves(request: Request):
     return _page(request, "releves", "Relevés terrain", "releves.html")
 
 
+@router.get("/ia", response_class=HTMLResponse)
+def page_ia(request: Request):
+    return _page(request, "ia", "Agent IA 🤖", "ia.html")
+
+
 @router.get("/referentiels", response_class=HTMLResponse)
 def page_referentiels(request: Request):
     return _page(request, "referentiels", "Référentiels", "referentiels.html")
