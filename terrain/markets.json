@@ -1,0 +1,12 @@
+[
+  {"nom": "Marché Central", "ville": "Douala", "pays": "CM", "lat": 4.048, "lon": 9.704, "jours_affluence": ["sam", "mer"], "phase": 1, "specialites": ["alimentaire", "import"]},
+  {"nom": "Mboppi", "ville": "Douala", "pays": "CM", "lat": 4.058, "lon": 9.732, "jours_affluence": ["sam"], "phase": 1, "specialites": ["textile", "electromenager"]},
+  {"nom": "Marché Mokolo", "ville": "Yaoundé", "pays": "CM", "lat": 3.873, "lon": 11.502, "jours_affluence": ["sam", "mer"], "phase": 1, "specialites": ["alimentaire", "friperie"]},
+  {"nom": "Marché Mfoundi", "ville": "Yaoundé", "pays": "CM", "lat": 3.866, "lon": 11.522, "jours_affluence": ["dim", "sam"], "phase": 1, "specialites": ["vivrier"]},
+  {"nom": "Marché A", "ville": "Bafoussam", "pays": "CM", "lat": 5.478, "lon": 10.417, "jours_affluence": ["sam"], "phase": 1, "specialites": ["vivrier", "quincaillerie"]},
+  {"nom": "Marché central", "ville": "Garoua", "pays": "CM", "lat": 9.301, "lon": 13.397, "jours_affluence": ["sam"], "phase": 1, "specialites": ["cereales", "betail"]},
+  {"nom": "Poto-Poto", "ville": "Brazzaville", "pays": "CG", "lat": -4.255, "lon": 15.256, "jours_affluence": ["sam"], "phase": 2, "specialites": ["alimentaire", "textile"]},
+  {"nom": "Marché Central", "ville": "NDjamena", "pays": "TD", "lat": 12.134, "lon": 15.055, "jours_affluence": ["sam"], "phase": 2, "specialites": ["cereales", "import"]},
+  {"nom": "Mont-Bouët", "ville": "Libreville", "pays": "GA", "lat": 0.394, "lon": 9.451, "jours_affluence": ["sam"], "phase": 2, "specialites": ["alimentaire"]},
+  {"nom": "PK5", "ville": "Bangui", "pays": "CF", "lat": 4.365, "lon": 18.554, "jours_affluence": ["sam"], "phase": 2, "specialites": ["alimentaire", "import"]}
+]

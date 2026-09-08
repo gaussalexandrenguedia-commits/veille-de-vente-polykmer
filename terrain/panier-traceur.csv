@@ -1,0 +1,13 @@
+sku,nom,categorie,unite_releve,marques_suivies,frequence
+RIZ-PARF-50KG,Riz parfumé 50 kg,Alimentaire,sac 50kg,Mémé;Broli,hebdo
+RIZ-VRAC-KG,Riz vrac 1 kg,Alimentaire,kg,,hebdo
+HUILE-VEG-1L,Huile végétale 1 L,Alimentaire,bouteille 1L,Mayor;Diamaor,hebdo
+HUILE-VEG-5L,Huile végétale 5 L,Alimentaire,bidon 5L,Mayor;Diamaor,hebdo
+SUCRE-1KG,Sucre en poudre 1 kg,Alimentaire,kg,Sosucam,hebdo
+FARINE-1KG,Farine de blé 1 kg,Alimentaire,kg,,hebdo
+SAVON-PIECE,Savon de ménage pièce,Hygiène,pièce;carton,,hebdo
+CIMENT-50KG,Ciment 50 kg,Matériaux,sac 50kg,Cimencam;Dangote,hebdo
+TOLE-2M,Tôle ondulée 2 m,Matériaux,pièce,,hebdo
+CONGEL-200L,Congélateur 200 L,Électroménager,pièce,Hisense;Nasco,hebdo
+TV-32,Téléviseur 32 pouces,Électroménager,pièce,Hisense;TCL,hebdo
+SMART-ENTRY,Smartphone entrée de gamme 64 Go,Téléphonie,pièce,Tecno;Itel;Redmi,hebdo
