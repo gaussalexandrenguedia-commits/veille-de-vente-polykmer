@@ -1,0 +1,84 @@
+# ── Veille temps réel : ChangeDetection.io + n8n + sniper + apprise-api ──
+# Usage : docker compose -f infra/docker-compose.sniper.yml up -d
+# Ports : 5000 changedetection · 5678 n8n · 8001 webhooks sniper · 8002 apprise-api
+# Prérequis : cp sniper/.env.example sniper/.env (+ renseigner tokens)
+#            cp sniper/config/watches.example.yaml sniper/config/watches.yaml
+
+services:
+  changedetection:
+    image: dgtlmoon/changedetection.io:latest
+    container_name: veille_changedetection
+    restart: unless-stopped
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./changedetection-data:/datastore
+    environment:
+      TZ: Africa/Douala
+
+  # Rendu Playwright/JS pour ChangeDetection (optionnel mais recommandé)
+  # Doc : https://changedetection.io/docs/playwright/
+  playwright-chrome:
+    image: browserless/chrome:latest
+    container_name: veille_playwright
+    restart: unless-stopped
+    ports:
+      - "3001:3000"
+    environment:
+      MAX_CONCURRENT_SESSIONS: 2
+      CONNECTION_TIMEOUT: 60000
+
+  n8n:
+    image: n8nio/n8n:latest
+    container_name: veille_n8n
+    restart: unless-stopped
+    ports:
+      - "5678:5678"
+    environment:
+      TZ: Africa/Douala
+      N8N_BASIC_AUTH_ACTIVE: "true"
+      N8N_BASIC_AUTH_USER: admin
+      N8N_BASIC_AUTH_PASSWORD: ${N8N_PASSWORD:-changez-moi}
+      WEBHOOK_URL: ${N8N_WEBHOOK_URL:-http://localhost:5678/}
+    volumes:
+      - ./n8n-data:/home/node/.n8n
+      - ../n8n/workflows:/workflows:ro
+
+  sniper:
+    build: ../sniper
+    container_name: veille_sniper
+    restart: unless-stopped
+    env_file:
+      - ../sniper/.env
+    volumes:
+      - ../sniper/config:/app/config:ro
+      - sniper-state:/app/state
+    depends_on:
+      - apprise-api
+
+  sniper-webhooks:
+    build: ../sniper
+    container_name: veille_sniper_webhooks
+    restart: unless-stopped
+    command: ["uvicorn", "sniper.webhook_server:app", "--host", "0.0.0.0", "--port", "8001"]
+    env_file:
+      - ../sniper/.env
+    environment:
+      SNIPER_CONFIG: config/watches.yaml
+    ports:
+      - "8001:8001"
+    volumes:
+      - ../sniper/config:/app/config:ro
+      - sniper-state:/app/state
+
+  apprise-api:
+    image: caronc/apprise:latest
+    container_name: veille_apprise
+    restart: unless-stopped
+    ports:
+      - "8002:8000"
+    volumes:
+      - ./apprise-data:/config
+
+volumes:
+  sniper-state:

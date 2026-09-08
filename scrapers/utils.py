@@ -15,7 +15,7 @@ HEADERS = {
     "Accept-Language": "fr-FR,fr;q=0.9,en;q=0.8",
 }
 
-PRIX_RE = re.compile(r"([\d\s\u202f.,]+)\s*(FCFA|XAF|F\s?CFA)?", re.I)
+PRIX_RE = re.compile(r"(\d[\d\s\u202f.,]*)\s*(FCFA|XAF|F\s?CFA)?", re.I)
 
 
 def session_polie(delai: float = 4.0) -> requests.Session:

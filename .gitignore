@@ -9,6 +9,11 @@ data/*.json
 data/*.csv
 !data/samples/
 !data/.gitkeep
+sniper/state/*.db
+sniper/config/watches.yaml
+infra/changedetection-data/
+infra/n8n-data/
+infra/apprise-data/
 .DS_Store
 .streamlit/
 *.log

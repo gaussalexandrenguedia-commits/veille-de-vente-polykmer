@@ -39,6 +39,8 @@ veille-de-vente-polykmer/
 │   ├── 06-DEFIS-CEMAC.md
 │   └── 07-GUIDE-TERRAIN.md
 ├── backend/                   ← API FastAPI (ingestion + KPIs + alertes)
+├── sniper/                    ← ⚡ surveillance continue + sniping (polling hot, webhooks <1s, Telegram)
+├── n8n/workflows/             ← orchestration (seuils métier, escalade, Sheets)
 ├── scrapers/                  ← scripts Python (Jumia, CoinAfrique, Facebook…)
 ├── terrain/                   ← formulaires KoboToolbox + référentiel marchés
 ├── dashboard/                 ← dashboard Streamlit (MVP visualisation)
@@ -118,6 +120,7 @@ Détail : [`docs/05-ROADMAP.md`](docs/05-ROADMAP.md)
 6. [Roadmap](docs/05-ROADMAP.md)
 7. [Défis CEMAC](docs/06-DEFIS-CEMAC.md)
 8. [Guide enquêteurs terrain](docs/07-GUIDE-TERRAIN.md)
+9. [Surveillance continue & sniping temps réel](docs/08-SNIPING-TEMPS-REEL.md)
 
 ## 🤝 Contribuer
 
