@@ -14,6 +14,11 @@ sniper/config/watches.yaml
 infra/changedetection-data/
 infra/n8n-data/
 infra/apprise-data/
+sniper/sessions/*.json
+sniper/sessions/*.state.json
+!sniper/sessions/.gitkeep
+.login-profile/
+.capture.json
 .DS_Store
 .streamlit/
 *.log

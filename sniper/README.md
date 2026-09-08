@@ -46,6 +46,17 @@ C'est **ce chemin push** (et non le polling) qui tient la promesse « retard d'u
 pytest tests/ -q
 ```
 
+## Sniping avancé (v0.2)
+
+- **Zones + sélecteurs auto-réparables** : `zone_css_chain`, `price_css_chain`, repli sémantique ; santé sur `GET :8001/selectors/{watch}`.
+- **Interception API** : `python -m sniper.tools.record_xhr --url …` → convertit une page lourde en polling `api_json` ~50 ms.
+- **Sessions** : `python -m sniper.tools.save_session --domain …` (login manuel, vos comptes) → `session:` dans la watch.
+- **Stealth** : profils rotatifs, `impersonate: chrome124` (curl_cffi optionnel), proxies fournis par vous.
+- **Filtre sémantique** : bloc `semantic:` (heuristique offline, `ollama` ou OpenAI-compatible) — ex. électrogène ≥ 5 kVA sous 200 000 FCFA.
+- **One-click** : `actions_card:` avec bouton WhatsApp vendeur pré-rempli (`wa.me/…?text=…`).
+
+Détail : [`docs/09-SNIPING-AVANCE.md`](../docs/09-SNIPING-AVANCE.md).
+
 ## Règles disponibles
 
 | Règle | Exemple | Usage |

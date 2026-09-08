@@ -109,3 +109,43 @@ watches:
     rules:
       - {type: keyword, pattern: "rupture", severity: rouge}
     actions: {telegram: true, apprise: true, post_api: false}
+
+  # ── EXEMPLE AVANCÉ : zones + healing + sémantique + one-click + stealth ──
+  - id: electro-gene-dla
+    name: "Annonces — groupe électrogène Douala"
+    tier: warm
+    interval: 300
+    type: html
+    url: "https://annonces.example.com/recherche?q=groupe+electrogene&ville=douala"
+    ville: "Douala"
+    # session: sessions/marketplace.json   # décommenter après login manuel (tools/save_session.py)
+    stealth:
+      profile: rotate          # rotate | desktop | mobile | off
+      # impersonate: chrome124 # nécessite `pip install curl-cffi`
+      # proxies: ["http://user:pass@proxy:port"]
+    extract:
+      zone_css_chain: [".listing-detail", ".annonce", "main"]  # ciblage zone (anti faux positifs)
+      price_css_chain: [".product-price", ".prc", ".price", "[data-price]"]  # auto-réparée
+      price_regex: '([\\d\\s.]+)\\s*(FCFA|XAF)'
+      seller_phone_regex: '((?:\\+237)?[\\s\\d]{9,})'  # -> bouton WhatsApp
+      clean_html: true
+    rules:
+      - {type: below, value: 200000}
+      - {type: keyword, pattern: "electrogene|générateur|generator"}
+    semantic:                  # gate AVANT alerte (ScrapeGraphAI-like)
+      backend: heuristic       # heuristic | ollama | openai_compatible
+      applies_to: ["*"]
+      on_error: allow
+      criteria:
+        must_include: ["electrogene"]
+        must_exclude: ["pièces détachées", "réparation", "location"]
+        numeric: [{pattern: '([\\d.,]+)\\s*kva', op: ">=", value: 5}]
+        max_price: 200000
+      # ollama: {url: "http://localhost:11434", model: "llama3.1:8b"}
+    actions_card:              # boutons one-click Telegram
+      wa_text: "Bonjour, '{watch}' à {prix} XAF m'intéresse, toujours dispo ? ({ville})"
+      buttons:
+        - {label: "💬 WhatsApp vendeur", requires: seller_phone,
+           url: "https://wa.me/{seller_phone_digits}?text={wa_text}"}
+        - {label: "🔗 Voir l'annonce", url: "{url}"}
+    actions: {telegram: true, apprise: false, post_api: true}

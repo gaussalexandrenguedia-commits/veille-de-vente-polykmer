@@ -1,16 +1,8 @@
 """Serveur de webhooks entrants — le chemin < 1 s (push, pas de polling).
 
-Une source externe (boutique partenaire, Kobo, ChangeDetection.io, n8n…)
-POSTe un fait observé -> évaluation immédiate -> alerte Telegram.
-
 Lancement :
     uvicorn sniper.webhook_server:app --host 0.0.0.0 --port 8001
     # config via SNIPER_CONFIG (défaut: config/watches.yaml)
-
-Exemple :
-    curl -X POST localhost:8001/hook/kobo-rupture-push \\
-      -H 'X-API-Key: $API_KEY_INGEST' -H 'Content-Type: application/json' \\
-      -d '{"text": "rupture riz Mokolo", "price": null}'
 """
 from __future__ import annotations
 
@@ -25,12 +17,13 @@ from .alerter import Alerter
 from .config import load_config
 from .extractors import page_hash
 from .rules import evaluate
+from .semantic import filter_signals
 from .store import Store
 
 CONFIG_PATH = os.getenv("SNIPER_CONFIG", "config/watches.yaml")
 API_KEY = os.getenv("API_KEY_INGEST", "")
 
-app = FastAPI(title="Veille Sniper — webhooks", version="0.1.0")
+app = FastAPI(title="Veille Sniper — webhooks", version="0.2.0")
 cfg = load_config(CONFIG_PATH) if os.path.exists(CONFIG_PATH) else {"global": {}, "watches": []}
 store = Store(cfg.get("global", {}).get("state_db", "state/sniper.db"))
 alerter = Alerter(cfg)
@@ -42,6 +35,7 @@ class Push(BaseModel):
     stock: bool | None = None
     text: str = ""
     items: list[str] | None = None
+    seller_phone: str | None = None
 
 
 def _check(x_api_key: str | None):
@@ -59,6 +53,14 @@ def status():
     return {wid: store.get_state(wid) for wid in WATCHES}
 
 
+@app.get("/selectors/{watch_id}")
+def selectors(watch_id: str):
+    """Santé des sélecteurs (auto-réparation) : succès/échecs par sélecteur."""
+    if watch_id not in WATCHES:
+        raise HTTPException(404, f"Watch inconnue : {watch_id}")
+    return store.selector_report(watch_id)
+
+
 @app.post("/hook/{watch_id}")
 async def hook(watch_id: str, push: Push, x_api_key: str | None = Header(default=None)):
     t0 = time.perf_counter()
@@ -67,13 +69,16 @@ async def hook(watch_id: str, push: Push, x_api_key: str | None = Header(default
     if not watch:
         raise HTTPException(404, f"Watch inconnue : {watch_id}")
     obs = {"price": push.price, "stock": push.stock, "text": push.text[:20000],
-           "items": push.items, "hash": page_hash(push.text)}
+           "items": push.items, "seller_phone": push.seller_phone,
+           "hash": page_hash(push.text)}
     prev = store.get_state(watch_id)
     store.set_state(watch_id, obs)
     g = cfg.get("global", {})
     envoyees: list[str] = []
     async with httpx.AsyncClient(timeout=10.0) as client:
-        for sig in evaluate(watch, obs, prev):
+        signals = await filter_signals(watch, obs, evaluate(watch, obs, prev), client)
+        for sig in signals:
+            sig.detail.setdefault("seller_phone", obs.get("seller_phone"))
             if store.is_duplicate(sig.dedup_sig, g.get("dedup_ttl", 86400)):
                 continue
             if not store.cooldown_ok(sig.cooldown_key, g.get("default_cooldown", 300)):

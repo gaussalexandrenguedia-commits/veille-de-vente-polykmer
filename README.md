@@ -121,6 +121,7 @@ Détail : [`docs/05-ROADMAP.md`](docs/05-ROADMAP.md)
 7. [Défis CEMAC](docs/06-DEFIS-CEMAC.md)
 8. [Guide enquêteurs terrain](docs/07-GUIDE-TERRAIN.md)
 9. [Surveillance continue & sniping temps réel](docs/08-SNIPING-TEMPS-REEL.md)
+10. [Sniping avancé : healing, zones, interception API, stealth, sémantique, one-click](docs/09-SNIPING-AVANCE.md)
 
 ## 🤝 Contribuer
 

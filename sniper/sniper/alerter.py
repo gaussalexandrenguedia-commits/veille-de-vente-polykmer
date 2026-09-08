@@ -1,11 +1,16 @@
-"""Alertes : Telegram Bot API (push < 1 s) + Apprise (fan-out) + API veille.
+"""Alertes : Telegram one-click + Apprise fan-out + API veille.
 
-Sans token configuré -> mode dry-run (log uniquement), parfait pour tester.
+Sans token configuré -> mode dry-run (log uniquement).
+Carte d'action (`actions_card:`) : boutons WhatsApp vendeur pré-rempli,
+appel direct, offre, dashboard — variables {url} {title} {prix} {ville}
+{seller_phone} {seller_phone_digits} {wa_text} {dashboard}.
 """
 from __future__ import annotations
 
 import logging
+import re
 import time
+from urllib.parse import quote
 
 import httpx
 
@@ -31,35 +36,64 @@ class Alerter:
     def dry_run(self) -> bool:
         return not (self.token and self.chat_ids)
 
-    def format_telegram(self, watch: dict, signal: Signal) -> str:
-        ville = watch.get("ville", "")
-        lignes = [
-            f"{EMOJI.get(signal.severity, '🟡')} *{signal.title}*",
-            f"_{watch.get('name', watch['id'])}_ · {ville}",
+    # ── carte d'action ──
+    def render(self, tpl: str, watch: dict, signal: Signal) -> str:
+        d = signal.detail
+        phone = re.sub(r"[^\d]", "", str(d.get("seller_phone") or ""))
+        prix = d.get("prix") or d.get("prix_avant")
+        var = {"url": watch.get("url", ""), "title": signal.title,
+               "watch": watch.get("name", watch.get("id", "")),
+               "ville": watch.get("ville", ""), "rule": signal.rule,
+               "prix": f"{prix:,.0f}".replace(",", " ") if prix else "",
+               "seller_phone": str(d.get("seller_phone") or ""),
+               "seller_phone_digits": phone, "dashboard": self.dashboard}
+        out = tpl
+        for k, v in var.items():
+            out = out.replace("{" + k + "}", v)
+        return out
+
+    def keyboard(self, watch: dict, signal: Signal) -> dict:
+        card = watch.get("actions_card") or {}
+        buttons = card.get("buttons") or [
+            {"label": "🔗 Voir l'offre", "url": "{url}"},
         ]
+        rows = []
+        for b in buttons:
+            if b.get("requires") == "seller_phone" and not signal.detail.get("seller_phone"):
+                continue  # pas de numéro -> bouton masqué
+            url = self.render(b["url"], watch, signal)
+            url = url.replace("{wa_text}", quote(self.render(
+                card.get("wa_text", "Bonjour, '{watch}' à {prix} XAF m'intéresse. Dispo ?"),
+                watch, signal)))
+            rows.append([{"text": self.render(b.get("label", "Ouvrir"), watch, signal),
+                          "url": url}])
+        if card.get("dashboard", True) and self.dashboard:
+            rows.append([{"text": "📊 Dashboard", "url": self.dashboard}])
+        return {"inline_keyboard": rows or [[{"text": "🔗 Voir", "url": watch.get("url", "")}]]}
+
+    def format_telegram(self, watch: dict, signal: Signal) -> str:
+        lignes = [f"{EMOJI.get(signal.severity, '🟡')} *{signal.title}*",
+                  f"_{watch.get('name', watch['id'])}_ · {watch.get('ville', '')}"]
         d = signal.detail
         if "drop_pct" in d:
             lignes.append(f"Baisse : *-{d['drop_pct']:.1f} %*")
-        if "prix" in d and d["prix"]:
+        if d.get("prix"):
             lignes.append(f"Prix : *{d['prix']:,.0f} XAF*".replace(",", " "))
         if "seuil" in d:
             lignes.append(f"Seuil : {d['seuil']:,.0f} XAF".replace(",", " "))
-        if "item_id" in d:
+        if d.get("item_id"):
             lignes.append(f"Item : `{d['item_id']}`")
+        if d.get("seller_phone"):
+            lignes.append(f"☎️ Vendeur : `{d['seller_phone']}` — bouton WhatsApp ⬇️")
+        if d.get("semantic"):
+            lignes.append(f"🧠 Filtre : {d['semantic']}")
         lignes.append(f"Règle : `{signal.rule}` · gravité : {signal.severity}")
         return "\n".join(lignes)
 
-    def keyboard(self, watch: dict) -> dict:
-        boutons = [[{"text": "🔗 Voir l'offre", "url": watch.get("url", "https://example.com")}]]
-        if self.dashboard:
-            boutons.append([{"text": "📊 Dashboard", "url": self.dashboard}])
-        return {"inline_keyboard": boutons}
-
     async def send_telegram(self, client: httpx.AsyncClient, watch: dict, signal: Signal) -> int:
-        """Retourne la latence d'envoi en ms. 0 si dry-run."""
         texte = self.format_telegram(watch, signal)
         if self.dry_run:
-            log.warning("[dry-run] TELEGRAM (pas de token) : %s", texte.replace("\n", " | "))
+            log.warning("[dry-run] TELEGRAM : %s", texte.replace("\n", " | "))
             return 0
         t0 = time.perf_counter()
         for chat in self.chat_ids:
@@ -67,7 +101,7 @@ class Alerter:
                 r = await client.post(
                     f"https://api.telegram.org/bot{self.token}/sendMessage",
                     json={"chat_id": chat, "text": texte, "parse_mode": "Markdown",
-                          "reply_markup": self.keyboard(watch),
+                          "reply_markup": self.keyboard(watch, signal),
                           "disable_web_page_preview": True},
                     timeout=10.0)
                 if r.status_code != 200:
@@ -92,7 +126,6 @@ class Alerter:
         log.info("Apprise fan-out %d canaux : %s", len(self.apprise_urls), "OK" if ok else "ÉCHEC")
 
     async def post_api_veille(self, client: httpx.AsyncClient, watch: dict, signal: Signal) -> None:
-        """Stocke le signal comme offre dans l'API veille (/ingest/scraper)."""
         if not (self.api_url and self.api_key):
             return
         prix = signal.detail.get("prix") or signal.detail.get("prix_avant")
@@ -109,7 +142,6 @@ class Alerter:
             log.error("API veille erreur : %s", e)
 
     async def dispatch(self, client: httpx.AsyncClient, watch: dict, signal: Signal) -> int:
-        """Envoie selon actions configurées. Retourne latence Telegram en ms."""
         actions = watch.get("actions", {})
         lat = 0
         if actions.get("telegram"):

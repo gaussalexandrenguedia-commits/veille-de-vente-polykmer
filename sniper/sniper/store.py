@@ -13,6 +13,10 @@ CREATE TABLE IF NOT EXISTS signals_vus (
   sig_hash TEXT PRIMARY KEY, created REAL NOT NULL);
 CREATE TABLE IF NOT EXISTS cooldowns (
   cle TEXT PRIMARY KEY, last_alert REAL NOT NULL);
+CREATE TABLE IF NOT EXISTS selector_stats (
+  watch_id TEXT NOT NULL, selector TEXT NOT NULL,
+  ok INTEGER DEFAULT 0, fail INTEGER DEFAULT 0, last_ok REAL,
+  PRIMARY KEY (watch_id, selector));
 """
 
 
@@ -55,3 +59,23 @@ class Store:
     def mark_alert(self, cle: str) -> None:
         self.db.execute("INSERT OR REPLACE INTO cooldowns VALUES (?,?)", (cle, time.time()))
         self.db.commit()
+
+    # ── santé des sélecteurs (auto-réparation) ──
+    def record_selector(self, watch_id: str, selector: str, ok: bool) -> None:
+        now = time.time()
+        self.db.execute(
+            """INSERT INTO selector_stats (watch_id, selector, ok, fail, last_ok)
+               VALUES (?,?,?,?,?)
+               ON CONFLICT (watch_id, selector) DO UPDATE SET
+                 ok = ok + ?, fail = fail + ?,
+                 last_ok = CASE WHEN ? THEN ? ELSE last_ok END""",
+            (watch_id, selector, int(ok), int(not ok), now if ok else None,
+             int(ok), int(not ok), bool(ok), now))
+        self.db.commit()
+
+    def selector_report(self, watch_id: str) -> list[dict]:
+        rows = self.db.execute(
+            """SELECT selector, ok, fail, last_ok FROM selector_stats
+               WHERE watch_id=? ORDER BY ok DESC, fail ASC""", (watch_id,)).fetchall()
+        return [{"selector": s, "ok": o, "fail": f, "last_ok": lo}
+                for s, o, f, lo in rows]
