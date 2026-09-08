@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+{% block content %}
+<section class="kpis">
+  <div class="kpi"><span class="kpi-label">Relevés (7 j)</span><span class="kpi-val" id="kpiReleves">…</span></div>
+  <div class="kpi"><span class="kpi-label">Ruptures (7 j)</span><span class="kpi-val danger" id="kpiRuptures">…</span></div>
+  <div class="kpi"><span class="kpi-label">Promos (7 j)</span><span class="kpi-val ok" id="kpiPromos">…</span></div>
+  <div class="kpi"><span class="kpi-label">Mentions Mobile Money</span><span class="kpi-val info" id="kpiMomo">…</span></div>
+</section>
+
+<section class="grid-2">
+  <div class="card">
+    <div class="card-head"><h2>Courbe des prix</h2><select id="courbeProduit" class="input"></select></div>
+    <div id="chartCourbe" class="chart"></div>
+  </div>
+  <div class="card">
+    <div class="card-head"><h2>Variations 7 j</h2><a class="link" href="/prix">détail →</a></div>
+    <div id="chartVariations" class="chart"></div>
+  </div>
+</section>
+
+<section class="grid-2">
+  <div class="card">
+    <div class="card-head"><h2>Ruptures par produit (7 j)</h2></div>
+    <div id="chartRuptures" class="chart"></div>
+  </div>
+  <div class="card">
+    <div class="card-head"><h2>Promos par ville (7 j)</h2></div>
+    <div id="chartPromos" class="chart"></div>
+  </div>
+</section>
+
+<section class="grid-2">
+  <div class="card">
+    <div class="card-head"><h2>Couverture par source (7 j)</h2></div>
+    <div id="chartCouverture" class="chart"></div>
+  </div>
+  <div class="card">
+    <div class="card-head"><h2>Dernières alertes</h2><a class="link" href="/alertes">toutes →</a></div>
+    <div id="listAlertes" class="alert-list"></div>
+  </div>
+</section>
+{% endblock %}

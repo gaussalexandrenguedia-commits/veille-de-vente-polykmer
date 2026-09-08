@@ -63,3 +63,17 @@ def get_prix(produit: str, ville: str | None = None, jours: int = 30,
         raise HTTPException(404, f"Produit introuvable : {produit!r}")
     return {"produit": p.nom, "sku": p.sku, "ville": ville, "jours": jours,
             "serie": serie_prix(db, p.id, ville, jours)}
+
+
+@router.get("/releves/recent")
+def recent_releves(limit: int = 50, db: Session = Depends(get_db)):
+    rows = (db.query(RelevePrix, Produit.nom, Produit.sku, Source.nom, Marche.nom)
+            .join(Produit, RelevePrix.produit_id == Produit.id)
+            .join(Source, RelevePrix.source_id == Source.id)
+            .outerjoin(Marche, RelevePrix.marche_id == Marche.id)
+            .order_by(RelevePrix.observe_le.desc()).limit(min(limit, 200)).all())
+    return [{"id": r.id, "date": r.observe_le.isoformat(), "produit": nom,
+             "sku": sku, "ville": r.ville, "marche": marche,
+             "source": src, "prix": float(r.prix), "promo": r.promo,
+             "rupture": r.rupture, "marque": r.marque, "methode": r.methode}
+            for r, nom, sku, src, marche in rows]

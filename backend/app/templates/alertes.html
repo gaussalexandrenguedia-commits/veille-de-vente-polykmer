@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block content %}
+<section class="card">
+  <div class="filters">
+    <label>Gravité
+      <select id="filtreGravite" class="input">
+        <option value="">Toutes</option>
+        <option value="rouge">🔴 Critiques</option>
+        <option value="jaune">🟡 Attention</option>
+        <option value="vert">🟢 Info</option>
+      </select>
+    </label>
+    <label>Seuil variation (%)
+      <select id="seuilGenerer" class="input">
+        <option value="5">5 %</option>
+        <option value="10" selected>10 %</option>
+        <option value="15">15 %</option>
+      </select>
+    </label>
+    <button class="btn primary" id="btnGenerer">⚙️ Générer les alertes</button>
+  </div>
+</section>
+<section class="card">
+  <div class="card-head"><h2>Alertes actives (<span id="nbAlertes">0</span>)</h2></div>
+  <div id="listAlertesFull" class="alert-list"></div>
+</section>
+{% endblock %}

@@ -48,17 +48,18 @@ veille-de-vente-polykmer/
 └── data/samples/              ← jeux de données d'exemple
 ```
 
-## 🚀 Démarrage rapide (5 min)
+## 🚀 Démarrage rapide (2 min)
 
-### Option A — Dashboard démo (sans base de données)
+### Option A — Application web (recommandé) 🌐
+
+Un seul serveur, une seule URL, données démo auto-chargées :
 
 ```bash
-cd dashboard
+cd backend
 pip install -r requirements.txt
-streamlit run streamlit_app.py
+uvicorn app.main:app --host 0.0.0.0 --port 8000
+# -> http://localhost:8000  (tableau de bord, prix, alertes, sniper, écoute sociale, relevés)
 ```
-
-Le dashboard charge `data/samples/prix_exemple.csv` et affiche prix, variations, promos, sentiment.
 
 ### Option B — Stack complète (API + Postgres + Dashboard)
 

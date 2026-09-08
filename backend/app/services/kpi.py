@@ -13,6 +13,13 @@ from ..models import Alerte, Produit, RelevePrix
 POIDS = {"terrain": 2.0, "scrape": 1.0, "api": 1.5, "manuel": 1.0}
 
 
+def _aware(d: dt.datetime | None) -> dt.datetime | None:
+    """SQLite renvoie des datetimes naïfs : on les suppose UTC."""
+    if d is None:
+        return None
+    return d if d.tzinfo else d.replace(tzinfo=dt.timezone.utc)
+
+
 def mediane_ponderee(valeurs: list[tuple[float, str]]) -> float | None:
     """valeurs = [(prix, methode), ...]. Répète selon poids puis médiane."""
     if not valeurs:
@@ -24,7 +31,8 @@ def mediane_ponderee(valeurs: list[tuple[float, str]]) -> float | None:
 
 
 def serie_prix(db: Session, produit_id: int, ville: str | None, jours: int = 30) -> list[dict]:
-    depuis = dt.datetime.now(dt.timezone.utc) - dt.timedelta(days=jours)
+    now = dt.datetime.now(dt.timezone.utc)
+    depuis = now - dt.timedelta(days=jours)
     q = db.query(RelevePrix).filter(
         RelevePrix.produit_id == produit_id,
         RelevePrix.observe_le >= depuis,
@@ -35,7 +43,7 @@ def serie_prix(db: Session, produit_id: int, ville: str | None, jours: int = 30)
     rows = q.order_by(RelevePrix.observe_le).all()
     return [
         {"prix": float(r.prix), "methode": r.methode, "ville": r.ville,
-         "observe_le": r.observe_le.isoformat(), "promo": r.promo,
+         "observe_le": (_aware(r.observe_le) or now).isoformat(), "promo": r.promo,
          "marque": r.marque, "collecteur": r.collecteur}
         for r in rows
     ]
@@ -52,8 +60,9 @@ def variation(db: Session, produit_id: int, ville: str | None = None) -> dict | 
     if ville:
         q = q.filter(func.lower(RelevePrix.ville) == ville.lower())
     rows = q.all()
-    cur = [(float(r.prix), r.methode) for r in rows if r.observe_le >= now - dt.timedelta(days=7)]
-    prev = [(float(r.prix), r.methode) for r in rows if r.observe_le < now - dt.timedelta(days=7)]
+    lim = now - dt.timedelta(days=7)
+    cur = [(float(r.prix), r.methode) for r in rows if (_aware(r.observe_le) or now) >= lim]
+    prev = [(float(r.prix), r.methode) for r in rows if (_aware(r.observe_le) or now) < lim]
     m_cur, m_prev = mediane_ponderee(cur), mediane_ponderee(prev)
     if m_cur is None or m_prev in (None, 0):
         return None

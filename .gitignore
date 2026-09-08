@@ -19,6 +19,7 @@ sniper/sessions/*.state.json
 !sniper/sessions/.gitkeep
 .login-profile/
 .capture.json
+*.db
 .DS_Store
 .streamlit/
 *.log

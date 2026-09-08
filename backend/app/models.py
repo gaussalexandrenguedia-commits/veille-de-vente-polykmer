@@ -1,12 +1,23 @@
-"""Modèles ORM — miroir de infra/init.sql (v0.1)."""
+"""Modèles ORM — miroir de infra/init.sql (+ webapp)."""
 import datetime as dt
 
-from sqlalchemy import (ARRAY, JSON, Boolean, Date, ForeignKey, Integer, Numeric,
-                        String, Text, UniqueConstraint)
-from sqlalchemy.dialects.postgresql import TIMESTAMP
+from sqlalchemy import (JSON, Boolean, ForeignKey, Integer, Numeric, String,
+                        Text, TypeDecorator, UniqueConstraint)
+from sqlalchemy.dialects.postgresql import ARRAY, TIMESTAMP
 from sqlalchemy.orm import Mapped, mapped_column
 
 from .database import Base
+
+
+class StringArray(TypeDecorator):
+    """text[] sur Postgres, JSON sur SQLite (mode démo)."""
+    impl = ARRAY(Text)
+    cache_ok = True
+
+    def load_dialect_impl(self, dialect):
+        if dialect.name == "sqlite":
+            return JSON()
+        return ARRAY(Text())
 
 
 class Produit(Base):
@@ -16,8 +27,8 @@ class Produit(Base):
     nom: Mapped[str] = mapped_column(String)
     categorie: Mapped[str] = mapped_column(String)
     unite: Mapped[str] = mapped_column(String, default="piece")
-    marques_suivies: Mapped[list] = mapped_column(ARRAY(Text), default=list)
-    alias: Mapped[list] = mapped_column(ARRAY(Text), default=list)
+    marques_suivies: Mapped[list] = mapped_column(StringArray, default=list)
+    alias: Mapped[list] = mapped_column(StringArray, default=list)
     traceur: Mapped[bool] = mapped_column(Boolean, default=False)
 
 
@@ -41,6 +52,15 @@ class Source(Base):
     frequence: Mapped[str] = mapped_column(String, default="hebdo")
     statut_legal: Mapped[str] = mapped_column(String, default="a_qualifier")
     actif: Mapped[bool] = mapped_column(Boolean, default=True)
+
+
+class Corridor(Base):
+    __tablename__ = "corridors"
+    id: Mapped[int] = mapped_column(primary_key=True)
+    nom: Mapped[str] = mapped_column(String, unique=True)
+    origine: Mapped[str] = mapped_column(String)
+    destination: Mapped[str] = mapped_column(String)
+    distance_km: Mapped[int | None] = mapped_column(Integer, nullable=True)
 
 
 class RelevePrix(Base):
@@ -91,6 +111,19 @@ class OffreDigitale(Base):
     vendeur_hash: Mapped[str | None] = mapped_column(Text, nullable=True)
     ville: Mapped[str | None] = mapped_column(Text, nullable=True)
     engagement: Mapped[dict] = mapped_column(JSON, default=dict)
+
+
+class Commentaire(Base):
+    __tablename__ = "commentaires"
+    id: Mapped[int] = mapped_column(primary_key=True)
+    offre_id: Mapped[int | None] = mapped_column(ForeignKey("offres_digitales.id"), nullable=True)
+    source_id: Mapped[int] = mapped_column(ForeignKey("sources.id"))
+    texte: Mapped[str] = mapped_column(Text)
+    auteur_hash: Mapped[str | None] = mapped_column(Text, nullable=True)
+    langue: Mapped[str] = mapped_column(String, default="fr")
+    sentiment_score: Mapped[int] = mapped_column(Integer, default=0)
+    motif: Mapped[str | None] = mapped_column(Text, nullable=True)
+    capture_le: Mapped[dt.datetime] = mapped_column(TIMESTAMP(timezone=True), default=lambda: dt.datetime.now(dt.timezone.utc))
 
 
 class ReleveLogistique(Base):

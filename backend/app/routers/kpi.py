@@ -47,3 +47,14 @@ def run_alertes(seuil: float = 10.0, db: Session = Depends(get_db)):
     creees = generer_alertes(db, seuil)
     return {"nouvelles_alertes": len(creees),
             "titres": [a.titre for a in creees]}
+
+
+@router.post("/alertes/{alerte_id}/resoudre")
+def resoudre_alerte(alerte_id: int, db: Session = Depends(get_db)):
+    from fastapi import HTTPException
+    a = db.query(Alerte).filter(Alerte.id == alerte_id).first()
+    if not a:
+        raise HTTPException(404, "Alerte introuvable")
+    a.resolu = True
+    db.commit()
+    return {"ok": True, "id": alerte_id}
